@@ -101,7 +101,7 @@ Partial Class PreRegistro
         Me.txtapemat.MaxLength = 45
         Me.txtapemat.Name = "txtapemat"
         Me.txtapemat.Size = New System.Drawing.Size(348, 22)
-        Me.txtapemat.TabIndex = 45
+        Me.txtapemat.TabIndex = 3
         '
         'Label4
         '
@@ -120,7 +120,7 @@ Partial Class PreRegistro
         Me.txtapepat.MaxLength = 45
         Me.txtapepat.Name = "txtapepat"
         Me.txtapepat.Size = New System.Drawing.Size(348, 22)
-        Me.txtapepat.TabIndex = 43
+        Me.txtapepat.TabIndex = 2
         '
         'Label3
         '
@@ -139,7 +139,7 @@ Partial Class PreRegistro
         Me.txtnombre.MaxLength = 70
         Me.txtnombre.Name = "txtnombre"
         Me.txtnombre.Size = New System.Drawing.Size(348, 22)
-        Me.txtnombre.TabIndex = 41
+        Me.txtnombre.TabIndex = 1
         '
         'Label2
         '
@@ -202,17 +202,17 @@ Partial Class PreRegistro
         Me.cmbannonac.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbannonac.Name = "cmbannonac"
         Me.cmbannonac.Size = New System.Drawing.Size(76, 24)
-        Me.cmbannonac.TabIndex = 58
+        Me.cmbannonac.TabIndex = 6
         '
         'cmbmesnac
         '
         Me.cmbmesnac.FormattingEnabled = True
         Me.cmbmesnac.Items.AddRange(New Object() {"ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"})
-        Me.cmbmesnac.Location = New System.Drawing.Point(162, 23)
+        Me.cmbmesnac.Location = New System.Drawing.Point(163, 23)
         Me.cmbmesnac.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbmesnac.Name = "cmbmesnac"
         Me.cmbmesnac.Size = New System.Drawing.Size(121, 24)
-        Me.cmbmesnac.TabIndex = 57
+        Me.cmbmesnac.TabIndex = 5
         '
         'Label38
         '
@@ -232,7 +232,7 @@ Partial Class PreRegistro
         Me.cmbdianac.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbdianac.Name = "cmbdianac"
         Me.cmbdianac.Size = New System.Drawing.Size(56, 24)
-        Me.cmbdianac.TabIndex = 55
+        Me.cmbdianac.TabIndex = 4
         '
         'Label37
         '
@@ -263,7 +263,7 @@ Partial Class PreRegistro
         Me.txtnommama.MaxLength = 120
         Me.txtnommama.Name = "txtnommama"
         Me.txtnommama.Size = New System.Drawing.Size(924, 22)
-        Me.txtnommama.TabIndex = 59
+        Me.txtnommama.TabIndex = 11
         '
         'txtnompapa
         '
@@ -271,7 +271,7 @@ Partial Class PreRegistro
         Me.txtnompapa.MaxLength = 120
         Me.txtnompapa.Name = "txtnompapa"
         Me.txtnompapa.Size = New System.Drawing.Size(924, 22)
-        Me.txtnompapa.TabIndex = 58
+        Me.txtnompapa.TabIndex = 10
         '
         'Label7
         '
@@ -310,7 +310,7 @@ Partial Class PreRegistro
         Me.txtnomapm.MaxLength = 120
         Me.txtnomapm.Name = "txtnomapm"
         Me.txtnomapm.Size = New System.Drawing.Size(911, 22)
-        Me.txtnomapm.TabIndex = 59
+        Me.txtnomapm.TabIndex = 13
         '
         'txtnomapp
         '
@@ -318,7 +318,7 @@ Partial Class PreRegistro
         Me.txtnomapp.MaxLength = 120
         Me.txtnomapp.Name = "txtnomapp"
         Me.txtnomapp.Size = New System.Drawing.Size(913, 22)
-        Me.txtnomapp.TabIndex = 58
+        Me.txtnomapp.TabIndex = 12
         '
         'Label8
         '
@@ -357,7 +357,7 @@ Partial Class PreRegistro
         Me.txtnomamm.MaxLength = 120
         Me.txtnomamm.Name = "txtnomamm"
         Me.txtnomamm.Size = New System.Drawing.Size(911, 22)
-        Me.txtnomamm.TabIndex = 59
+        Me.txtnomamm.TabIndex = 15
         '
         'txtnomamp
         '
@@ -365,7 +365,7 @@ Partial Class PreRegistro
         Me.txtnomamp.MaxLength = 120
         Me.txtnomamp.Name = "txtnomamp"
         Me.txtnomamp.Size = New System.Drawing.Size(913, 22)
-        Me.txtnomamp.TabIndex = 58
+        Me.txtnomamp.TabIndex = 14
         '
         'Label10
         '
@@ -404,7 +404,7 @@ Partial Class PreRegistro
         Me.txtnommad.MaxLength = 120
         Me.txtnommad.Name = "txtnommad"
         Me.txtnommad.Size = New System.Drawing.Size(911, 22)
-        Me.txtnommad.TabIndex = 59
+        Me.txtnommad.TabIndex = 17
         '
         'txtnompad
         '
@@ -412,7 +412,7 @@ Partial Class PreRegistro
         Me.txtnompad.MaxLength = 120
         Me.txtnompad.Name = "txtnompad"
         Me.txtnompad.Size = New System.Drawing.Size(913, 22)
-        Me.txtnompad.TabIndex = 58
+        Me.txtnompad.TabIndex = 16
         '
         'Label12
         '
@@ -464,7 +464,7 @@ Partial Class PreRegistro
         Me.cmbannobau.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbannobau.Name = "cmbannobau"
         Me.cmbannobau.Size = New System.Drawing.Size(76, 24)
-        Me.cmbannobau.TabIndex = 58
+        Me.cmbannobau.TabIndex = 9
         '
         'cmbmesbau
         '
@@ -474,7 +474,7 @@ Partial Class PreRegistro
         Me.cmbmesbau.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbmesbau.Name = "cmbmesbau"
         Me.cmbmesbau.Size = New System.Drawing.Size(121, 24)
-        Me.cmbmesbau.TabIndex = 57
+        Me.cmbmesbau.TabIndex = 8
         '
         'Label14
         '
@@ -494,7 +494,7 @@ Partial Class PreRegistro
         Me.cmbdiabau.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbdiabau.Name = "cmbdiabau"
         Me.cmbdiabau.Size = New System.Drawing.Size(56, 24)
-        Me.cmbdiabau.TabIndex = 55
+        Me.cmbdiabau.TabIndex = 7
         '
         'Label15
         '

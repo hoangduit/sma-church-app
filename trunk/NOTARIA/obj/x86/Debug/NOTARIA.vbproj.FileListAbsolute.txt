@@ -31,3 +31,6 @@ C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\NOTARIA\obj\x86\Debu
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\NOTARIA\obj\x86\Debug\NOTARIA.Busquedas.resources
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\NOTARIA\obj\x86\Debug\NOTARIA.Configuracion.resources
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\NOTARIA\obj\x86\Debug\NOTARIA.Preregistro2.resources
+C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.exe
+C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.xml
+C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.pdb

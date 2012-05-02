@@ -79,7 +79,7 @@ Partial Class Configuracion
         Me.Controls.Add(Me.Label1)
         Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Configuracion"
-        Me.Text = "Configuracion"
+        Me.Text = "Configuración"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

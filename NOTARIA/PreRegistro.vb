@@ -1,4 +1,6 @@
-﻿Public Class PreRegistro
+﻿Imports MySql.Data.MySqlClient
+
+Public Class PreRegistro
 
 
     Private Sub BtnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnGuardar.Click
@@ -69,7 +71,66 @@
         End If
 
         MsgBox("Gudardar")
+
         'Me.Close()
         'LstPreRegistros.Show()
+    End Sub
+
+    Private Sub PreRegistro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim conn As MySqlConnection
+        Dim sql As String
+
+
+        If txtid.Text = "" Then
+            'Nuevo Registro
+            conn = New MySqlConnection()
+            conn.ConnectionString = "server=localhost; user id=root; password=nota2012; database=test"
+
+            Try
+                conn.Open()
+                'MessageBox.Show("Connection Opened Successfully")
+                sql = "SELECT * FROM test.tb_admin"
+
+                'create data adapter
+                Dim da As MySqlDataAdapter = New MySqlDataAdapter(sql, conn)
+
+                'create dataset
+                Dim ds As DataSet = New DataSet
+
+                'fill dataset
+                da.Fill(ds, "tb_admin")
+
+                'get data table
+                Dim dt As DataTable = ds.Tables("tb_admin")
+
+                'display data
+                Dim row As DataRow
+                Dim aux As String
+
+                For Each row In dt.Rows
+                    aux = row("lstannos")
+                Next
+
+                aux.Split(",")
+                For Each elemento In aux
+                    cmbannobau(renglon).Text = aux(renglon)
+
+                Next
+
+
+
+                conn.Close()
+
+            Catch myerror As MySqlException
+                MessageBox.Show("Error Connecting to Database: " & myerror.Message)
+            Finally
+                conn.Dispose()
+            End Try
+
+
+        Else
+            'Registro existente
+
+        End If
     End Sub
 End Class

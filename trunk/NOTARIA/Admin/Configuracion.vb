@@ -5,8 +5,35 @@ Public Class Configuracion
 
 
     Private Sub BtnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnGuardar.Click
-        Me.Hide()
-        Admin.Show()
+        Dim conn As MySqlConnection
+        Dim sql As String
+
+        conn = New MySqlConnection()
+        conn.ConnectionString = "server=localhost; user id=root; password=nota2012; database=test"
+
+
+        Try
+            conn.Open()
+            sql = "UPDATE test.tb_admin SET lstannos = '" + txtannos.Text + "'"
+
+            Dim cmd As MySqlCommand = New MySqlCommand(sql, conn)
+            'MsgBox(sql)
+            Dim i As Integer = cmd.ExecuteNonQuery()
+            If (i > 0) Then
+                'MsgBox("Record is Successfully Updated")
+                Me.Hide()
+                Admin.Show()
+            Else
+                MsgBox("Record is not Updated")
+            End If
+
+            conn.Close()
+        Catch myerror As MySqlException
+            MessageBox.Show("Error Connecting to Database: " & myerror.Message)
+        Finally
+            conn.Dispose()
+        End Try
+
     End Sub
 
     Private Sub Configuracion_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

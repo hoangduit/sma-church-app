@@ -4,6 +4,12 @@ Public Class PreRegistro
 
 
     Private Sub BtnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnGuardar.Click
+
+        MsgBox("Valor del combo = " + cmbdianac.SelectedText)
+        MsgBox("Valor del combo = " + cmbdianac.SelectedValue)
+        Exit Sub
+
+
         If txtnombre.Text = "" Then
             MsgBox("Por favor ingresar valor en el campo nombre")
             txtnombre.Focus()
@@ -16,6 +22,7 @@ Public Class PreRegistro
             MsgBox("Por favor ingresa valor en el campo apellido materno")
             txtapemat.Focus()
             Exit Sub
+            'ElseIf cmbdianac.SelectedText = "" Then
         ElseIf cmbdianac.SelectedText = "" Then
             MsgBox("Por favor selecciona el dia de nacimiento")
             cmbdianac.Focus()
@@ -80,55 +87,49 @@ Public Class PreRegistro
         Dim conn As MySqlConnection
         Dim sql As String
 
+        conn = New MySqlConnection()
+        conn.ConnectionString = "server=localhost; user id=root; password=nota2012; database=test"
 
-        If txtid.Text = "" Then
-            'Nuevo Registro
-            conn = New MySqlConnection()
-            conn.ConnectionString = "server=localhost; user id=root; password=nota2012; database=test"
+        Try
+            conn.Open()
+            'MessageBox.Show("Connection Opened Successfully")
+            sql = "SELECT * FROM test.tb_admin"
 
-            Try
-                conn.Open()
-                'MessageBox.Show("Connection Opened Successfully")
-                sql = "SELECT * FROM test.tb_admin"
+            'create data adapter
+            Dim da As MySqlDataAdapter = New MySqlDataAdapter(sql, conn)
 
-                'create data adapter
-                Dim da As MySqlDataAdapter = New MySqlDataAdapter(sql, conn)
+            'create dataset
+            Dim ds As DataSet = New DataSet
 
-                'create dataset
-                Dim ds As DataSet = New DataSet
+            'fill dataset
+            da.Fill(ds, "tb_admin")
 
-                'fill dataset
-                da.Fill(ds, "tb_admin")
+            'get data table
+            Dim dt As DataTable = ds.Tables("tb_admin")
 
-                'get data table
-                Dim dt As DataTable = ds.Tables("tb_admin")
+            'display data
+            Dim row As DataRow
+            Dim aux, valor As String
+            Dim aryTextFile() As String
 
-                'display data
-                Dim row As DataRow
-                Dim aux As String
+            For Each row In dt.Rows
+                aux = row("lstannos")
+            Next
 
-                For Each row In dt.Rows
-                    aux = row("lstannos")
-                Next
+            aryTextFile = aux.Split(",")
+            cmbannobau.Items.AddRange(aryTextFile)
+            cmbannonac.Items.AddRange(aryTextFile)
 
-                aux.Split(",")
-                For Each elemento In aux
-                    cmbannobau(renglon).Text = aux(renglon)
+            conn.Close()
 
-                Next
-
-
-
-                conn.Close()
-
-            Catch myerror As MySqlException
-                MessageBox.Show("Error Connecting to Database: " & myerror.Message)
-            Finally
-                conn.Dispose()
-            End Try
+        Catch myerror As MySqlException
+            MessageBox.Show("Error Connecting to Database: " & myerror.Message)
+        Finally
+            conn.Dispose()
+        End Try
 
 
-        Else
+        If txtid.Text <> "" Then
             'Registro existente
 
         End If

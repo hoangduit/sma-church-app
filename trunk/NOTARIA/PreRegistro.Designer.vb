@@ -197,6 +197,8 @@ Partial Class PreRegistro
         '
         'cmbannonac
         '
+        Me.cmbannonac.AutoCompleteCustomSource.AddRange(New String() {"Selecciona"})
+        Me.cmbannonac.FormatString = "N0"
         Me.cmbannonac.FormattingEnabled = True
         Me.cmbannonac.Location = New System.Drawing.Point(332, 26)
         Me.cmbannonac.Margin = New System.Windows.Forms.Padding(4)

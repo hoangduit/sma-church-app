@@ -5,11 +5,6 @@ Public Class PreRegistro
 
     Private Sub BtnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnGuardar.Click
 
-        MsgBox("Valor del combo = " + cmbdianac.SelectedText)
-        MsgBox("Valor del combo = " + cmbdianac.SelectedValue)
-        Exit Sub
-
-
         If txtnombre.Text = "" Then
             MsgBox("Por favor ingresar valor en el campo nombre")
             txtnombre.Focus()
@@ -23,24 +18,28 @@ Public Class PreRegistro
             txtapemat.Focus()
             Exit Sub
             'ElseIf cmbdianac.SelectedText = "" Then
-        ElseIf cmbdianac.SelectedText = "" Then
+        ElseIf cmbdianac.SelectedIndex.Equals(-1) Then
             MsgBox("Por favor selecciona el dia de nacimiento")
             cmbdianac.Focus()
             Exit Sub
-        ElseIf cmbmesnac.SelectedText = "" Then
+        ElseIf cmbmesnac.SelectedIndex.Equals(-1) Then
             MsgBox("Por favor selecciona el mes de nacimiento")
             cmbmesnac.Focus()
             Exit Sub
-        ElseIf cmbannonac.SelectedText = "" Then
+        ElseIf cmbannonac.SelectedIndex.Equals(-1) Then
             MsgBox("Por favor selecciona el año de nacimiento")
             cmbannonac.Focus()
             Exit Sub
-        ElseIf cmbdiabau.SelectedText = "" Then
+        ElseIf cmbdiabau.SelectedIndex.Equals(-1) Then
             MsgBox("Por favor selecciona el dia de bautizo")
             cmbdiabau.Focus()
             Exit Sub
-        ElseIf cmbmesbau.SelectedText = "" Then
+        ElseIf cmbmesbau.SelectedIndex.Equals(-1) Then
             MsgBox("Por favor selecciona el mes de bautizo")
+            cmbmesbau.Focus()
+            Exit Sub
+        ElseIf cmbannobau.SelectedIndex.Equals(-1) Then
+            MsgBox("Por favor selecciona el año de bautizo")
             cmbmesbau.Focus()
             Exit Sub
         ElseIf txtnompapa.Text = "" Then

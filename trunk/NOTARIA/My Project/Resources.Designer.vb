@@ -59,5 +59,143 @@ Namespace My.Resources
                 resourceCulture = value
             End Set
         End Property
+        
+        Friend ReadOnly Property Back() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Back", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to DELETE FROM usuario  WHERE nombre = @name.
+        '''</summary>
+        Friend ReadOnly Property deleteUserByName() As String
+            Get
+                Return ResourceManager.GetString("deleteUserByName", resourceCulture)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property Forward() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Forward", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property Home() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Home", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to INSERT INTO aplicacionrole (idrol,idaplicacion) VALUES(@idRol, @idAplication).
+        '''</summary>
+        Friend ReadOnly Property insertAplicationRol() As String
+            Get
+                Return ResourceManager.GetString("insertAplicationRol", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to INSERT INTO rol (tiporol) VALUES(@tipoRol).
+        '''</summary>
+        Friend ReadOnly Property insertRol() As String
+            Get
+                Return ResourceManager.GetString("insertRol", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to INSERT INTO usuario (nombre, password,idrol) VALUES(@name, @pass, @idrol).
+        '''</summary>
+        Friend ReadOnly Property insertUser() As String
+            Get
+                Return ResourceManager.GetString("insertUser", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to SELECT *  FROM aplicacion a.
+        '''</summary>
+        Friend ReadOnly Property selectApplication() As String
+            Get
+                Return ResourceManager.GetString("selectApplication", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to SELECT * FROM rol WHERE tiporol =@tipoRol.
+        '''</summary>
+        Friend ReadOnly Property selectRolByTipoRol() As String
+            Get
+                Return ResourceManager.GetString("selectRolByTipoRol", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to SELECT r.tiporol FROM rol r.
+        '''</summary>
+        Friend ReadOnly Property selectRoltipo() As String
+            Get
+                Return ResourceManager.GetString("selectRoltipo", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to SELECT r.tiporol FROM rol r WHERE r.idrol = @idRol.
+        '''</summary>
+        Friend ReadOnly Property selectRolTipoRolByIdRol() As String
+            Get
+                Return ResourceManager.GetString("selectRolTipoRolByIdRol", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to SELECT * FROM usuario.
+        '''</summary>
+        Friend ReadOnly Property selectUser() As String
+            Get
+                Return ResourceManager.GetString("selectUser", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to SELECT u.nombre FROM usuario u WHERE u.idrol = @idRol.
+        '''</summary>
+        Friend ReadOnly Property selectUserByIdRol() As String
+            Get
+                Return ResourceManager.GetString("selectUserByIdRol", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to SELECT * FROM usuario u WHERE u.nombre = @name.
+        '''</summary>
+        Friend ReadOnly Property selectUserByNombre() As String
+            Get
+                Return ResourceManager.GetString("selectUserByNombre", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to SELECT u.nombre FROM usuario u.
+        '''</summary>
+        Friend ReadOnly Property selectUserNombre() As String
+            Get
+                Return ResourceManager.GetString("selectUserNombre", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to UPDATE usuario SET nombre = @newName, password = @pass, idrol = @idRol WHERE nombre = @oldName.
+        '''</summary>
+        Friend ReadOnly Property updateUserByName() As String
+            Get
+                Return ResourceManager.GetString("updateUserByName", resourceCulture)
+            End Get
+        End Property
     End Module
 End Namespace

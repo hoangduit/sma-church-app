@@ -22,7 +22,7 @@ Public Class Configuracion
             If (i > 0) Then
                 'MsgBox("Record is Successfully Updated")
                 Me.Hide()
-                Admin.Show()
+                'Admin.Show()
             Else
                 MsgBox("Record is not Updated")
             End If

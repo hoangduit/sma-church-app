@@ -15,6 +15,58 @@ NOTARIA
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:NOTARIA.My.Resources.Resources.deleteUserByName">
+	<summary>
+  Looks up a localized string similar to DELETE FROM usuario  WHERE nombre = @name.
+</summary>
+</member><member name="P:NOTARIA.My.Resources.Resources.insertAplicationRol">
+	<summary>
+  Looks up a localized string similar to INSERT INTO aplicacionrole (idrol,idaplicacion) VALUES(@idRol, @idAplication).
+</summary>
+</member><member name="P:NOTARIA.My.Resources.Resources.insertRol">
+	<summary>
+  Looks up a localized string similar to INSERT INTO rol (tiporol) VALUES(@tipoRol).
+</summary>
+</member><member name="P:NOTARIA.My.Resources.Resources.insertUser">
+	<summary>
+  Looks up a localized string similar to INSERT INTO usuario (nombre, password,idrol) VALUES(@name, @pass, @idrol).
+</summary>
+</member><member name="P:NOTARIA.My.Resources.Resources.selectApplication">
+	<summary>
+  Looks up a localized string similar to SELECT *  FROM aplicacion a.
+</summary>
+</member><member name="P:NOTARIA.My.Resources.Resources.selectRolByTipoRol">
+	<summary>
+  Looks up a localized string similar to SELECT * FROM rol WHERE tiporol =@tipoRol.
+</summary>
+</member><member name="P:NOTARIA.My.Resources.Resources.selectRoltipo">
+	<summary>
+  Looks up a localized string similar to SELECT r.tiporol FROM rol r.
+</summary>
+</member><member name="P:NOTARIA.My.Resources.Resources.selectRolTipoRolByIdRol">
+	<summary>
+  Looks up a localized string similar to SELECT r.tiporol FROM rol r WHERE r.idrol = @idRol.
+</summary>
+</member><member name="P:NOTARIA.My.Resources.Resources.selectUser">
+	<summary>
+  Looks up a localized string similar to SELECT * FROM usuario.
+</summary>
+</member><member name="P:NOTARIA.My.Resources.Resources.selectUserByIdRol">
+	<summary>
+  Looks up a localized string similar to SELECT u.nombre FROM usuario u WHERE u.idrol = @idRol.
+</summary>
+</member><member name="P:NOTARIA.My.Resources.Resources.selectUserByNombre">
+	<summary>
+  Looks up a localized string similar to SELECT * FROM usuario u WHERE u.nombre = @name.
+</summary>
+</member><member name="P:NOTARIA.My.Resources.Resources.selectUserNombre">
+	<summary>
+  Looks up a localized string similar to SELECT u.nombre FROM usuario u.
+</summary>
+</member><member name="P:NOTARIA.My.Resources.Resources.updateUserByName">
+	<summary>
+  Looks up a localized string similar to UPDATE usuario SET nombre = @newName, password = @pass, idrol = @idRol WHERE nombre = @oldName.
+</summary>
 </member><member name="T:NOTARIA.My.Resources.Resources">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.

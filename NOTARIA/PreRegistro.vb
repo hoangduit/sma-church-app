@@ -76,7 +76,7 @@ Public Class PreRegistro
             Exit Sub
         End If
 
-        MsgBox("Gudardar")
+        MsgBox("Guardar")
 
         'Me.Close()
         'LstPreRegistros.Show()

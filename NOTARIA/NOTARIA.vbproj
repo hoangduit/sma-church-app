@@ -16,6 +16,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -28,7 +29,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -65,19 +65,28 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\libraries\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Web, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
     <Reference Include="Qios.DevSuite.Components">
       <HintPath>..\libraries\Qios.DevSuite.Components.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -97,12 +106,6 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\Admin.Designer.vb">
-      <DependentUpon>Admin.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Admin.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Acceso.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -110,16 +113,22 @@
       <DependentUpon>Acceso.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\LstUsuarios.Designer.vb">
-      <DependentUpon>LstUsuarios.vb</DependentUpon>
+    <Compile Include="Admin\AltaCuenta.Designer.vb">
+      <DependentUpon>AltaCuenta.vb</DependentUpon>
     </Compile>
-    <Compile Include="Admin\LstUsuarios.vb">
+    <Compile Include="Admin\AltaCuenta.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\LstRoles.Designer.vb">
-      <DependentUpon>LstRoles.vb</DependentUpon>
+    <Compile Include="Admin\EditUser.Designer.vb">
+      <DependentUpon>EditUser.vb</DependentUpon>
     </Compile>
-    <Compile Include="Admin\LstRoles.vb">
+    <Compile Include="Admin\EditUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\PerfilCuenta.Designer.vb">
+      <DependentUpon>PerfilCuenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PerfilCuenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Busquedas.Designer.vb">
@@ -132,6 +141,12 @@
       <DependentUpon>Configuracion.vb</DependentUpon>
     </Compile>
     <Compile Include="Admin\Configuracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Cuentas.Designer.vb">
+      <DependentUpon>Cuentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Cuentas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.vb">
@@ -161,18 +176,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Admin\Usuario.Designer.vb">
-      <DependentUpon>Usuario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Usuario.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\Rol.Designer.vb">
-      <DependentUpon>Rol.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Rol.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="LstPreRegistros.Designer.vb">
       <DependentUpon>LstPreRegistros.vb</DependentUpon>
     </Compile>
@@ -191,28 +194,29 @@
     <Compile Include="PreRegistro.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Settings.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Admin\Admin.resx">
-      <DependentUpon>Admin.vb</DependentUpon>
+    <EmbeddedResource Include="Admin\AltaCuenta.resx">
+      <DependentUpon>AltaCuenta.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Usuario.resx">
-      <DependentUpon>Usuario.vb</DependentUpon>
+    <EmbeddedResource Include="Admin\EditUser.resx">
+      <DependentUpon>EditUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\PerfilCuenta.resx">
+      <DependentUpon>PerfilCuenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Acceso.resx">
       <DependentUpon>Acceso.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\LstUsuarios.resx">
-      <DependentUpon>LstUsuarios.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\LstRoles.resx">
-      <DependentUpon>LstRoles.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Busquedas.resx">
       <DependentUpon>Busquedas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Configuracion.resx">
       <DependentUpon>Configuracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Cuentas.resx">
+      <DependentUpon>Cuentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
@@ -225,9 +229,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Rol.resx">
-      <DependentUpon>Rol.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LstPreRegistros.resx">
       <DependentUpon>LstPreRegistros.vb</DependentUpon>
@@ -243,6 +244,7 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -318,6 +320,18 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

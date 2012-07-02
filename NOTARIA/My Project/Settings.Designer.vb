@@ -53,6 +53,16 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=localhost; user id=root; password=admin; database=notariadb")>  _
+        Public ReadOnly Property connectionDB() As String
+            Get
+                Return CType(Me("connectionDB"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

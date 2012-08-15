@@ -38,16 +38,11 @@ C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTAR
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\bin\Debug\NOTARIA.pdb
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\bin\Debug\NOTARIA.xml
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.Admin.resources
-C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.Usuario.resources
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.frmAcceso.resources
-C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.LstUsuarios.resources
-C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.LstRoles.resources
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.Busquedas.resources
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.Configuracion.resources
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.Main.resources
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.Resources.resources
-C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.Rol.resources
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.LstPreRegistros.resources
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.PreRegistroOld.resources
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.PreRegistro.resources
@@ -79,3 +74,10 @@ C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\NOTARIA\obj\x86\Debug\GenerateResource.read.183.tlog
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\NOTARIA\obj\x86\Debug\NOTARIA.PerfilCuenta.resources
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\NOTARIA\obj\x86\Debug\NOTARIA.EditUser.resources
+C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\bin\Debug\Qios.DevSuite.Components.dll
+C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.AltaCuenta.resources
+C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.EditUser.resources
+C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.PerfilCuenta.resources
+C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.Cuentas.resources
+C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.MainNotaria.resources
+C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\GenerateResource.read.183.tlog

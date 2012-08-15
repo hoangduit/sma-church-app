@@ -78,7 +78,7 @@ Public Class PreRegistro
 
         MsgBox("Guardar")
 
-        'Me.Close()
+        'Me.Close()+
         'LstPreRegistros.Show()
     End Sub
 
@@ -88,6 +88,8 @@ Public Class PreRegistro
 
         conn = New MySqlConnection()
         conn.ConnectionString = "server=localhost; user id=root; password=nota2012; database=test"
+        'conn.ConnectionString = "server=SQL09.FREEMYSQL.NET; user id=notariasma; password=zaq12wsx; database=notariabd"
+        
 
         Try
             conn.Open()
@@ -108,7 +110,7 @@ Public Class PreRegistro
 
             'display data
             Dim row As DataRow
-            Dim aux, valor As String
+            Dim aux As String
             Dim aryTextFile() As String
 
             For Each row In dt.Rows
@@ -127,10 +129,7 @@ Public Class PreRegistro
             conn.Dispose()
         End Try
 
-
-        If txtid.Text <> "" Then
-            'Registro existente
-
-        End If
     End Sub
+
+  
 End Class

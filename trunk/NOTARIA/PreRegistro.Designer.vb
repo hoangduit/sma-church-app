@@ -149,7 +149,6 @@ Partial Class PreRegistro
         Me.txtid.Name = "txtid"
         Me.txtid.Size = New System.Drawing.Size(100, 20)
         Me.txtid.TabIndex = 39
-        Me.txtid.Visible = False
         '
         'Label1
         '
@@ -169,9 +168,9 @@ Partial Class PreRegistro
         Me.GroupBox1.Controls.Add(Me.cmbdianac)
         Me.GroupBox1.Controls.Add(Me.Label37)
         Me.GroupBox1.Location = New System.Drawing.Point(448, 14)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(314, 52)
         Me.GroupBox1.TabIndex = 54
         Me.GroupBox1.TabStop = False
@@ -239,9 +238,9 @@ Partial Class PreRegistro
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Location = New System.Drawing.Point(9, 124)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Size = New System.Drawing.Size(751, 81)
         Me.GroupBox2.TabIndex = 57
         Me.GroupBox2.TabStop = False
@@ -250,7 +249,7 @@ Partial Class PreRegistro
         'txtnommama
         '
         Me.txtnommama.Location = New System.Drawing.Point(50, 44)
-        Me.txtnommama.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtnommama.Margin = New System.Windows.Forms.Padding(2)
         Me.txtnommama.MaxLength = 120
         Me.txtnommama.Name = "txtnommama"
         Me.txtnommama.Size = New System.Drawing.Size(694, 20)
@@ -259,7 +258,7 @@ Partial Class PreRegistro
         'txtnompapa
         '
         Me.txtnompapa.Location = New System.Drawing.Point(50, 21)
-        Me.txtnompapa.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtnompapa.Margin = New System.Windows.Forms.Padding(2)
         Me.txtnompapa.MaxLength = 120
         Me.txtnompapa.Name = "txtnompapa"
         Me.txtnompapa.Size = New System.Drawing.Size(694, 20)
@@ -292,9 +291,9 @@ Partial Class PreRegistro
         Me.GroupBox3.Controls.Add(Me.Label8)
         Me.GroupBox3.Controls.Add(Me.Label9)
         Me.GroupBox3.Location = New System.Drawing.Point(10, 210)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox3.Size = New System.Drawing.Size(751, 81)
         Me.GroupBox3.TabIndex = 58
         Me.GroupBox3.TabStop = False
@@ -303,7 +302,7 @@ Partial Class PreRegistro
         'txtnomapm
         '
         Me.txtnomapm.Location = New System.Drawing.Point(60, 44)
-        Me.txtnomapm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtnomapm.Margin = New System.Windows.Forms.Padding(2)
         Me.txtnomapm.MaxLength = 120
         Me.txtnomapm.Name = "txtnomapm"
         Me.txtnomapm.Size = New System.Drawing.Size(684, 20)
@@ -312,7 +311,7 @@ Partial Class PreRegistro
         'txtnomapp
         '
         Me.txtnomapp.Location = New System.Drawing.Point(58, 21)
-        Me.txtnomapp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtnomapp.Margin = New System.Windows.Forms.Padding(2)
         Me.txtnomapp.MaxLength = 120
         Me.txtnomapp.Name = "txtnomapp"
         Me.txtnomapp.Size = New System.Drawing.Size(686, 20)
@@ -345,9 +344,9 @@ Partial Class PreRegistro
         Me.GroupBox4.Controls.Add(Me.Label10)
         Me.GroupBox4.Controls.Add(Me.Label11)
         Me.GroupBox4.Location = New System.Drawing.Point(10, 293)
-        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox4.Size = New System.Drawing.Size(751, 81)
         Me.GroupBox4.TabIndex = 59
         Me.GroupBox4.TabStop = False
@@ -356,7 +355,7 @@ Partial Class PreRegistro
         'txtnomamm
         '
         Me.txtnomamm.Location = New System.Drawing.Point(60, 44)
-        Me.txtnomamm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtnomamm.Margin = New System.Windows.Forms.Padding(2)
         Me.txtnomamm.MaxLength = 120
         Me.txtnomamm.Name = "txtnomamm"
         Me.txtnomamm.Size = New System.Drawing.Size(684, 20)
@@ -365,7 +364,7 @@ Partial Class PreRegistro
         'txtnomamp
         '
         Me.txtnomamp.Location = New System.Drawing.Point(58, 21)
-        Me.txtnomamp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtnomamp.Margin = New System.Windows.Forms.Padding(2)
         Me.txtnomamp.MaxLength = 120
         Me.txtnomamp.Name = "txtnomamp"
         Me.txtnomamp.Size = New System.Drawing.Size(686, 20)
@@ -398,9 +397,9 @@ Partial Class PreRegistro
         Me.GroupBox5.Controls.Add(Me.Label12)
         Me.GroupBox5.Controls.Add(Me.Label13)
         Me.GroupBox5.Location = New System.Drawing.Point(10, 379)
-        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox5.Size = New System.Drawing.Size(751, 81)
         Me.GroupBox5.TabIndex = 60
         Me.GroupBox5.TabStop = False
@@ -409,7 +408,7 @@ Partial Class PreRegistro
         'txtnommad
         '
         Me.txtnommad.Location = New System.Drawing.Point(60, 44)
-        Me.txtnommad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtnommad.Margin = New System.Windows.Forms.Padding(2)
         Me.txtnommad.MaxLength = 120
         Me.txtnommad.Name = "txtnommad"
         Me.txtnommad.Size = New System.Drawing.Size(684, 20)
@@ -418,7 +417,7 @@ Partial Class PreRegistro
         'txtnompad
         '
         Me.txtnompad.Location = New System.Drawing.Point(58, 21)
-        Me.txtnompad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtnompad.Margin = New System.Windows.Forms.Padding(2)
         Me.txtnompad.MaxLength = 120
         Me.txtnompad.Name = "txtnompad"
         Me.txtnompad.Size = New System.Drawing.Size(686, 20)
@@ -453,9 +452,9 @@ Partial Class PreRegistro
         Me.GroupBox6.Controls.Add(Me.cmbdiabau)
         Me.GroupBox6.Controls.Add(Me.Label15)
         Me.GroupBox6.Location = New System.Drawing.Point(449, 71)
-        Me.GroupBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox6.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox6.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox6.Size = New System.Drawing.Size(314, 52)
         Me.GroupBox6.TabIndex = 61
         Me.GroupBox6.TabStop = False
@@ -535,7 +534,7 @@ Partial Class PreRegistro
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtid)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "PreRegistro"
         Me.Text = "Pre-Registro"
         Me.GroupBox1.ResumeLayout(False)

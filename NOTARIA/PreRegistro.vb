@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
+
 Public Class PreRegistro
 
 
@@ -83,13 +84,14 @@ Public Class PreRegistro
     End Sub
 
     Private Sub PreRegistro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim conn As MySqlConnection
+        Dim conn, conn2 As MySqlConnection
         Dim sql As String
 
         conn = New MySqlConnection()
         conn.ConnectionString = "server=localhost; user id=root; password=nota2012; database=test"
         'conn.ConnectionString = "server=SQL09.FREEMYSQL.NET; user id=notariasma; password=zaq12wsx; database=notariabd"
-        
+
+        'MsgBox(txtid.Text)
 
         Try
             conn.Open()
@@ -128,6 +130,40 @@ Public Class PreRegistro
         Finally
             conn.Dispose()
         End Try
+
+
+
+        If txtid.Text = "" Then
+            ' New Record
+        Else
+            ' Existing Record
+            sql = "SELECT * FROM test.tb_preregistro WHERE idregistro=" + txtid.Text
+
+            MsgBox(sql)
+
+            'create data adapter
+            'Dim da As MySqlDataAdapter = New MySqlDataAdapter(sql, conn)
+
+            conn2 = New MySqlConnection()
+            conn2.ConnectionString = "server=localhost; user id=root; password=nota2012; database=test"
+            MsgBox("0")
+            'create data reader
+            ' Dim dr As MySqlDataReader = New MySqlDataReader
+            Dim myCommand As MySqlCommand
+
+            MsgBox("1")
+
+
+            myCommand = New MySqlCommand(sql, conn2)
+            MsgBox("12")
+
+            'executing the command and assigning it to connection 
+            'dr = myCommand.ExecuteReader()
+            'Me.txtnombre.Text = dr(1).ToString
+            ' MsgBox(dr(1).ToString)
+
+
+        End If
 
     End Sub
 

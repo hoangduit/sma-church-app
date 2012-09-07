@@ -55,9 +55,11 @@ Public Class LstPreRegistros
         Dim invId As Object = DataGridView1.Rows(e.RowIndex).Cells(0).Value
         inventoryIdLabel.Text = Convert.ToString(invId)
         'Me.Close()
-        PreRegistro.Show()
         PreRegistro.txtid.Text = Convert.ToString(invId)
+        PreRegistro.Show()
+
     End Sub
 
+    'stringConnection 
   
 End Class

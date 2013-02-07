@@ -127,4 +127,7 @@ Public Class AltaCuenta
 
     End Sub
 
+    Private Sub qccAltaCuenta_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles qccAltaCuenta.ItemActivated
+
+    End Sub
 End Class

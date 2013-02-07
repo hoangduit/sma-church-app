@@ -2,21 +2,18 @@
 
 
 Public Class Configuracion
-
+    Private connectionMysql As String = My.Settings.connectionDB
+    Private query As String
 
     Private Sub BtnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnGuardar.Click
-        Dim conn As MySqlConnection
-        Dim sql As String
-
-        conn = New MySqlConnection()
-        conn.ConnectionString = "server=localhost; user id=root; password=nota2012; database=test"
+        Dim conn As New MySqlConnection(connectionMysql)
 
 
         Try
             conn.Open()
-            sql = "UPDATE test.tb_admin SET lstannos = '" + txtannos.Text + "'"
+            query = "UPDATE test.tb_admin SET lstannos = '" + txtannos.Text + "'"
 
-            Dim cmd As MySqlCommand = New MySqlCommand(sql, conn)
+            Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
             'MsgBox(sql)
             Dim i As Integer = cmd.ExecuteNonQuery()
             If (i > 0) Then
@@ -37,19 +34,15 @@ Public Class Configuracion
     End Sub
 
     Private Sub Configuracion_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim conn As MySqlConnection
-        Dim sql As String
-
-        conn = New MySqlConnection()
-        conn.ConnectionString = "server=localhost; user id=root; password=nota2012; database=test"
+        Dim conn As New MySqlConnection(connectionMysql)
 
         Try
             conn.Open()
             'MessageBox.Show("Connection Opened Successfully")
-            sql = "SELECT * FROM test.tb_admin"
+            query = "SELECT * FROM test.tb_admin"
 
             'create data adapter
-            Dim da As MySqlDataAdapter = New MySqlDataAdapter(sql, conn)
+            Dim da As MySqlDataAdapter = New MySqlDataAdapter(query, conn)
 
             'create dataset
             Dim ds As DataSet = New DataSet

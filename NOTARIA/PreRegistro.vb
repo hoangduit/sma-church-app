@@ -2,6 +2,8 @@
 
 
 Public Class PreRegistro
+    Private connectionMysql As String = My.Settings.connectionDB
+    Private query As String
 
 
     Private Sub BtnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnGuardar.Click
@@ -79,16 +81,27 @@ Public Class PreRegistro
 
         MsgBox("Guardar")
 
+        ' usuario (nombre, password,idrol) VALUES(@name, @pass, @idrol)
+        query = "INSERT INTO tb_preregistro (nombre, apepat, apemat, nombrepapa, nombremama, nombreapp, nombreamp, nombreamp, nombreamm, nombrepadrino, nombremadrina, dianac, mesnac, annonac, diabau, mesbau, annobau)"
+        query = query + "VALUES (" + txtnombre.Text + ", " + txtapepat.Text + ", " + txtapemat.Text + ", " + txtnompapa.Text + " ," + txtnommama.Text + ", " + txtnomapp.Text + " ," + txtnomapm.Text + " ," + txtnomamp.Text + " ," + txtnomamm.Text + " ," + txtnompad.Text + " ," + txtnommad.Text + " ," + cmbdianac.Text + " ," + cmbmesnac.Text + " ," + cmbannonac.Text + " ," + cmbdiabau.Text + " ," + cmbmesbau.Text + " ," + cmbannobau.Text + ")"
+        MsgBox(query)
+
+
+
+
+
+
+
+
+
         'Me.Close()+
         'LstPreRegistros.Show()
     End Sub
 
     Private Sub PreRegistro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim conn, conn2 As MySqlConnection
-        Dim sql As String
+        Dim conn As New MySqlConnection(connectionMysql)
+        Dim conn2 As New MySqlConnection(connectionMysql)
 
-        conn = New MySqlConnection()
-        conn.ConnectionString = "server=localhost; user id=root; password=nota2012; database=test"
         'conn.ConnectionString = "server=SQL09.FREEMYSQL.NET; user id=notariasma; password=zaq12wsx; database=notariabd"
 
         'MsgBox(txtid.Text)
@@ -96,10 +109,10 @@ Public Class PreRegistro
         Try
             conn.Open()
             'MessageBox.Show("Connection Opened Successfully")
-            sql = "SELECT * FROM test.tb_admin"
+            query = "SELECT * FROM test.tb_admin"
 
             'create data adapter
-            Dim da As MySqlDataAdapter = New MySqlDataAdapter(sql, conn)
+            Dim da As MySqlDataAdapter = New MySqlDataAdapter(query, conn)
 
             'create dataset
             Dim ds As DataSet = New DataSet
@@ -137,15 +150,13 @@ Public Class PreRegistro
             ' New Record
         Else
             ' Existing Record
-            sql = "SELECT * FROM test.tb_preregistro WHERE idregistro=" + txtid.Text
+            query = "SELECT * FROM test.tb_preregistro WHERE idregistro=" + txtid.Text
 
-            MsgBox(sql)
+            MsgBox(query)
 
             'create data adapter
             'Dim da As MySqlDataAdapter = New MySqlDataAdapter(sql, conn)
 
-            conn2 = New MySqlConnection()
-            conn2.ConnectionString = "server=localhost; user id=root; password=nota2012; database=test"
             MsgBox("0")
             'create data reader
             ' Dim dr As MySqlDataReader = New MySqlDataReader
@@ -153,8 +164,7 @@ Public Class PreRegistro
 
             MsgBox("1")
 
-
-            myCommand = New MySqlCommand(sql, conn2)
+            myCommand = New MySqlCommand(query, conn2)
             MsgBox("12")
 
             'executing the command and assigning it to connection 

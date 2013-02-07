@@ -98,9 +98,9 @@ Partial Class AltaCuenta
         '
         '
         Me.qcibUser.InputBox.CueText = "Introduzca el Usuario"
-        Me.qcibUser.InputBox.Location = New System.Drawing.Point(74, 65)
+        Me.qcibUser.InputBox.Location = New System.Drawing.Point(78, 65)
         Me.qcibUser.InputBox.Name = ""
-        Me.qcibUser.InputBox.Size = New System.Drawing.Size(250, 19)
+        Me.qcibUser.InputBox.Size = New System.Drawing.Size(250, 21)
         Me.qcibUser.InputBox.TabIndex = 0
         '
         'qcgPass
@@ -122,9 +122,9 @@ Partial Class AltaCuenta
         '
         '
         Me.qcibPass.InputBox.CueText = "Introduca  Contraseña"
-        Me.qcibPass.InputBox.Location = New System.Drawing.Point(73, 89)
+        Me.qcibPass.InputBox.Location = New System.Drawing.Point(78, 89)
         Me.qcibPass.InputBox.Name = ""
-        Me.qcibPass.InputBox.Size = New System.Drawing.Size(250, 19)
+        Me.qcibPass.InputBox.Size = New System.Drawing.Size(250, 21)
         Me.qcibPass.InputBox.TabIndex = 1
         '
         'qcgPerfil

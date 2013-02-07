@@ -86,11 +86,25 @@ Public Class PreRegistro
         query = query + "VALUES (" + txtnombre.Text + ", " + txtapepat.Text + ", " + txtapemat.Text + ", " + txtnompapa.Text + " ," + txtnommama.Text + ", " + txtnomapp.Text + " ," + txtnomapm.Text + " ," + txtnomamp.Text + " ," + txtnomamm.Text + " ," + txtnompad.Text + " ," + txtnommad.Text + " ," + cmbdianac.Text + " ," + cmbmesnac.Text + " ," + cmbannonac.Text + " ," + cmbdiabau.Text + " ," + cmbmesbau.Text + " ," + cmbannobau.Text + ")"
         MsgBox(query)
 
+        Dim conn As New MySqlConnection(connectionMysql)
 
+        Try
+            Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
+            Dim i As Integer = cmd.ExecuteNonQuery()
+            If (i > 0) Then
+                'MsgBox("Record is Successfully Updated")
+                Me.Hide()
+                'Admin.Show()
+            Else
+                MsgBox("Record is not Updated")
+            End If
 
-
-
-
+            conn.Close()
+        Catch myerror As MySqlException
+            MessageBox.Show("Error Connecting to Database: " & myerror.Message)
+        Finally
+            conn.Dispose()
+        End Try
 
 
 

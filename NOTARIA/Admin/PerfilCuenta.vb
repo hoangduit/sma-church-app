@@ -97,7 +97,8 @@ Public Class PerfilCuenta
 
 
     Function getIdRol(ByVal query As String, ByVal rol As String) As Integer
-        Dim connectDB As New MySqlConnection(My.Settings.connectionDB)
+        Dim connectDB As New MySqlConnection(My.Settings.connectionDB
+                                             )
         Dim cmd As MySqlCommand = New MySqlCommand(My.Resources.selectRolByTipoRol, connectDB)
         Dim reader As MySqlDataReader
         Dim idRol As Integer = 0

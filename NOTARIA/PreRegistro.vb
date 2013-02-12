@@ -166,25 +166,53 @@ Public Class PreRegistro
             ' Existing Record
             query = "SELECT * FROM test.tb_preregistro WHERE idregistro=" + txtid.Text
 
-            MsgBox(query)
+            'MsgBox(query)
 
             'create data adapter
             'Dim da As MySqlDataAdapter = New MySqlDataAdapter(sql, conn)
 
-            MsgBox("0")
+            'MsgBox("0")
             'create data reader
             ' Dim dr As MySqlDataReader = New MySqlDataReader
             Dim myCommand As MySqlCommand
 
-            MsgBox("1")
+            'MsgBox("1")
+            conn2.Open()
 
             myCommand = New MySqlCommand(query, conn2)
-            MsgBox("12")
 
             'executing the command and assigning it to connection 
-            'dr = myCommand.ExecuteReader()
-            'Me.txtnombre.Text = dr(1).ToString
-            ' MsgBox(dr(1).ToString)
+            Dim dr As MySqlDataReader
+
+            dr = myCommand.ExecuteReader()
+
+            If dr.HasRows Then
+                dr.Read()
+                Me.txtnombre.Text = dr(1).ToString
+                Me.txtapepat.Text = dr(2).ToString
+                Me.txtapemat.Text = dr(3).ToString
+                Me.txtnompapa.Text = dr(4).ToString
+                Me.txtnommama.Text = dr(5).ToString
+                'abuelos paternos
+                Me.txtnomapp.Text = dr(6).ToString
+                Me.txtnomapm.Text = dr(8).ToString
+                'abuelos maternos
+                Me.txtnomamp.Text = dr(7).ToString
+                Me.txtnomamm.Text = dr(9).ToString
+                'padrinos
+                Me.txtnompad.Text = dr(10).ToString
+                Me.txtnommad.Text = dr(11).ToString
+                'dia nac
+                Me.cmbdianac.Text = dr(15).ToString
+                Me.cmbmesnac.Text = dr(16).ToString
+                Me.cmbannonac.Text = dr(17).ToString
+                'dia bautizo
+                Me.cmbdiabau.Text = dr(12).ToString
+                Me.cmbmesbau.Text = dr(13).ToString
+                Me.cmbannobau.Text = dr(14).ToString
+            End If
+
+            conn2.Close()
 
 
         End If

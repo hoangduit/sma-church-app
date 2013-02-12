@@ -4,6 +4,7 @@ Public Class AltaCuenta
 
     Private connectionMysql As String = My.Settings.connectionDB
 
+
     Private Sub AltaCuenta_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim connection As New MySqlConnection(connectionMysql)
         Dim da As New MySqlDataAdapter(My.Resources.selectRoltipo, connection)

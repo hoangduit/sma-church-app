@@ -76,7 +76,7 @@ Partial Class PreRegistro
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(368, 95)
+        Me.btnCerrar.Location = New System.Drawing.Point(169, 465)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(75, 23)
         Me.btnCerrar.TabIndex = 47
@@ -85,7 +85,7 @@ Partial Class PreRegistro
         '
         'BtnGuardar
         '
-        Me.BtnGuardar.Location = New System.Drawing.Point(367, 61)
+        Me.BtnGuardar.Location = New System.Drawing.Point(70, 465)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(75, 23)
         Me.BtnGuardar.TabIndex = 46
@@ -97,7 +97,7 @@ Partial Class PreRegistro
         Me.txtapemat.Location = New System.Drawing.Point(100, 100)
         Me.txtapemat.MaxLength = 45
         Me.txtapemat.Name = "txtapemat"
-        Me.txtapemat.Size = New System.Drawing.Size(262, 20)
+        Me.txtapemat.Size = New System.Drawing.Size(343, 20)
         Me.txtapemat.TabIndex = 3
         '
         'Label4
@@ -114,7 +114,7 @@ Partial Class PreRegistro
         Me.txtapepat.Location = New System.Drawing.Point(100, 74)
         Me.txtapepat.MaxLength = 45
         Me.txtapepat.Name = "txtapepat"
-        Me.txtapepat.Size = New System.Drawing.Size(262, 20)
+        Me.txtapepat.Size = New System.Drawing.Size(343, 20)
         Me.txtapepat.TabIndex = 2
         '
         'Label3
@@ -131,7 +131,7 @@ Partial Class PreRegistro
         Me.txtnombre.Location = New System.Drawing.Point(100, 48)
         Me.txtnombre.MaxLength = 70
         Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(262, 20)
+        Me.txtnombre.Size = New System.Drawing.Size(343, 20)
         Me.txtnombre.TabIndex = 1
         '
         'Label2
@@ -149,15 +149,17 @@ Partial Class PreRegistro
         Me.txtid.Name = "txtid"
         Me.txtid.Size = New System.Drawing.Size(100, 20)
         Me.txtid.TabIndex = 39
+        Me.txtid.Visible = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(17, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 13)
+        Me.Label1.Size = New System.Drawing.Size(205, 17)
         Me.Label1.TabIndex = 38
-        Me.Label1.Text = "Pre-Registro"
+        Me.Label1.Text = "Formulario de Pre-Registro"
         '
         'GroupBox1
         '
@@ -248,20 +250,20 @@ Partial Class PreRegistro
         '
         'txtnommama
         '
-        Me.txtnommama.Location = New System.Drawing.Point(50, 44)
+        Me.txtnommama.Location = New System.Drawing.Point(91, 44)
         Me.txtnommama.Margin = New System.Windows.Forms.Padding(2)
         Me.txtnommama.MaxLength = 120
         Me.txtnommama.Name = "txtnommama"
-        Me.txtnommama.Size = New System.Drawing.Size(694, 20)
+        Me.txtnommama.Size = New System.Drawing.Size(653, 20)
         Me.txtnommama.TabIndex = 11
         '
         'txtnompapa
         '
-        Me.txtnompapa.Location = New System.Drawing.Point(50, 21)
+        Me.txtnompapa.Location = New System.Drawing.Point(91, 21)
         Me.txtnompapa.Margin = New System.Windows.Forms.Padding(2)
         Me.txtnompapa.MaxLength = 120
         Me.txtnompapa.Name = "txtnompapa"
-        Me.txtnompapa.Size = New System.Drawing.Size(694, 20)
+        Me.txtnompapa.Size = New System.Drawing.Size(653, 20)
         Me.txtnompapa.TabIndex = 10
         '
         'Label7
@@ -301,20 +303,20 @@ Partial Class PreRegistro
         '
         'txtnomapm
         '
-        Me.txtnomapm.Location = New System.Drawing.Point(60, 44)
+        Me.txtnomapm.Location = New System.Drawing.Point(90, 44)
         Me.txtnomapm.Margin = New System.Windows.Forms.Padding(2)
         Me.txtnomapm.MaxLength = 120
         Me.txtnomapm.Name = "txtnomapm"
-        Me.txtnomapm.Size = New System.Drawing.Size(684, 20)
+        Me.txtnomapm.Size = New System.Drawing.Size(654, 20)
         Me.txtnomapm.TabIndex = 13
         '
         'txtnomapp
         '
-        Me.txtnomapp.Location = New System.Drawing.Point(58, 21)
+        Me.txtnomapp.Location = New System.Drawing.Point(90, 21)
         Me.txtnomapp.Margin = New System.Windows.Forms.Padding(2)
         Me.txtnomapp.MaxLength = 120
         Me.txtnomapp.Name = "txtnomapp"
-        Me.txtnomapp.Size = New System.Drawing.Size(686, 20)
+        Me.txtnomapp.Size = New System.Drawing.Size(654, 20)
         Me.txtnomapp.TabIndex = 12
         '
         'Label8
@@ -354,20 +356,20 @@ Partial Class PreRegistro
         '
         'txtnomamm
         '
-        Me.txtnomamm.Location = New System.Drawing.Point(60, 44)
+        Me.txtnomamm.Location = New System.Drawing.Point(90, 44)
         Me.txtnomamm.Margin = New System.Windows.Forms.Padding(2)
         Me.txtnomamm.MaxLength = 120
         Me.txtnomamm.Name = "txtnomamm"
-        Me.txtnomamm.Size = New System.Drawing.Size(684, 20)
+        Me.txtnomamm.Size = New System.Drawing.Size(654, 20)
         Me.txtnomamm.TabIndex = 15
         '
         'txtnomamp
         '
-        Me.txtnomamp.Location = New System.Drawing.Point(58, 21)
+        Me.txtnomamp.Location = New System.Drawing.Point(90, 21)
         Me.txtnomamp.Margin = New System.Windows.Forms.Padding(2)
         Me.txtnomamp.MaxLength = 120
         Me.txtnomamp.Name = "txtnomamp"
-        Me.txtnomamp.Size = New System.Drawing.Size(686, 20)
+        Me.txtnomamp.Size = New System.Drawing.Size(654, 20)
         Me.txtnomamp.TabIndex = 14
         '
         'Label10
@@ -407,20 +409,20 @@ Partial Class PreRegistro
         '
         'txtnommad
         '
-        Me.txtnommad.Location = New System.Drawing.Point(60, 44)
+        Me.txtnommad.Location = New System.Drawing.Point(90, 44)
         Me.txtnommad.Margin = New System.Windows.Forms.Padding(2)
         Me.txtnommad.MaxLength = 120
         Me.txtnommad.Name = "txtnommad"
-        Me.txtnommad.Size = New System.Drawing.Size(684, 20)
+        Me.txtnommad.Size = New System.Drawing.Size(654, 20)
         Me.txtnommad.TabIndex = 17
         '
         'txtnompad
         '
-        Me.txtnompad.Location = New System.Drawing.Point(58, 21)
+        Me.txtnompad.Location = New System.Drawing.Point(90, 21)
         Me.txtnompad.Margin = New System.Windows.Forms.Padding(2)
         Me.txtnompad.MaxLength = 120
         Me.txtnompad.Name = "txtnompad"
-        Me.txtnompad.Size = New System.Drawing.Size(686, 20)
+        Me.txtnompad.Size = New System.Drawing.Size(654, 20)
         Me.txtnompad.TabIndex = 16
         '
         'Label12
@@ -517,7 +519,7 @@ Partial Class PreRegistro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(771, 469)
+        Me.ClientSize = New System.Drawing.Size(777, 499)
         Me.Controls.Add(Me.GroupBox6)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox4)

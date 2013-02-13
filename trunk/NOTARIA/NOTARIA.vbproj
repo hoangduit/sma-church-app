@@ -250,6 +250,15 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\AltaCuenta.datasource" />
+    <None Include="My Project\DataSources\Busquedas.datasource" />
+    <None Include="My Project\DataSources\Configuracion.datasource" />
+    <None Include="My Project\DataSources\Cuentas.datasource" />
+    <None Include="My Project\DataSources\EditUser.datasource" />
+    <None Include="My Project\DataSources\frmAcceso.datasource" />
+    <None Include="My Project\DataSources\LstPreRegistros.datasource" />
+    <None Include="My Project\DataSources\Main.datasource" />
+    <None Include="My Project\DataSources\MainNotaria.datasource" />
     <None Include="My Project\DataSources\MySql.Data.MySqlClient.BaseCommandInterceptor.datasource" />
     <None Include="My Project\DataSources\MySql.Data.MySqlClient.BaseExceptionInterceptor.datasource" />
     <None Include="My Project\DataSources\MySql.Data.MySqlClient.BaseTableCache.datasource" />
@@ -294,6 +303,11 @@
     <None Include="My Project\DataSources\MySql.Data.Types.MySqlConversionException.datasource" />
     <None Include="My Project\DataSources\MySql.Data.Types.MySqlDateTime.datasource" />
     <None Include="My Project\DataSources\MySql.Data.Types.MySqlDecimal.datasource" />
+    <None Include="My Project\DataSources\NOTARIA.My.MyApplication.datasource" />
+    <None Include="My Project\DataSources\NOTARIA.My.MySettings.datasource" />
+    <None Include="My Project\DataSources\PerfilCuenta.datasource" />
+    <None Include="My Project\DataSources\PreRegistro.datasource" />
+    <None Include="My Project\DataSources\PreRegistroOld.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>

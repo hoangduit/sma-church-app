@@ -20,7 +20,6 @@ Public Class PreRegistro
             MsgBox("Por favor ingresa valor en el campo apellido materno")
             txtapemat.Focus()
             Exit Sub
-            'ElseIf cmbdianac.SelectedText = "" Then
         ElseIf cmbdianac.SelectedIndex.Equals(-1) Then
             MsgBox("Por favor selecciona el dia de nacimiento")
             cmbdianac.Focus()
@@ -79,24 +78,36 @@ Public Class PreRegistro
             Exit Sub
         End If
 
-        MsgBox("Guardar")
-
-        ' usuario (nombre, password,idrol) VALUES(@name, @pass, @idrol)
-        query = "INSERT INTO tb_preregistro (nombre, apepat, apemat, nombrepapa, nombremama, nombreapp, nombreamp, nombreamp, nombreamm, nombrepadrino, nombremadrina, dianac, mesnac, annonac, diabau, mesbau, annobau)"
-        query = query + "VALUES (" + txtnombre.Text + ", " + txtapepat.Text + ", " + txtapemat.Text + ", " + txtnompapa.Text + " ," + txtnommama.Text + ", " + txtnomapp.Text + " ," + txtnomapm.Text + " ," + txtnomamp.Text + " ," + txtnomamm.Text + " ," + txtnompad.Text + " ," + txtnommad.Text + " ," + cmbdianac.Text + " ," + cmbmesnac.Text + " ," + cmbannonac.Text + " ," + cmbdiabau.Text + " ," + cmbmesbau.Text + " ," + cmbannobau.Text + ")"
-        MsgBox(query)
 
         Dim conn As New MySqlConnection(connectionMysql)
 
+
         Try
+            conn.Open()
+            If txtid.Text = "" Then
+                ' usuario (nombre, password,idrol) VALUES(@name, @pass, @idrol)
+                query = "INSERT INTO tb_preregistro (nombre, apepat, apemat, nombrepapa, nombremama, nombreapp, nombreamp, nombreamp, nombreamm, nombrepadrino, nombremadrina, dianac, mesnac, annonac, diabau, mesbau, annobau)"
+                query = query + "VALUES (" + txtnombre.Text + ", " + txtapepat.Text + ", " + txtapemat.Text + ", " + txtnompapa.Text + " ," + txtnommama.Text + ", " + txtnomapp.Text + " ," + txtnomapm.Text + " ," + txtnomamp.Text + " ," + txtnomamm.Text + " ," + txtnompad.Text + " ," + txtnommad.Text + " ," + cmbdianac.Text + " ," + cmbmesnac.Text + " ," + cmbannonac.Text + " ," + cmbdiabau.Text + " ," + cmbmesbau.Text + " ," + cmbannobau.Text + ")"
+
+            Else
+                query = "UPDATE tb_preregistro SET nombre='" + txtnombre.Text + "', apepat='" + txtapepat.Text + "', apemat='" + txtapemat.Text + "', nombrepapa='" + txtnompapa.Text + "', nombremama='" + txtnommama.Text + "', nombreapp='" + txtnomapp.Text + "', nombreapm='" + txtnomapm.Text + "', nombreamp='" + txtnomamp.Text + "', nombreamm='" + txtnomamm.Text
+                query = query + "' , nombrepadrino='" + txtnompad.Text + "', nombremadrina='" + txtnommad.Text + "', dianac='" + cmbdianac.Text + "', mesnac='" + cmbmesnac.Text + "', annonac='" + cmbannonac.Text + "', diabau='" + cmbdiabau.Text + "', mesbau='" + cmbmesbau.Text + "', annobau='" + cmbannobau.Text
+                query = query + "' WHERE idregistro='" + txtid.Text + "'"
+            End If
+            'MsgBox(query)
+
             Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
             Dim i As Integer = cmd.ExecuteNonQuery()
             If (i > 0) Then
                 'MsgBox("Record is Successfully Updated")
+                'Actualizar el data grid. 
+
+
                 Me.Hide()
+
                 'Admin.Show()
             Else
-                MsgBox("Record is not Updated")
+                MsgBox("Registro no actualizado")
             End If
 
             conn.Close()
@@ -219,5 +230,5 @@ Public Class PreRegistro
 
     End Sub
 
-  
+
 End Class

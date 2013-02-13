@@ -90,7 +90,7 @@ Partial Class LstPreRegistros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(696, 342)
+        Me.ClientSize = New System.Drawing.Size(779, 572)
         Me.Controls.Add(Me.inventoryIdLabel)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button1)

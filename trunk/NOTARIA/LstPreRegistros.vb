@@ -53,15 +53,10 @@ Public Class LstPreRegistros
         'inventoryIdLabel.Text = Convert.ToString(invId)
         Dim invId As Object = DataGridView1.Rows(e.RowIndex).Cells(0).Value
         inventoryIdLabel.Text = Convert.ToString(invId)
-        'Me.Close()
         PreRegistro.txtid.Text = Convert.ToString(invId)
         PreRegistro.Show()
+        'Me.Close()
 
     End Sub
 
-    'stringConnection 
-
-    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
-    End Sub
 End Class

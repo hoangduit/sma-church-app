@@ -86,15 +86,15 @@ Public Class PreRegistro
             conn.Open()
             If txtid.Text = "" Then
                 ' usuario (nombre, password,idrol) VALUES(@name, @pass, @idrol)
-                query = "INSERT INTO tb_preregistro (nombre, apepat, apemat, nombrepapa, nombremama, nombreapp, nombreamp, nombreamp, nombreamm, nombrepadrino, nombremadrina, dianac, mesnac, annonac, diabau, mesbau, annobau)"
-                query = query + "VALUES (" + txtnombre.Text + ", " + txtapepat.Text + ", " + txtapemat.Text + ", " + txtnompapa.Text + " ," + txtnommama.Text + ", " + txtnomapp.Text + " ," + txtnomapm.Text + " ," + txtnomamp.Text + " ," + txtnomamm.Text + " ," + txtnompad.Text + " ," + txtnommad.Text + " ," + cmbdianac.Text + " ," + cmbmesnac.Text + " ," + cmbannonac.Text + " ," + cmbdiabau.Text + " ," + cmbmesbau.Text + " ," + cmbannobau.Text + ")"
+                query = "INSERT INTO tb_preregistro (nombre, apepat, apemat, nombrepapa, nombremama, nombreapp, nombreapm, nombreamp, nombreamm, nombrepadrino, nombremadrina, dianac, mesnac, annonac, diabau, mesbau, annobau)"
+                query = query + "VALUES ('" + txtnombre.Text + "', '" + txtapepat.Text + "', '" + txtapemat.Text + "', '" + txtnompapa.Text + "', '" + txtnommama.Text + "', '" + txtnomapp.Text + "', '" + txtnomapm.Text + "', '" + txtnomamp.Text + "', '" + txtnomamm.Text + "', '" + txtnompad.Text + "', '" + txtnommad.Text + "', '" + cmbdianac.Text + "', '" + cmbmesnac.Text + "', '" + cmbannonac.Text + "', '" + cmbdiabau.Text + "', '" + cmbmesbau.Text + "', '" + cmbannobau.Text + "')"
 
             Else
                 query = "UPDATE tb_preregistro SET nombre='" + txtnombre.Text + "', apepat='" + txtapepat.Text + "', apemat='" + txtapemat.Text + "', nombrepapa='" + txtnompapa.Text + "', nombremama='" + txtnommama.Text + "', nombreapp='" + txtnomapp.Text + "', nombreapm='" + txtnomapm.Text + "', nombreamp='" + txtnomamp.Text + "', nombreamm='" + txtnomamm.Text
                 query = query + "' , nombrepadrino='" + txtnompad.Text + "', nombremadrina='" + txtnommad.Text + "', dianac='" + cmbdianac.Text + "', mesnac='" + cmbmesnac.Text + "', annonac='" + cmbannonac.Text + "', diabau='" + cmbdiabau.Text + "', mesbau='" + cmbmesbau.Text + "', annobau='" + cmbannobau.Text
                 query = query + "' WHERE idregistro='" + txtid.Text + "'"
             End If
-            'MsgBox(query)
+            MsgBox(query)
 
             Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
             Dim i As Integer = cmd.ExecuteNonQuery()
@@ -119,8 +119,8 @@ Public Class PreRegistro
 
 
 
-        'Me.Close()+
-        'LstPreRegistros.Show()
+        LstPreRegistros.Show()
+        Me.Close()
     End Sub
 
     Private Sub PreRegistro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -231,4 +231,8 @@ Public Class PreRegistro
     End Sub
 
 
+    Private Sub btnCerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCerrar.Click
+        LstPreRegistros.Show()
+        Me.Close()
+    End Sub
 End Class

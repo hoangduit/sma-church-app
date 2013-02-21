@@ -24,19 +24,20 @@ Partial Class LstPreRegistros
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnPrincipal = New System.Windows.Forms.Button()
-        Me.btnNuevo = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.inventoryIdLabel = New System.Windows.Forms.TextBox()
+        Me.btnActualizar = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(13, 13)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(70, 13)
+        Me.Label1.Size = New System.Drawing.Size(83, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Pre-Registros"
         '
@@ -49,18 +50,9 @@ Partial Class LstPreRegistros
         Me.btnPrincipal.Text = "Principal"
         Me.btnPrincipal.UseVisualStyleBackColor = True
         '
-        'btnNuevo
-        '
-        Me.btnNuevo.Location = New System.Drawing.Point(259, 8)
-        Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(75, 23)
-        Me.btnNuevo.TabIndex = 30
-        Me.btnNuevo.Text = "&Nuevo"
-        Me.btnNuevo.UseVisualStyleBackColor = True
-        '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(348, 8)
+        Me.Button1.Location = New System.Drawing.Point(304, 8)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 31
@@ -76,7 +68,7 @@ Partial Class LstPreRegistros
         Me.DataGridView1.Location = New System.Drawing.Point(-3, 37)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(687, 293)
+        Me.DataGridView1.Size = New System.Drawing.Size(966, 437)
         Me.DataGridView1.TabIndex = 32
         '
         'inventoryIdLabel
@@ -86,15 +78,24 @@ Partial Class LstPreRegistros
         Me.inventoryIdLabel.Size = New System.Drawing.Size(159, 20)
         Me.inventoryIdLabel.TabIndex = 33
         '
+        'btnActualizar
+        '
+        Me.btnActualizar.Location = New System.Drawing.Point(386, 8)
+        Me.btnActualizar.Name = "btnActualizar"
+        Me.btnActualizar.Size = New System.Drawing.Size(75, 23)
+        Me.btnActualizar.TabIndex = 34
+        Me.btnActualizar.Text = "Actualizar"
+        Me.btnActualizar.UseVisualStyleBackColor = True
+        '
         'LstPreRegistros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(779, 572)
+        Me.ClientSize = New System.Drawing.Size(966, 572)
+        Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.inventoryIdLabel)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.btnNuevo)
         Me.Controls.Add(Me.btnPrincipal)
         Me.Controls.Add(Me.Label1)
         Me.Name = "LstPreRegistros"
@@ -106,8 +107,8 @@ Partial Class LstPreRegistros
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnPrincipal As System.Windows.Forms.Button
-    Friend WithEvents btnNuevo As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents inventoryIdLabel As System.Windows.Forms.TextBox
+    Friend WithEvents btnActualizar As System.Windows.Forms.Button
 End Class

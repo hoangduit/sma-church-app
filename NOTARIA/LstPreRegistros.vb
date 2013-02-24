@@ -78,4 +78,28 @@ Public Class LstPreRegistros
         End Try
 
     End Sub
+
+    Private Sub btnBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBorrar.Click
+
+        Dim button As DialogResult
+        button = MessageBox.Show _
+        ("Estas seguro que deseas borrar el registro :  " + +DataGridView1.SelectedCells(0).Value.ToString + ".- " + DataGridView1.SelectedCells(1).Value.ToString + " " + DataGridView1.SelectedCells(2).Value.ToString + " " + DataGridView1.SelectedCells(3).Value.ToString + " ?", _
+        "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
+        If button = Windows.Forms.DialogResult.Yes Then
+            MsgBox("Borrar registro")
+            ' Codigo para borrar registro
+        End If
+
+    End Sub
+
+    Private Sub btnBorrarTodos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBorrarTodos.Click
+        Dim button As DialogResult
+        button = MessageBox.Show _
+        ("Estas seguro que deseas borrar todos los registros.", _
+        "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
+        If button = Windows.Forms.DialogResult.Yes Then
+            MsgBox("Borrar registro")
+            ' Codigo para borrar registro
+        End If
+    End Sub
 End Class

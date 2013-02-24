@@ -28,6 +28,8 @@ Partial Class LstPreRegistros
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.inventoryIdLabel = New System.Windows.Forms.TextBox()
         Me.btnActualizar = New System.Windows.Forms.Button()
+        Me.btnBorrar = New System.Windows.Forms.Button()
+        Me.btnBorrarTodos = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -73,7 +75,7 @@ Partial Class LstPreRegistros
         '
         'inventoryIdLabel
         '
-        Me.inventoryIdLabel.Location = New System.Drawing.Point(478, 6)
+        Me.inventoryIdLabel.Location = New System.Drawing.Point(717, 6)
         Me.inventoryIdLabel.Name = "inventoryIdLabel"
         Me.inventoryIdLabel.Size = New System.Drawing.Size(159, 20)
         Me.inventoryIdLabel.TabIndex = 33
@@ -84,14 +86,34 @@ Partial Class LstPreRegistros
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(75, 23)
         Me.btnActualizar.TabIndex = 34
-        Me.btnActualizar.Text = "Actualizar"
+        Me.btnActualizar.Text = "&Actualizar"
         Me.btnActualizar.UseVisualStyleBackColor = True
+        '
+        'btnBorrar
+        '
+        Me.btnBorrar.Location = New System.Drawing.Point(467, 8)
+        Me.btnBorrar.Name = "btnBorrar"
+        Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBorrar.TabIndex = 35
+        Me.btnBorrar.Text = "&Borrar"
+        Me.btnBorrar.UseVisualStyleBackColor = True
+        '
+        'btnBorrarTodos
+        '
+        Me.btnBorrarTodos.Location = New System.Drawing.Point(548, 8)
+        Me.btnBorrarTodos.Name = "btnBorrarTodos"
+        Me.btnBorrarTodos.Size = New System.Drawing.Size(113, 23)
+        Me.btnBorrarTodos.TabIndex = 36
+        Me.btnBorrarTodos.Text = "Borrar &Todos"
+        Me.btnBorrarTodos.UseVisualStyleBackColor = True
         '
         'LstPreRegistros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(966, 572)
+        Me.Controls.Add(Me.btnBorrarTodos)
+        Me.Controls.Add(Me.btnBorrar)
         Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.inventoryIdLabel)
         Me.Controls.Add(Me.DataGridView1)
@@ -111,4 +133,6 @@ Partial Class LstPreRegistros
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents inventoryIdLabel As System.Windows.Forms.TextBox
     Friend WithEvents btnActualizar As System.Windows.Forms.Button
+    Friend WithEvents btnBorrar As System.Windows.Forms.Button
+    Friend WithEvents btnBorrarTodos As System.Windows.Forms.Button
 End Class

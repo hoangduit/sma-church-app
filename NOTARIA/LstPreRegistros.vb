@@ -83,11 +83,31 @@ Public Class LstPreRegistros
 
         Dim button As DialogResult
         button = MessageBox.Show _
-        ("Estas seguro que deseas borrar el registro :  " + +DataGridView1.SelectedCells(0).Value.ToString + ".- " + DataGridView1.SelectedCells(1).Value.ToString + " " + DataGridView1.SelectedCells(2).Value.ToString + " " + DataGridView1.SelectedCells(3).Value.ToString + " ?", _
+        ("Estas seguro que deseas borrar el registro :  " + DataGridView1.SelectedCells(0).Value.ToString + ".- " + DataGridView1.SelectedCells(1).Value.ToString + " " + DataGridView1.SelectedCells(2).Value.ToString + " " + DataGridView1.SelectedCells(3).Value.ToString + " ?", _
         "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
         If button = Windows.Forms.DialogResult.Yes Then
-            MsgBox("Borrar registro")
+            'MsgBox("Borrar registro")
             ' Codigo para borrar registro
+            Dim conn As New MySqlConnection(connectionMysql)
+
+            Try
+                conn.Open()
+                'MessageBox.Show("Connection Opened Successfully")
+                query = "DELETE FROM tb_preregistro WHERE idregistro=" + DataGridView1.SelectedCells(0).Value.ToString
+
+                'create data adapter
+                Dim da As MySqlDataAdapter = New MySqlDataAdapter(query, conn)
+
+                Dim dt = New DataTable
+                da.Fill(dt)
+                DataGridView1.DataSource = dt
+                conn.Close()
+
+            Catch myerror As MySqlException
+                MessageBox.Show("Error Connecting to Database: " & myerror.Message)
+            Finally
+                conn.Dispose()
+            End Try
         End If
 
     End Sub
@@ -100,6 +120,27 @@ Public Class LstPreRegistros
         If button = Windows.Forms.DialogResult.Yes Then
             MsgBox("Borrar registro")
             ' Codigo para borrar registro
+            Dim conn As New MySqlConnection(connectionMysql)
+
+            Try
+                conn.Open()
+                'MessageBox.Show("Connection Opened Successfully")
+                query = "DELETE FROM tb_preregistro"
+
+                'create data adapter
+                Dim da As MySqlDataAdapter = New MySqlDataAdapter(query, conn)
+
+                Dim dt = New DataTable
+                da.Fill(dt)
+                DataGridView1.DataSource = dt
+                conn.Close()
+
+            Catch myerror As MySqlException
+                MessageBox.Show("Error Connecting to Database: " & myerror.Message)
+            Finally
+                conn.Dispose()
+            End Try
+
         End If
     End Sub
 End Class

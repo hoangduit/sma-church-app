@@ -30,6 +30,7 @@ Partial Class LstPreRegistros
         Me.btnActualizar = New System.Windows.Forms.Button()
         Me.btnBorrar = New System.Windows.Forms.Button()
         Me.btnBorrarTodos = New System.Windows.Forms.Button()
+        Me.btnCrearBautizo = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -45,7 +46,7 @@ Partial Class LstPreRegistros
         '
         'btnPrincipal
         '
-        Me.btnPrincipal.Location = New System.Drawing.Point(142, 8)
+        Me.btnPrincipal.Location = New System.Drawing.Point(117, 8)
         Me.btnPrincipal.Name = "btnPrincipal"
         Me.btnPrincipal.Size = New System.Drawing.Size(75, 23)
         Me.btnPrincipal.TabIndex = 5
@@ -54,7 +55,7 @@ Partial Class LstPreRegistros
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(304, 8)
+        Me.Button1.Location = New System.Drawing.Point(214, 8)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 31
@@ -82,7 +83,7 @@ Partial Class LstPreRegistros
         '
         'btnActualizar
         '
-        Me.btnActualizar.Location = New System.Drawing.Point(386, 8)
+        Me.btnActualizar.Location = New System.Drawing.Point(295, 8)
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(75, 23)
         Me.btnActualizar.TabIndex = 34
@@ -91,7 +92,7 @@ Partial Class LstPreRegistros
         '
         'btnBorrar
         '
-        Me.btnBorrar.Location = New System.Drawing.Point(467, 8)
+        Me.btnBorrar.Location = New System.Drawing.Point(517, 8)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
         Me.btnBorrar.TabIndex = 35
@@ -100,18 +101,28 @@ Partial Class LstPreRegistros
         '
         'btnBorrarTodos
         '
-        Me.btnBorrarTodos.Location = New System.Drawing.Point(548, 8)
+        Me.btnBorrarTodos.Location = New System.Drawing.Point(598, 8)
         Me.btnBorrarTodos.Name = "btnBorrarTodos"
         Me.btnBorrarTodos.Size = New System.Drawing.Size(113, 23)
         Me.btnBorrarTodos.TabIndex = 36
         Me.btnBorrarTodos.Text = "Borrar &Todos"
         Me.btnBorrarTodos.UseVisualStyleBackColor = True
         '
+        'btnCrearBautizo
+        '
+        Me.btnCrearBautizo.Location = New System.Drawing.Point(376, 8)
+        Me.btnCrearBautizo.Name = "btnCrearBautizo"
+        Me.btnCrearBautizo.Size = New System.Drawing.Size(109, 23)
+        Me.btnCrearBautizo.TabIndex = 37
+        Me.btnCrearBautizo.Text = "&Crear Bautizo"
+        Me.btnCrearBautizo.UseVisualStyleBackColor = True
+        '
         'LstPreRegistros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(966, 572)
+        Me.Controls.Add(Me.btnCrearBautizo)
         Me.Controls.Add(Me.btnBorrarTodos)
         Me.Controls.Add(Me.btnBorrar)
         Me.Controls.Add(Me.btnActualizar)
@@ -135,4 +146,5 @@ Partial Class LstPreRegistros
     Friend WithEvents btnActualizar As System.Windows.Forms.Button
     Friend WithEvents btnBorrar As System.Windows.Forms.Button
     Friend WithEvents btnBorrarTodos As System.Windows.Forms.Button
+    Friend WithEvents btnCrearBautizo As System.Windows.Forms.Button
 End Class

@@ -149,6 +149,12 @@
     <Compile Include="Admin\Cuentas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmBautizo.Designer.vb">
+      <DependentUpon>frmBautizo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBautizo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Main.Designer.vb">
       <DependentUpon>Main.vb</DependentUpon>
     </Compile>
@@ -183,12 +189,6 @@
     <Compile Include="LstPreRegistros.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PreRegistroOld.Designer.vb">
-      <DependentUpon>PreRegistroOld.vb</DependentUpon>
-    </Compile>
-    <Compile Include="PreRegistroOld.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="PreRegistro.Designer.vb">
       <DependentUpon>PreRegistro.vb</DependentUpon>
     </Compile>
@@ -219,6 +219,9 @@
     <EmbeddedResource Include="Admin\Cuentas.resx">
       <DependentUpon>Cuentas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBautizo.resx">
+      <DependentUpon>frmBautizo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
     </EmbeddedResource>
@@ -233,9 +236,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LstPreRegistros.resx">
       <DependentUpon>LstPreRegistros.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PreRegistroOld.resx">
-      <DependentUpon>PreRegistroOld.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PreRegistro.resx">
       <DependentUpon>PreRegistro.vb</DependentUpon>

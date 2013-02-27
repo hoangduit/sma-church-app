@@ -79,7 +79,7 @@ Partial Class PreRegistro
         Me.btnCerrar.Location = New System.Drawing.Point(169, 465)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(75, 23)
-        Me.btnCerrar.TabIndex = 47
+        Me.btnCerrar.TabIndex = 19
         Me.btnCerrar.Text = "&Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
@@ -88,7 +88,7 @@ Partial Class PreRegistro
         Me.BtnGuardar.Location = New System.Drawing.Point(70, 465)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnGuardar.TabIndex = 46
+        Me.BtnGuardar.TabIndex = 18
         Me.BtnGuardar.Text = "&Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = True
         '

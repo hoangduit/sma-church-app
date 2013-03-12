@@ -143,4 +143,14 @@ Public Class LstPreRegistros
 
         End If
     End Sub
+
+    Private Sub btnCrearBautizo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCrearBautizo.Click
+        Dim invId As Object = DataGridView1.Rows(e.RowIndex).Cells(0).Value
+        inventoryIdLabel.Text = Convert.ToString(invId)
+        PreRegistro.txtid.Text = Convert.ToString(invId)
+        frmBautizo.Show()
+
+    End Sub
+
+  
 End Class

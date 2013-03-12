@@ -78,6 +78,9 @@ Partial Class frmBautizo
         Me.Label20 = New System.Windows.Forms.Label()
         Me.txtLugarFecha = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.txtEstatus = New System.Windows.Forms.TextBox()
+        Me.txtPrereg = New System.Windows.Forms.TextBox()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -296,7 +299,7 @@ Partial Class frmBautizo
         '
         'BtnGuardar
         '
-        Me.BtnGuardar.Location = New System.Drawing.Point(794, 95)
+        Me.BtnGuardar.Location = New System.Drawing.Point(794, 110)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(75, 23)
         Me.BtnGuardar.TabIndex = 70
@@ -531,6 +534,8 @@ Partial Class frmBautizo
         '
         'GroupBox7
         '
+        Me.GroupBox7.Controls.Add(Me.txtEstatus)
+        Me.GroupBox7.Controls.Add(Me.Label21)
         Me.GroupBox7.Controls.Add(Me.txtActa)
         Me.GroupBox7.Controls.Add(Me.Label18)
         Me.GroupBox7.Controls.Add(Me.txtPagina)
@@ -546,7 +551,7 @@ Partial Class frmBautizo
         '
         'txtActa
         '
-        Me.txtActa.Location = New System.Drawing.Point(521, 19)
+        Me.txtActa.Location = New System.Drawing.Point(437, 19)
         Me.txtActa.MaxLength = 70
         Me.txtActa.Name = "txtActa"
         Me.txtActa.Size = New System.Drawing.Size(104, 20)
@@ -555,7 +560,7 @@ Partial Class frmBautizo
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(438, 22)
+        Me.Label18.Location = New System.Drawing.Point(390, 22)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(35, 13)
         Me.Label18.TabIndex = 73
@@ -563,7 +568,7 @@ Partial Class frmBautizo
         '
         'txtPagina
         '
-        Me.txtPagina.Location = New System.Drawing.Point(301, 19)
+        Me.txtPagina.Location = New System.Drawing.Point(270, 19)
         Me.txtPagina.MaxLength = 70
         Me.txtPagina.Name = "txtPagina"
         Me.txtPagina.Size = New System.Drawing.Size(104, 20)
@@ -572,7 +577,7 @@ Partial Class frmBautizo
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(218, 22)
+        Me.Label17.Location = New System.Drawing.Point(213, 22)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(46, 13)
         Me.Label17.TabIndex = 71
@@ -646,11 +651,37 @@ Partial Class frmBautizo
         Me.Label19.TabIndex = 18
         Me.Label19.Text = "Lugar y Fecha :"
         '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(559, 22)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(48, 13)
+        Me.Label21.TabIndex = 74
+        Me.Label21.Text = "Estatus :"
+        '
+        'txtEstatus
+        '
+        Me.txtEstatus.Location = New System.Drawing.Point(613, 19)
+        Me.txtEstatus.MaxLength = 70
+        Me.txtEstatus.Name = "txtEstatus"
+        Me.txtEstatus.Size = New System.Drawing.Size(104, 20)
+        Me.txtEstatus.TabIndex = 75
+        '
+        'txtPrereg
+        '
+        Me.txtPrereg.Location = New System.Drawing.Point(311, -1)
+        Me.txtPrereg.Name = "txtPrereg"
+        Me.txtPrereg.Size = New System.Drawing.Size(100, 20)
+        Me.txtPrereg.TabIndex = 80
+        Me.txtPrereg.Visible = False
+        '
         'frmBautizo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(917, 735)
+        Me.Controls.Add(Me.txtPrereg)
         Me.Controls.Add(Me.GroupBox8)
         Me.Controls.Add(Me.GroupBox7)
         Me.Controls.Add(Me.txtapemat)
@@ -670,7 +701,7 @@ Partial Class frmBautizo
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.txtid)
         Me.Name = "frmBautizo"
-        Me.Text = "frmBautizo"
+        Me.Text = "9"
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)
@@ -747,4 +778,7 @@ Partial Class frmBautizo
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents txtLugarFecha As System.Windows.Forms.TextBox
     Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents txtEstatus As System.Windows.Forms.TextBox
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents txtPrereg As System.Windows.Forms.TextBox
 End Class

@@ -30,9 +30,9 @@ Partial Class MainNotaria
         Me.QRibbonPage1 = New Qios.DevSuite.Components.Ribbon.QRibbonPage()
         Me.QRibbonPanel4 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
         Me.qcbNuevoPre = New Qios.DevSuite.Components.QCompositeButton()
+        Me.QRibbonPanel6 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
+        Me.QCompositeButton1 = New Qios.DevSuite.Components.QCompositeButton()
         Me.QRibbonPanel5 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
-        Me.QRibbonItemGroup2 = New Qios.DevSuite.Components.Ribbon.QRibbonItemGroup()
-        Me.QRibbonInputBoxItem2 = New Qios.DevSuite.Components.Ribbon.QRibbonInputBoxItem()
         Me.QCompositeButton3 = New Qios.DevSuite.Components.QCompositeButton()
         Me.QRibbonPage2 = New Qios.DevSuite.Components.Ribbon.QRibbonPage()
         Me.QRibbonPanel1 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
@@ -102,6 +102,7 @@ Partial Class MainNotaria
         Me.QRibbonPage1.ButtonConfiguration.Spacing = New Qios.DevSuite.Components.QSpacing(40, 0)
         Me.QRibbonPage1.ButtonOrder = 0
         Me.QRibbonPage1.Items.Add(Me.QRibbonPanel4)
+        Me.QRibbonPage1.Items.Add(Me.QRibbonPanel6)
         Me.QRibbonPage1.Items.Add(Me.QRibbonPanel5)
         Me.QRibbonPage1.Location = New System.Drawing.Point(2, 28)
         Me.QRibbonPage1.Name = "QRibbonPage1"
@@ -112,7 +113,7 @@ Partial Class MainNotaria
         'QRibbonPanel4
         '
         Me.QRibbonPanel4.Items.Add(Me.qcbNuevoPre)
-        Me.QRibbonPanel4.Title = "Alta"
+        Me.QRibbonPanel4.Title = "Listado"
         '
         'qcbNuevoPre
         '
@@ -121,32 +122,35 @@ Partial Class MainNotaria
         Me.qcbNuevoPre.Configuration.MinimumSize = New System.Drawing.Size(60, 22)
         Me.qcbNuevoPre.Configuration.StretchVertical = True
         Me.qcbNuevoPre.Icon = CType(resources.GetObject("qcbNuevoPre.Icon"), System.Drawing.Icon)
-        Me.qcbNuevoPre.Title = "Nuevo"
+        Me.qcbNuevoPre.Title = "Listado"
+        '
+        'QRibbonPanel6
+        '
+        Me.QRibbonPanel6.Items.Add(Me.QCompositeButton1)
+        Me.QRibbonPanel6.Title = "Alta"
+        '
+        'QCompositeButton1
+        '
+        Me.QCompositeButton1.Configuration.Direction = Qios.DevSuite.Components.QPartDirection.Vertical
+        Me.QCompositeButton1.Configuration.IconConfiguration.IconSize = New System.Drawing.Size(32, 32)
+        Me.QCompositeButton1.Configuration.MinimumSize = New System.Drawing.Size(60, 22)
+        Me.QCompositeButton1.Configuration.StretchVertical = True
+        Me.QCompositeButton1.Icon = CType(resources.GetObject("QCompositeButton1.Icon"), System.Drawing.Icon)
+        Me.QCompositeButton1.Title = "Nuevo"
         '
         'QRibbonPanel5
         '
-        Me.QRibbonPanel5.Items.Add(Me.QRibbonItemGroup2)
+        Me.QRibbonPanel5.Items.Add(Me.QCompositeButton3)
         Me.QRibbonPanel5.Title = "Edición"
-        '
-        'QRibbonItemGroup2
-        '
-        Me.QRibbonItemGroup2.Items.Add(Me.QRibbonInputBoxItem2)
-        Me.QRibbonItemGroup2.Items.Add(Me.QCompositeButton3)
-        '
-        'QRibbonInputBoxItem2
-        '
-        Me.QRibbonInputBoxItem2.ControlSize = New System.Drawing.Size(100, 19)
-        '
-        '
-        '
-        Me.QRibbonInputBoxItem2.InputBox.Location = New System.Drawing.Point(80, 9)
-        Me.QRibbonInputBoxItem2.InputBox.Name = ""
-        Me.QRibbonInputBoxItem2.InputBox.Size = New System.Drawing.Size(100, 19)
-        Me.QRibbonInputBoxItem2.InputBox.TabIndex = 0
         '
         'QCompositeButton3
         '
+        Me.QCompositeButton3.Configuration.Direction = Qios.DevSuite.Components.QPartDirection.Vertical
+        Me.QCompositeButton3.Configuration.IconConfiguration.IconSize = New System.Drawing.Size(32, 32)
+        Me.QCompositeButton3.Configuration.MinimumSize = New System.Drawing.Size(60, 22)
+        Me.QCompositeButton3.Configuration.StretchVertical = True
         Me.QCompositeButton3.Icon = CType(resources.GetObject("QCompositeButton3.Icon"), System.Drawing.Icon)
+        Me.QCompositeButton3.Title = "Actualizar"
         '
         'QRibbonPage2
         '
@@ -157,7 +161,7 @@ Partial Class MainNotaria
         Me.QRibbonPage2.Location = New System.Drawing.Point(2, 28)
         Me.QRibbonPage2.Name = "QRibbonPage2"
         Me.QRibbonPage2.PersistGuid = New System.Guid("02df447e-ffa0-42ae-9849-6f68ee5e6a52")
-        Me.QRibbonPage2.Size = New System.Drawing.Size(796, 102)
+        Me.QRibbonPage2.Size = New System.Drawing.Size(1074, 102)
         Me.QRibbonPage2.Text = "Bautizos"
         '
         'QRibbonPanel1
@@ -190,7 +194,7 @@ Partial Class MainNotaria
         Me.QRibbonPage3.Location = New System.Drawing.Point(2, 28)
         Me.QRibbonPage3.Name = "QRibbonPage3"
         Me.QRibbonPage3.PersistGuid = New System.Guid("46f88814-8cf8-45f3-a129-d4fb4e9189a3")
-        Me.QRibbonPage3.Size = New System.Drawing.Size(796, 102)
+        Me.QRibbonPage3.Size = New System.Drawing.Size(1074, 102)
         Me.QRibbonPage3.Text = "Administracion"
         '
         'QRPanelAltaAdmin
@@ -250,7 +254,7 @@ Partial Class MainNotaria
         Me.QRibbonPage4.Location = New System.Drawing.Point(2, 28)
         Me.QRibbonPage4.Name = "QRibbonPage4"
         Me.QRibbonPage4.PersistGuid = New System.Guid("e7e0e9af-4309-4c5c-baba-d9caf74d13ff")
-        Me.QRibbonPage4.Size = New System.Drawing.Size(796, 102)
+        Me.QRibbonPage4.Size = New System.Drawing.Size(1074, 102)
         Me.QRibbonPage4.Text = "Configuracion"
         '
         'QRibbonPanel7
@@ -299,7 +303,6 @@ Partial Class MainNotaria
     Friend WithEvents QRibbon1 As Qios.DevSuite.Components.Ribbon.QRibbon
     Friend WithEvents QRibbonPage1 As Qios.DevSuite.Components.Ribbon.QRibbonPage
     Friend WithEvents QRibbonPanel4 As Qios.DevSuite.Components.Ribbon.QRibbonPanel
-    Friend WithEvents QRibbonPanel5 As Qios.DevSuite.Components.Ribbon.QRibbonPanel
     Friend WithEvents QRibbonPage2 As Qios.DevSuite.Components.Ribbon.QRibbonPage
     Friend WithEvents QRibbonPanel1 As Qios.DevSuite.Components.Ribbon.QRibbonPanel
     Friend WithEvents QRibbonPanel2 As Qios.DevSuite.Components.Ribbon.QRibbonPanel
@@ -309,9 +312,6 @@ Partial Class MainNotaria
     Friend WithEvents QCompositeButton2 As Qios.DevSuite.Components.QCompositeButton
     Friend WithEvents QRibbonInputBoxItem1 As Qios.DevSuite.Components.Ribbon.QRibbonInputBoxItem
     Friend WithEvents QRibbonItemGroup1 As Qios.DevSuite.Components.Ribbon.QRibbonItemGroup
-    Friend WithEvents QRibbonItemGroup2 As Qios.DevSuite.Components.Ribbon.QRibbonItemGroup
-    Friend WithEvents QRibbonInputBoxItem2 As Qios.DevSuite.Components.Ribbon.QRibbonInputBoxItem
-    Friend WithEvents QCompositeButton3 As Qios.DevSuite.Components.QCompositeButton
     Friend WithEvents QRPanelAltaAdmin As Qios.DevSuite.Components.Ribbon.QRibbonPanel
     Friend WithEvents QRibbonPage4 As Qios.DevSuite.Components.Ribbon.QRibbonPage
     Friend WithEvents QRibbonPanel7 As Qios.DevSuite.Components.Ribbon.QRibbonPanel
@@ -322,4 +322,8 @@ Partial Class MainNotaria
     Friend WithEvents qclmiRole As Qios.DevSuite.Components.QCompositeLargeMenuItem
     Friend WithEvents QRibbonItemGroup6 As Qios.DevSuite.Components.Ribbon.QRibbonItemGroup
     Friend WithEvents qcbEditUser As Qios.DevSuite.Components.QCompositeButton
+    Friend WithEvents QRibbonPanel6 As Qios.DevSuite.Components.Ribbon.QRibbonPanel
+    Friend WithEvents QCompositeButton1 As Qios.DevSuite.Components.QCompositeButton
+    Friend WithEvents QRibbonPanel5 As Qios.DevSuite.Components.Ribbon.QRibbonPanel
+    Friend WithEvents QCompositeButton3 As Qios.DevSuite.Components.QCompositeButton
 End Class

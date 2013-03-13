@@ -82,3 +82,28 @@ C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTAR
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\GenerateResource.read.183.tlog
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.frmBautizo.resources
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\NOTARIA\obj\x86\Debug\NOTARIA.frmBautizo.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\bin\Debug\NOTARIA.exe.config
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.AltaCuenta.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.EditUser.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.PerfilCuenta.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.frmAcceso.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.Busquedas.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.Configuracion.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.Cuentas.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.frmBautizo.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.Main.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.MainNotaria.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.Resources.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.LstPreRegistros.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.PreRegistro.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\GenerateResource.read.183.tlog
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\bin\Debug\NOTARIA.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\bin\Debug\NOTARIA.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\bin\Debug\NOTARIA.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\bin\Debug\Qios.DevSuite.Components.dll

@@ -126,6 +126,7 @@ Public Class PreRegistro
     Private Sub PreRegistro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim conn As New MySqlConnection(connectionMysql)
         Dim conn2 As New MySqlConnection(connectionMysql)
+        Dim aux As String
 
         'conn.ConnectionString = "server=SQL09.FREEMYSQL.NET; user id=notariasma; password=zaq12wsx; database=notariabd"
 
@@ -150,7 +151,6 @@ Public Class PreRegistro
 
             'display data
             Dim row As DataRow
-            Dim aux As String
             Dim aryTextFile() As String
 
             For Each row In dt.Rows

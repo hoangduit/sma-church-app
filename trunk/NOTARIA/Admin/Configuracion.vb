@@ -54,18 +54,19 @@ Public Class Configuracion
             Dim dt As DataTable = ds.Tables("tb_admin")
 
             'display data
-            Dim row As DataRow
+            Dim row As New DataRow
+
 
             For Each row In dt.Rows
                 txtannos.Text = row("lstannos")
             Next
 
-            txtParroco.Text = row("nombreparroco")
-            txtObispado.Text = row("obispadode")
-            txtDireccion.Text = row("direccionnotaria")
-            txtConBau.Text = row("actabautizo")
-            txtConMat.Text = row("actamatrimonio")
-            txtConDef.Text = row("actadefuncion")
+            'txtParroco.Text = row("nombreparroco")
+            'txtObispado.Text = row("obispadode")
+            'txtDireccion.Text = row("direccionnotaria")
+            'txtConBau.Text = row("actabautizo")
+            'txtConMat.Text = row("actamatrimonio")
+            'txtConDef.Text = row("actadefuncion")
 
 
             conn.Close()

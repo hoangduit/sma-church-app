@@ -158,7 +158,7 @@
     <value>SELECT * FROM usuario u WHERE u.nombre = @name</value>
   </data>
   <data name="selectUserNombre" xml:space="preserve">
-    <value>SELECT u.nombre FROM usuario u</value>
+    <value>SELECT nombre FROM usuario</value>
   </data>
   <data name="deleteUserByName" xml:space="preserve">
     <value>DELETE FROM usuario  WHERE nombre = @name</value>

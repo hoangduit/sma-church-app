@@ -35,69 +35,73 @@ Public Class AltaCuenta
         Dim cmdSelect, cmdInsert As MySqlCommand
         Dim reader As MySqlDataReader
         Dim idRol As Integer = 0
+        Dim answer As DialogResult = MessageBox.Show("¿Desea guardar los cambios?", "Cambios pendientes", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+
+        If answer = Windows.Forms.DialogResult.Yes Then
+            Try
+
+                connection.Open()
+
+                da.Fill(dt)
+
+                If dt.Rows.Count > 0 Then
+
+                    qctNotification.Title = "Usuario ya existe, introduzca otro"
 
 
-        Try
+                Else
+                    'select id perfil
 
-            connection.Open()
+                    cmdSelect = New MySqlCommand(My.Resources.selectRolByTipoRol, connection)
 
-            da.Fill(dt)
+                    cmdSelect.Parameters.AddWithValue("@tipoRol", qcbPerfil.Text)
 
-            If dt.Rows.Count > 0 Then
+                    reader = cmdSelect.ExecuteReader
 
-                qctNotification.Title = "Usuario ya existe, introduzca otro"
+                    While reader.Read
+                        idRol = Val(reader.GetString(0))
 
+                    End While
 
-            Else
-                'select id perfil
-  
-                cmdSelect = New MySqlCommand(My.Resources.selectRolByTipoRol, connection)
-
-                cmdSelect.Parameters.AddWithValue("@tipoRol", qcbPerfil.Text)
-
-                reader = cmdSelect.ExecuteReader
-
-                While reader.Read
-                    idRol = Val(reader.GetString(0))
-  
-                End While
-
-                reader.Close()
-
-
-
-                'insert into en tabla Usuario
-                cmdInsert = New MySqlCommand(My.Resources.insertUser, connection)
-
-                cmdInsert.Parameters.AddWithValue("@name", qcibUser.InputBox.Text)
-
-                cmdInsert.Parameters.AddWithValue("@pass", qcibPass.InputBox.Text)
-
-                cmdInsert.Parameters.AddWithValue("@idrol", idRol)
-
-                cmdInsert.ExecuteNonQuery()
+                    reader.Close()
 
 
 
-            End If
+                    'insert into en tabla Usuario
+                    cmdInsert = New MySqlCommand(My.Resources.insertUser, connection)
 
-        Catch ex As Exception
+                    cmdInsert.Parameters.AddWithValue("@name", qcibUser.InputBox.Text)
 
-            Console.WriteLine(ex.Message)
+                    cmdInsert.Parameters.AddWithValue("@pass", qcibPass.InputBox.Text)
 
-            qctNotification.Title = "hay un error"
+                    cmdInsert.Parameters.AddWithValue("@idrol", idRol)
 
-        Finally
-
-            connection.Close()
-
-            NOTARIA.MainNotaria.qcbNuevoAdmin.Enabled = True
-
-            Me.Close()
-
-        End Try
+                    cmdInsert.ExecuteNonQuery()
 
 
+
+                End If
+
+            Catch ex As Exception
+
+                Console.WriteLine(ex.Message)
+
+                qctNotification.Title = "hay un error"
+
+            Finally
+
+                connection.Close()
+                'Que solo se habilite si se cancela
+                'NOTARIA.MainNotaria.qcbNuevoAdmin.Enabled = True
+                'Me.Close()
+                qcibUser.InputBox.Text = ""
+                qcibPass.InputBox.Text = ""
+                qcibUser.InputBox.Focus()
+
+
+            End Try
+
+        End If
 
 
     End Sub

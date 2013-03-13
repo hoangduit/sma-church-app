@@ -35,33 +35,41 @@ Public Class PerfilCuenta
 
     Private Sub qcbGuardar_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles qcbGuardar.ItemActivated
         Dim idRol As Integer = 0
-
-        'Insert Rol
-        insertRol(My.Resources.insertRol, qcibPerfil.InputBox.Text)
-
-        For Each row As DataGridViewRow In dgvApplication.Rows
-            'Console.WriteLine(row.Cells(0).FormattedValue & " | " & row.Cells(1).FormattedValue)
-            If Convert.ToBoolean(row.Cells(2).FormattedValue) Then
-                Try
-
-                    'Select rol
-                    idRol = getIdRol(My.Resources.selectRolByTipoRol, qcibPerfil.InputBox.Text)
-
-                    'InsertRolApplication
-                    insertRolApplication(My.Resources.insertAplicationRol, idRol, Val(row.Cells(0).FormattedValue))
+        Dim answer As DialogResult = MessageBox.Show("¿Desea guardar los cambios?", "Cambios pendientes", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
 
 
-                Catch ex As Exception
-                    Console.WriteLine(ex.Message)
-                End Try
+        If (answer = Windows.Forms.DialogResult.Yes) Then
+            'Insert Rol
+            insertRol(My.Resources.insertRol, qcibPerfil.InputBox.Text)
 
-            End If
+            For Each row As DataGridViewRow In dgvApplication.Rows
+                'Console.WriteLine(row.Cells(0).FormattedValue & " | " & row.Cells(1).FormattedValue)
+                If Convert.ToBoolean(row.Cells(2).FormattedValue) Then
+                    Try
 
-        Next row
+                        'Select rol
+                        idRol = getIdRol(My.Resources.selectRolByTipoRol, qcibPerfil.InputBox.Text)
 
-        NOTARIA.MainNotaria.qclmiRole.Enabled = True
+                        'InsertRolApplication
+                        insertRolApplication(My.Resources.insertAplicationRol, idRol, Val(row.Cells(0).FormattedValue))
 
-        Me.Close()
+
+                    Catch ex As Exception
+                        Console.WriteLine(ex.Message)
+                    End Try
+
+                End If
+
+            Next row
+            'Solo se active si se cancela
+            'NOTARIA.MainNotaria.qclmiRole.Enabled = True
+
+            qcibPerfil.InputBox.Text = ""
+            qcibPerfil.InputBox.Focus()
+
+
+        End If
+
 
 
 

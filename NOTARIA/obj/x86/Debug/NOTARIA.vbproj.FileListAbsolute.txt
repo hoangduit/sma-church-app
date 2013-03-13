@@ -81,3 +81,4 @@ C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTAR
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.MainNotaria.resources
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\GenerateResource.read.183.tlog
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.frmBautizo.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\NOTARIA\obj\x86\Debug\NOTARIA.frmBautizo.resources

@@ -11,7 +11,7 @@ Public Class Configuracion
 
         Try
             conn.Open()
-            query = "UPDATE test.tb_admin SET lstannos = '" + txtannos.Text + "'"
+            query = "UPDATE tb_admin SET lstannos = '" + txtannos.Text + "', nombreparroco='" + txtParroco.Text + "', obispadode='" + txtObispado.Text + "', direccionnotaria='" + txtDireccion.Text + "', actabautizo='" + txtConBau.Text + "', actamatrimonio='" + txtConMat.Text + "', actadefuncion='" + txtConDef.Text + "'"
 
             Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
             'MsgBox(sql)
@@ -39,7 +39,7 @@ Public Class Configuracion
         Try
             conn.Open()
             'MessageBox.Show("Connection Opened Successfully")
-            query = "SELECT * FROM test.tb_admin"
+            query = "SELECT * FROM tb_admin"
 
             'create data adapter
             Dim da As MySqlDataAdapter = New MySqlDataAdapter(query, conn)
@@ -60,6 +60,14 @@ Public Class Configuracion
                 txtannos.Text = row("lstannos")
             Next
 
+            txtParroco.Text = row("nombreparroco")
+            txtObispado.Text = row("obispadode")
+            txtDireccion.Text = row("direccionnotaria")
+            txtConBau.Text = row("actabautizo")
+            txtConMat.Text = row("actamatrimonio")
+            txtConDef.Text = row("actadefuncion")
+
+
             conn.Close()
 
         Catch myerror As MySqlException
@@ -74,5 +82,5 @@ Public Class Configuracion
     Private Sub MySqlDataAdapter()
         Throw New NotImplementedException
     End Sub
-
+    
 End Class

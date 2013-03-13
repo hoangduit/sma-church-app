@@ -181,7 +181,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to SELECT u.nombre FROM usuario u.
+        '''  Looks up a localized string similar to SELECT nombre FROM usuario.
         '''</summary>
         Friend ReadOnly Property selectUserNombre() As String
             Get

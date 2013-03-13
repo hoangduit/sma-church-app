@@ -38,7 +38,9 @@ Partial Class EditUser
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lbUsuarios = New System.Windows.Forms.ListBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.QCompositeControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'QCompositeControl1
@@ -95,7 +97,7 @@ Partial Class EditUser
         '
         'qtbUser
         '
-        Me.qtbUser.Location = New System.Drawing.Point(329, 96)
+        Me.qtbUser.Location = New System.Drawing.Point(100, 45)
         Me.qtbUser.Name = "qtbUser"
         Me.qtbUser.Size = New System.Drawing.Size(194, 19)
         Me.qtbUser.TabIndex = 2
@@ -103,7 +105,7 @@ Partial Class EditUser
         'qtbPass
         '
         Me.qtbPass.CueText = ""
-        Me.qtbPass.Location = New System.Drawing.Point(329, 138)
+        Me.qtbPass.Location = New System.Drawing.Point(100, 87)
         Me.qtbPass.Name = "qtbPass"
         Me.qtbPass.Size = New System.Drawing.Size(194, 19)
         Me.qtbPass.TabIndex = 3
@@ -111,7 +113,7 @@ Partial Class EditUser
         'qcbRol
         '
         Me.qcbRol.CueText = "Selecciona un Rol"
-        Me.qcbRol.Location = New System.Drawing.Point(329, 179)
+        Me.qcbRol.Location = New System.Drawing.Point(100, 128)
         Me.qcbRol.Name = "qcbRol"
         Me.qcbRol.Size = New System.Drawing.Size(171, 19)
         Me.qcbRol.TabIndex = 4
@@ -120,7 +122,7 @@ Partial Class EditUser
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(249, 96)
+        Me.Label1.Location = New System.Drawing.Point(20, 45)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(46, 13)
         Me.Label1.TabIndex = 5
@@ -130,7 +132,7 @@ Partial Class EditUser
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label2.Location = New System.Drawing.Point(249, 138)
+        Me.Label2.Location = New System.Drawing.Point(20, 87)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(67, 13)
         Me.Label2.TabIndex = 6
@@ -140,7 +142,7 @@ Partial Class EditUser
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(249, 179)
+        Me.Label3.Location = New System.Drawing.Point(20, 128)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(26, 13)
         Me.Label3.TabIndex = 7
@@ -154,25 +156,36 @@ Partial Class EditUser
         Me.lbUsuarios.Size = New System.Drawing.Size(163, 264)
         Me.lbUsuarios.TabIndex = 8
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.qtbUser)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.qtbPass)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.qcbRol)
+        Me.GroupBox1.Location = New System.Drawing.Point(209, 84)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(321, 264)
+        Me.GroupBox1.TabIndex = 9
+        Me.GroupBox1.TabStop = False
+        '
         'EditUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(577, 500)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.lbUsuarios)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.qcbRol)
-        Me.Controls.Add(Me.qtbPass)
-        Me.Controls.Add(Me.qtbUser)
         Me.Controls.Add(Me.QCompositeControl1)
         Me.Name = "EditUser"
         Me.ShowIcon = False
         Me.Text = "Editar Usuarios"
         CType(Me.QCompositeControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents QCompositeControl1 As Qios.DevSuite.Components.QCompositeControl
@@ -191,4 +204,5 @@ Partial Class EditUser
     Friend WithEvents qcbCancelar As Qios.DevSuite.Components.QCompositeButton
     Friend WithEvents lbUsuarios As System.Windows.Forms.ListBox
     Friend WithEvents qcbDelete As Qios.DevSuite.Components.QCompositeButton
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
 End Class

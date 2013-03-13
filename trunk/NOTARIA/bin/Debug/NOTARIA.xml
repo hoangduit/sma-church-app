@@ -61,7 +61,7 @@ NOTARIA
 </summary>
 </member><member name="P:NOTARIA.My.Resources.Resources.selectUserNombre">
 	<summary>
-  Looks up a localized string similar to SELECT u.nombre FROM usuario u.
+  Looks up a localized string similar to SELECT nombre FROM usuario.
 </summary>
 </member><member name="P:NOTARIA.My.Resources.Resources.updateUserByName">
 	<summary>

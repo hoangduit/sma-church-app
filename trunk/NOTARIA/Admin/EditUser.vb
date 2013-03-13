@@ -159,29 +159,33 @@ Public Class EditUser
     Private Sub qcbDelete_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles qcbDelete.ItemActivated
         Dim connect As MySqlConnection = New MySqlConnection(My.Settings.connectionDB)
         Dim cmd As MySqlCommand = New MySqlCommand(My.Resources.deleteUserByName, connect)
+        Dim answer As DialogResult = MessageBox.Show("¿Está seguro de eliminar al usuario?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
 
-        Try
+        If answer = Windows.Forms.DialogResult.Yes Then
+            Try
 
-            connect.Open()
+                connect.Open()
 
-            cmd.Parameters.AddWithValue("@name", qtbUser.Text)
+                cmd.Parameters.AddWithValue("@name", qtbUser.Text)
 
-            cmd.ExecuteNonQuery()
+                cmd.ExecuteNonQuery()
 
-        Catch ex As Exception
+            Catch ex As Exception
 
-            Console.WriteLine(ex.Message)
+                Console.WriteLine(ex.Message)
 
-        Finally
+            Finally
 
-            connect.Close()
+                connect.Close()
 
-            lbUsuarios.Text = ""
+                lbUsuarios.Text = ""
 
-            fillUsers()
+                fillUsers()
 
+            End Try
 
-        End Try
+        End If
+
 
 
 
@@ -191,33 +195,38 @@ Public Class EditUser
     Private Sub qcbGuardar_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles qcbGuardar.ItemActivated
         Dim connect As MySqlConnection = New MySqlConnection(My.Settings.connectionDB)
         Dim cmd As MySqlCommand = New MySqlCommand(My.Resources.updateUserByName, connect)
+        Dim answer As DialogResult = MessageBox.Show("¿Desea guardar los cambios?", "Cambios pendientes", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
 
-        Try
-            'UPDATE usuario SET nombre = , password = , idrol =  WHERE nombre = 
-            connect.Open()
+        If answer = Windows.Forms.DialogResult.Yes Then
+            Try
+                'UPDATE usuario SET nombre = , password = , idrol =  WHERE nombre = 
+                connect.Open()
 
-            cmd.Parameters.AddWithValue("@newName", qtbUser.Text)
+                cmd.Parameters.AddWithValue("@newName", qtbUser.Text)
 
-            cmd.Parameters.AddWithValue("@pass", qtbPass.Text)
+                cmd.Parameters.AddWithValue("@pass", qtbPass.Text)
 
-            cmd.Parameters.AddWithValue("@idRol", getIdRol(qcbRol.Text))
+                cmd.Parameters.AddWithValue("@idRol", getIdRol(qcbRol.Text))
 
-            cmd.Parameters.AddWithValue("@oldName", oldName)
+                cmd.Parameters.AddWithValue("@oldName", oldName)
 
-            cmd.ExecuteNonQuery()
-
-
+                cmd.ExecuteNonQuery()
 
 
-        Catch ex As Exception
 
-            Console.WriteLine(ex.Message)
 
-        Finally
+            Catch ex As Exception
 
-            connect.Close()
+                Console.WriteLine(ex.Message)
 
-        End Try
+            Finally
+
+                connect.Close()
+
+            End Try
+
+        End If
+
     End Sub
 
     Function getIdRol(ByVal name As String) As Integer
@@ -262,4 +271,6 @@ Public Class EditUser
 
 
     End Sub
+
+    
 End Class

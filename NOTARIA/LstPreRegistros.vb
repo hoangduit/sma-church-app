@@ -145,10 +145,17 @@ Public Class LstPreRegistros
     End Sub
 
     Private Sub btnCrearBautizo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCrearBautizo.Click
+<<<<<<< .mine
+        'Dim invId As Object = DataGridView1.Rows(e.RowIndex).Cells(0).Value
+        'inventoryIdLabel.Text = Convert.ToString(invId)
+        'PreRegistro.txtid.Text = Convert.ToString(invId)
+        frmBautizo.Show()
+=======
         'Dim invId As Object = DataGridView1.Rows(e.RowIndex).Cells(0).Value
         'inventoryIdLabel.Text = Convert.ToString(invId)
         'PreRegistro.txtid.Text = Convert.ToString(invId)
         'frmBautizo.Show()
+>>>>>>> .r60
 
     End Sub
 

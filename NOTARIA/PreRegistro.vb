@@ -150,16 +150,22 @@ Public Class PreRegistro
             Dim dt As DataTable = ds.Tables("tb_admin")
 
             'display data
+<<<<<<< .mine
+            'Dim row As DataRow
+            'Dim aux As String
+            'Dim aryTextFile() As String
+=======
             Dim row As DataRow
             Dim aryTextFile() As String
+>>>>>>> .r60
 
-            For Each row In dt.Rows
-                aux = row("lstannos")
-            Next
+            'For Each row In dt.Rows
+            'aux = row("lstannos")
+            'Next
 
-            aryTextFile = aux.Split(",")
-            cmbannobau.Items.AddRange(aryTextFile)
-            cmbannonac.Items.AddRange(aryTextFile)
+            'aryTextFile = aux.Split(",")
+            'cmbannobau.Items.AddRange(aryTextFile)
+            'cmbannonac.Items.AddRange(aryTextFile)
 
             conn.Close()
 

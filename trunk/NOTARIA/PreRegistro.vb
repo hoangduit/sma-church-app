@@ -126,7 +126,7 @@ Public Class PreRegistro
     Private Sub PreRegistro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim conn As New MySqlConnection(connectionMysql)
         Dim conn2 As New MySqlConnection(connectionMysql)
-        Dim aux As String
+        ' Dim aux As String
 
         'conn.ConnectionString = "server=SQL09.FREEMYSQL.NET; user id=notariasma; password=zaq12wsx; database=notariabd"
 
@@ -135,7 +135,7 @@ Public Class PreRegistro
         Try
             conn.Open()
             'MessageBox.Show("Connection Opened Successfully")
-            query = "SELECT * FROM test.tb_admin"
+            query = "SELECT * FROM tb_admin"
 
             'create data adapter
             Dim da As MySqlDataAdapter = New MySqlDataAdapter(query, conn)
@@ -150,14 +150,21 @@ Public Class PreRegistro
             Dim dt As DataTable = ds.Tables("tb_admin")
 
             'display data
+<<<<<<< .mine
+=======
 
+>>>>>>> .r63
             'Dim row As DataRow
             'Dim aux As String
             'Dim aryTextFile() As String
+<<<<<<< .mine
+ 
+=======
 
             Dim row As DataRow
             Dim aryTextFile() As String
 
+>>>>>>> .r63
 
             'For Each row In dt.Rows
             'aux = row("lstannos")

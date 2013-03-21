@@ -117,53 +117,56 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Back.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="deleteUserByName" xml:space="preserve">
+    <value>DELETE FROM usuario  WHERE nombre = @name</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Forward.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Home.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="insertAplicationRol" xml:space="preserve">
-    <value>INSERT INTO aplicacionrole (idrol,idaplicacion) VALUES(@idRol, @idAplication)</value>
-  </data>
-  <data name="insertRol" xml:space="preserve">
-    <value>INSERT INTO rol (tiporol) VALUES(@tipoRol)</value>
   </data>
   <data name="insertUser" xml:space="preserve">
     <value>INSERT INTO usuario (nombre, password,idrol) VALUES(@name, @pass, @idrol)</value>
   </data>
-  <data name="selectApplication" xml:space="preserve">
-    <value>SELECT *  FROM aplicacion a</value>
+  <data name="selectUserByIdRol" xml:space="preserve">
+    <value>SELECT u.nombre FROM usuario u WHERE u.idrol = @idRol</value>
   </data>
-  <data name="selectRolByTipoRol" xml:space="preserve">
-    <value>SELECT * FROM rol WHERE tiporol =@tipoRol</value>
-  </data>
-  <data name="selectRoltipo" xml:space="preserve">
-    <value>SELECT r.tiporol FROM rol r</value>
-  </data>
-  <data name="selectRolTipoRolByIdRol" xml:space="preserve">
-    <value>SELECT r.tiporol FROM rol r WHERE r.idrol = @idRol</value>
+  <data name="insertRol" xml:space="preserve">
+    <value>INSERT INTO rol (tiporol) VALUES(@tipoRol)</value>
   </data>
   <data name="selectUser" xml:space="preserve">
     <value>SELECT * FROM usuario</value>
   </data>
-  <data name="selectUserByIdRol" xml:space="preserve">
-    <value>SELECT u.nombre FROM usuario u WHERE u.idrol = @idRol</value>
+  <data name="Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Back.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="selectUserByNombre" xml:space="preserve">
-    <value>SELECT * FROM usuario u WHERE u.nombre = @name</value>
+  <data name="selectRolTipoRolByIdRol" xml:space="preserve">
+    <value>SELECT r.tiporol FROM rol r WHERE r.idrol = @idRol</value>
+  </data>
+  <data name="selectRolByTipoRol" xml:space="preserve">
+    <value>SELECT * FROM rol WHERE tiporol =@tipoRol</value>
   </data>
   <data name="selectUserNombre" xml:space="preserve">
     <value>SELECT nombre FROM usuario</value>
   </data>
-  <data name="deleteUserByName" xml:space="preserve">
-    <value>DELETE FROM usuario  WHERE nombre = @name</value>
+  <data name="Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Home.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="selectApplication" xml:space="preserve">
+    <value>SELECT *  FROM aplicacion a</value>
+  </data>
+  <data name="selectUserByNombre" xml:space="preserve">
+    <value>SELECT * FROM usuario u WHERE u.nombre = @name</value>
+  </data>
+  <data name="insertAplicationRol" xml:space="preserve">
+    <value>INSERT INTO aplicacionrole (idrol,idaplicacion) VALUES(@idRol, @idAplication)</value>
   </data>
   <data name="updateUserByName" xml:space="preserve">
     <value>UPDATE usuario SET nombre = @newName, password = @pass, idrol = @idRol WHERE nombre = @oldName</value>
+  </data>
+  <data name="selectRoltipo" xml:space="preserve">
+    <value>SELECT r.tiporol FROM rol r</value>
+  </data>
+  <data name="gui_secondbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gui_secondbox.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

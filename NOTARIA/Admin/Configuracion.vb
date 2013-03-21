@@ -44,8 +44,15 @@ Public Class Configuracion
             'create data adapter
             Dim da As MySqlDataAdapter = New MySqlDataAdapter(query, conn)
 
+
             'create dataset
             Dim ds As DataSet = New DataSet
+
+            If ds.Tables(0).Rows.Count = 0 Then
+                MsgBox("Exit")
+                Exit Sub
+            End If
+
 
             'fill dataset
             da.Fill(ds, "tb_admin")
@@ -54,22 +61,16 @@ Public Class Configuracion
             Dim dt As DataTable = ds.Tables("tb_admin")
 
             'display data
-<<<<<<< .mine
-            'Dim row As DataRow
-=======
-            Dim row As New DataRow
->>>>>>> .r60
 
-<<<<<<< .mine
-            ' For Each row In dt.Rows
-            'txtannos.Text = row("lstannos")
-            ' Next
-=======
+            Dim row As DataRow
+
+            'Dim row As New DataRow
+
 
             For Each row In dt.Rows
                 txtannos.Text = row("lstannos")
             Next
->>>>>>> .r60
+
 
             'txtParroco.Text = row("nombreparroco")
             'txtObispado.Text = row("obispadode")

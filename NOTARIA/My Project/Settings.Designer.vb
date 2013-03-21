@@ -57,8 +57,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("server=SQL09.FREEMYSQL.NET; user id=notariasma; password=zaq12wsx; database=notar"& _ 
-            "iabd")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=localhost; user id=root; password=admin; database=notariadb")>  _
         Public ReadOnly Property connectionDB() As String
             Get
                 Return CType(Me("connectionDB"),String)

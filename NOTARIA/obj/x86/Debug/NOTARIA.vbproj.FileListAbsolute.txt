@@ -107,3 +107,4 @@ C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTA
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\bin\Debug\NOTARIA.pdb
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\bin\Debug\NOTARIA.xml
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\bin\Debug\Qios.DevSuite.Components.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.EditRole.resources

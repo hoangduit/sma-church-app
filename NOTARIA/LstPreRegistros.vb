@@ -23,7 +23,7 @@ Public Class LstPreRegistros
         Try
             conn.Open()
             'MessageBox.Show("Connection Opened Successfully")
-            query = "SELECT idregistro as ID_Preregistro, nombre as Nombre, apepat as Apellido_Paterno, apemat as Apellido_Materno, nombrepapa as Nombre_Papa, nombremama as Nombre_Mama FROM test.tb_preregistro"
+            query = "SELECT idregistro as ID_Preregistro, nombre as Nombre, apepat as Apellido_Paterno, apemat as Apellido_Materno, nombrepapa as Nombre_Papa, nombremama as Nombre_Mama FROM tb_preregistro"
 
             'create data adapter
             Dim da As MySqlDataAdapter = New MySqlDataAdapter(query, conn)
@@ -144,6 +144,15 @@ Public Class LstPreRegistros
         End If
     End Sub
 
+<<<<<<< .mine
+    Private Sub btnCrearBautizo_Click(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles btnCrearBautizo.Click
+        'Daguiento este evento System.Windows.Forms.DataGridViewCellEventArgs
+        'es el que contiene el rowIndex lo puse en los parametros de este metodo
+        'solo que no se si funciona jejeje
+        Dim invId As Object = DataGridView1.Rows(e.RowIndex).Cells(0).Value
+        inventoryIdLabel.Text = Convert.ToString(invId)
+        PreRegistro.txtid.Text = Convert.ToString(invId)
+=======
     Private Sub btnCrearBautizo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCrearBautizo.Click
 
         'Dim invId As Object = DataGridView1.Rows(e.RowIndex).Cells(0).Value
@@ -156,6 +165,7 @@ Public Class LstPreRegistros
         'PreRegistro.txtid.Text = Convert.ToString(invId)
         'frmBautizo.Show()
 
+>>>>>>> .r63
 
     End Sub
 

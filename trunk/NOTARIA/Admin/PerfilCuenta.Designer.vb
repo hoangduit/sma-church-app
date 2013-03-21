@@ -22,6 +22,7 @@ Partial Class PerfilCuenta
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.qccMainPerfil = New Qios.DevSuite.Components.QCompositeControl()
         Me.qcgHeader = New Qios.DevSuite.Components.QCompositeGroup()
         Me.qctTitle = New Qios.DevSuite.Components.QCompositeText()
@@ -30,11 +31,12 @@ Partial Class PerfilCuenta
         Me.qcgPerfil = New Qios.DevSuite.Components.QCompositeGroup()
         Me.qctPerfil = New Qios.DevSuite.Components.QCompositeText()
         Me.qcibPerfil = New Qios.DevSuite.Components.QCompositeItemInputBox()
+        Me.QCompositeSeparator2 = New Qios.DevSuite.Components.QCompositeSeparator()
         Me.qcgActions = New Qios.DevSuite.Components.QCompositeGroup()
         Me.qcbGuardar = New Qios.DevSuite.Components.QCompositeButton()
         Me.qcbCancelar = New Qios.DevSuite.Components.QCompositeButton()
         Me.dgvApplication = New System.Windows.Forms.DataGridView()
-        Me.QCompositeSeparator2 = New Qios.DevSuite.Components.QCompositeSeparator()
+        Me.QContextMenu1 = New Qios.DevSuite.Components.QContextMenu(Me.components)
         CType(Me.qccMainPerfil, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvApplication, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -50,7 +52,7 @@ Partial Class PerfilCuenta
         Me.qccMainPerfil.Items.Add(Me.qcgActions)
         Me.qccMainPerfil.Location = New System.Drawing.Point(0, 0)
         Me.qccMainPerfil.Name = "qccMainPerfil"
-        Me.qccMainPerfil.Size = New System.Drawing.Size(631, 383)
+        Me.qccMainPerfil.Size = New System.Drawing.Size(651, 381)
         Me.qccMainPerfil.TabIndex = 0
         Me.qccMainPerfil.Text = "QCompositeControl1"
         '
@@ -127,7 +129,7 @@ Partial Class PerfilCuenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(631, 383)
+        Me.ClientSize = New System.Drawing.Size(651, 381)
         Me.Controls.Add(Me.dgvApplication)
         Me.Controls.Add(Me.qccMainPerfil)
         Me.Name = "PerfilCuenta"
@@ -150,4 +152,5 @@ Partial Class PerfilCuenta
     Friend WithEvents qcbGuardar As Qios.DevSuite.Components.QCompositeButton
     Friend WithEvents qcbCancelar As Qios.DevSuite.Components.QCompositeButton
     Friend WithEvents QCompositeSeparator2 As Qios.DevSuite.Components.QCompositeSeparator
+    Friend WithEvents QContextMenu1 As Qios.DevSuite.Components.QContextMenu
 End Class

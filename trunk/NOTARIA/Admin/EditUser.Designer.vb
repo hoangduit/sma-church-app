@@ -39,6 +39,7 @@ Partial Class EditUser
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lbUsuarios = New System.Windows.Forms.ListBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.QCompositeSeparator3 = New Qios.DevSuite.Components.QCompositeSeparator()
         CType(Me.QCompositeControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -48,6 +49,7 @@ Partial Class EditUser
         Me.QCompositeControl1.Configuration.Direction = Qios.DevSuite.Components.QPartDirection.Vertical
         Me.QCompositeControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.QCompositeControl1.Items.Add(Me.QCompositeGroup1)
+        Me.QCompositeControl1.Items.Add(Me.QCompositeSeparator3)
         Me.QCompositeControl1.Items.Add(Me.QCompositeGroup2)
         Me.QCompositeControl1.Location = New System.Drawing.Point(0, 0)
         Me.QCompositeControl1.Name = "QCompositeControl1"
@@ -205,4 +207,5 @@ Partial Class EditUser
     Friend WithEvents lbUsuarios As System.Windows.Forms.ListBox
     Friend WithEvents qcbDelete As Qios.DevSuite.Components.QCompositeButton
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents QCompositeSeparator3 As Qios.DevSuite.Components.QCompositeSeparator
 End Class

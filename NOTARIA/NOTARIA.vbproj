@@ -119,6 +119,12 @@
     <Compile Include="Admin\AltaCuenta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Admin\EditRole.Designer.vb">
+      <DependentUpon>EditRole.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditRole.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin\EditUser.Designer.vb">
       <DependentUpon>EditUser.vb</DependentUpon>
     </Compile>
@@ -200,6 +206,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Admin\AltaCuenta.resx">
       <DependentUpon>AltaCuenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\EditRole.resx">
+      <DependentUpon>EditRole.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\EditUser.resx">
       <DependentUpon>EditUser.vb</DependentUpon>
@@ -350,6 +359,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Matrimonio\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gui_secondbox.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -35,6 +35,10 @@ NOTARIA
 	<summary>
   Looks up a localized string similar to SELECT *  FROM aplicacion a.
 </summary>
+</member><member name="P:NOTARIA.My.Resources.Resources.selectApplicationRole">
+	<summary>
+  Looks up a localized string similar to SELECT distinct (a.idaplicacion) FROM aplicacion a, rol r, aplicacionrole ar where ar.idrol = 1 and ar.idaplicacion = a.idaplicacion.
+</summary>
 </member><member name="P:NOTARIA.My.Resources.Resources.selectRolByTipoRol">
 	<summary>
   Looks up a localized string similar to SELECT * FROM rol WHERE tiporol =@tipoRol.

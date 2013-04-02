@@ -134,6 +134,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to SELECT distinct (a.idaplicacion) FROM aplicacion a, rol r, aplicacionrole ar where ar.idrol = 1 and ar.idaplicacion = a.idaplicacion.
+        '''</summary>
+        Friend ReadOnly Property selectApplicationRole() As String
+            Get
+                Return ResourceManager.GetString("selectApplicationRole", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to SELECT * FROM rol WHERE tiporol =@tipoRol.
         '''</summary>
         Friend ReadOnly Property selectRolByTipoRol() As String

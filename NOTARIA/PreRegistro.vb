@@ -150,21 +150,13 @@ Public Class PreRegistro
             Dim dt As DataTable = ds.Tables("tb_admin")
 
             'display data
-<<<<<<< .mine
-=======
-
->>>>>>> .r63
             'Dim row As DataRow
             'Dim aux As String
             'Dim aryTextFile() As String
-<<<<<<< .mine
- 
-=======
 
-            Dim row As DataRow
-            Dim aryTextFile() As String
+            'Dim row As DataRow
+            'Dim aryTextFile() As String
 
->>>>>>> .r63
 
             'For Each row In dt.Rows
             'aux = row("lstannos")

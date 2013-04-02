@@ -169,4 +169,7 @@
   <data name="gui_secondbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gui_secondbox.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="selectApplicationRole" xml:space="preserve">
+    <value>SELECT distinct (a.idaplicacion) FROM aplicacion a, rol r, aplicacionrole ar where ar.idrol = 1 and ar.idaplicacion = a.idaplicacion</value>
+  </data>
 </root>

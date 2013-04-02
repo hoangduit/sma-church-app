@@ -61,26 +61,17 @@ Public Class Configuracion
             Dim dt As DataTable = ds.Tables("tb_admin")
 
             'display data
-<<<<<<< .mine
             'Dim row As DataRow
            ' For Each row In dt.Rows
             'txtannos.Text = row("lstannos")
             ' Next
-=======
-
             Dim row As DataRow
->>>>>>> .r63
-
-<<<<<<< .mine
-=======
             'Dim row As New DataRow
 
 
             For Each row In dt.Rows
                 txtannos.Text = row("lstannos")
             Next
->>>>>>> .r63
-
 
             'txtParroco.Text = row("nombreparroco")
             'txtObispado.Text = row("obispadode")

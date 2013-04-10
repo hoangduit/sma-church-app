@@ -6,3 +6,5 @@ Servidor Local
 
 server=localhost; user id=root; password=admin; database=notariadb
 
+Solo cambia estos valores
+

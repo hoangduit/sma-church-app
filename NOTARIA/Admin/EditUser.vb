@@ -119,7 +119,7 @@ Public Class EditUser
     End Sub
 
 
-
+ 
 
     Function getNamefromUser(ByVal idRol As Integer) As String
         Dim connect As MySqlConnection = New MySqlConnection(My.Settings.connectionDB)

@@ -129,6 +129,7 @@
   </data>
   <data name="selectUserByIdRol" xml:space="preserve">
     <value>SELECT u.nombre FROM usuario u WHERE u.idrol = @idRol</value>
+    <comment>Regresa el nombre segun su idRol</comment>
   </data>
   <data name="insertRol" xml:space="preserve">
     <value>INSERT INTO rol (tiporol) VALUES(@tipoRol)</value>
@@ -156,6 +157,7 @@
   </data>
   <data name="selectUserByNombre" xml:space="preserve">
     <value>SELECT * FROM usuario u WHERE u.nombre = @name</value>
+    <comment>Busca usuario por nombre</comment>
   </data>
   <data name="insertAplicationRol" xml:space="preserve">
     <value>INSERT INTO aplicacionrole (idrol,idaplicacion) VALUES(@idRol, @idAplication)</value>
@@ -170,6 +172,20 @@
     <value>..\Resources\gui_secondbox.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="selectApplicationRole" xml:space="preserve">
-    <value>SELECT distinct (a.idaplicacion) FROM aplicacion a, rol r, aplicacionrole ar where ar.idrol = 1 and ar.idaplicacion = a.idaplicacion</value>
+    <value>SELECT distinct (a.idaplicacion) FROM aplicacion a, rol r, aplicacionrole ar where ar.idrol = @tipoRol and ar.idaplicacion = a.idaplicacion</value>
+  </data>
+  <data name="deleteApplicationRolebyIdApp" xml:space="preserve">
+    <value>DELETE FROM aplicacionrole where idaplicacion = @idApp AND idrol = @tipoRol</value>
+  </data>
+  <data name="updateApplicationRole" xml:space="preserve">
+    <value>UPDATE aplicacionrole SET idaplicacion = @idApp WHERE idrol = @tipoRol</value>
+  </data>
+  <data name="selectModuleByIdRol" xml:space="preserve">
+    <value>SELECT app.modulo FROM aplicacionrole a, aplicacion app WHERE a.idaplicacion = app.idaplicacion AND a.idrol = @tipoRol</value>
+    <comment>Busca el modulo asociado al perfil segun su idrol</comment>
+  </data>
+  <data name="selectUserByNamePass" xml:space="preserve">
+    <value>SELECT * FROM usuario u WHERE u.nombre = @name and password = @pass</value>
+    <comment>Busca usuario por nombre y password</comment>
   </data>
 </root>

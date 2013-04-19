@@ -48,11 +48,11 @@ Partial Class MainNotaria
         Me.QRibbonItemGroup6 = New Qios.DevSuite.Components.Ribbon.QRibbonItemGroup()
         Me.qcbEditUser = New Qios.DevSuite.Components.QCompositeButton()
         Me.QRibbonItemGroup3 = New Qios.DevSuite.Components.Ribbon.QRibbonItemGroup()
+        Me.qcbEditRole = New Qios.DevSuite.Components.QCompositeButton()
         Me.qrPageConfiguracion = New Qios.DevSuite.Components.Ribbon.QRibbonPage()
         Me.QRibbonPanel7 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
         Me.QRibbonInputBoxItem1 = New Qios.DevSuite.Components.Ribbon.QRibbonInputBoxItem()
         Me.QRibbonItemGroup1 = New Qios.DevSuite.Components.Ribbon.QRibbonItemGroup()
-        Me.qcbEditRole = New Qios.DevSuite.Components.QCompositeButton()
         CType(Me.QRibbonCaption1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QRibbon1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.QRibbon1.SuspendLayout()
@@ -105,11 +105,11 @@ Partial Class MainNotaria
         Me.qrPagePreRegistro.Items.Add(Me.QRibbonPanel4)
         Me.qrPagePreRegistro.Items.Add(Me.QRibbonPanel6)
         Me.qrPagePreRegistro.Items.Add(Me.QRibbonPanel5)
-        Me.qrPagePreRegistro.Location = New System.Drawing.Point(2, 28)
+        Me.qrPagePreRegistro.Location = New System.Drawing.Point(2, 31)
         Me.qrPagePreRegistro.Name = "qrPagePreRegistro"
         Me.qrPagePreRegistro.PersistGuid = New System.Guid("f021ac2d-110a-475b-9900-812d424cc631")
-        Me.qrPagePreRegistro.Size = New System.Drawing.Size(1074, 102)
-        Me.qrPagePreRegistro.Text = "Pre -Registro"
+        Me.qrPagePreRegistro.Size = New System.Drawing.Size(1074, 99)
+        Me.qrPagePreRegistro.Text = "Pre-Registro"
         '
         'QRibbonPanel4
         '
@@ -159,10 +159,10 @@ Partial Class MainNotaria
         Me.qrPageBautizos.Items.Add(Me.QRibbonPanel1)
         Me.qrPageBautizos.Items.Add(Me.QRibbonPanel2)
         Me.qrPageBautizos.Items.Add(Me.QRibbonPanel3)
-        Me.qrPageBautizos.Location = New System.Drawing.Point(2, 28)
+        Me.qrPageBautizos.Location = New System.Drawing.Point(2, 31)
         Me.qrPageBautizos.Name = "qrPageBautizos"
         Me.qrPageBautizos.PersistGuid = New System.Guid("02df447e-ffa0-42ae-9849-6f68ee5e6a52")
-        Me.qrPageBautizos.Size = New System.Drawing.Size(1074, 102)
+        Me.qrPageBautizos.Size = New System.Drawing.Size(1074, 99)
         Me.qrPageBautizos.Text = "Bautizos"
         '
         'QRibbonPanel1
@@ -192,11 +192,11 @@ Partial Class MainNotaria
         Me.qrPageAdmin.ButtonOrder = 2
         Me.qrPageAdmin.Items.Add(Me.QRPanelAltaAdmin)
         Me.qrPageAdmin.Items.Add(Me.qrPanelEdicionAdmin)
-        Me.qrPageAdmin.Location = New System.Drawing.Point(2, 28)
+        Me.qrPageAdmin.Location = New System.Drawing.Point(2, 31)
         Me.qrPageAdmin.Name = "qrPageAdmin"
         Me.qrPageAdmin.PersistGuid = New System.Guid("46f88814-8cf8-45f3-a129-d4fb4e9189a3")
-        Me.qrPageAdmin.Size = New System.Drawing.Size(1074, 102)
-        Me.qrPageAdmin.Text = "Administracion"
+        Me.qrPageAdmin.Size = New System.Drawing.Size(1074, 99)
+        Me.qrPageAdmin.Text = "Administración"
         '
         'QRPanelAltaAdmin
         '
@@ -253,15 +253,24 @@ Partial Class MainNotaria
         Me.QRibbonItemGroup3.Configuration.StretchVertical = True
         Me.QRibbonItemGroup3.Items.Add(Me.qcbEditRole)
         '
+        'qcbEditRole
+        '
+        Me.qcbEditRole.Configuration.Direction = Qios.DevSuite.Components.QPartDirection.Vertical
+        Me.qcbEditRole.Configuration.IconConfiguration.IconSize = New System.Drawing.Size(40, 40)
+        Me.qcbEditRole.Configuration.IconConfiguration.StretchVertical = True
+        Me.qcbEditRole.Configuration.StretchVertical = True
+        Me.qcbEditRole.Icon = CType(resources.GetObject("qcbEditRole.Icon"), System.Drawing.Icon)
+        Me.qcbEditRole.Title = "Editar Role"
+        '
         'qrPageConfiguracion
         '
         Me.qrPageConfiguracion.ButtonOrder = 3
         Me.qrPageConfiguracion.Items.Add(Me.QRibbonPanel7)
-        Me.qrPageConfiguracion.Location = New System.Drawing.Point(2, 28)
+        Me.qrPageConfiguracion.Location = New System.Drawing.Point(2, 31)
         Me.qrPageConfiguracion.Name = "qrPageConfiguracion"
         Me.qrPageConfiguracion.PersistGuid = New System.Guid("e7e0e9af-4309-4c5c-baba-d9caf74d13ff")
-        Me.qrPageConfiguracion.Size = New System.Drawing.Size(1074, 102)
-        Me.qrPageConfiguracion.Text = "Configuracion"
+        Me.qrPageConfiguracion.Size = New System.Drawing.Size(1074, 99)
+        Me.qrPageConfiguracion.Text = "Configuración"
         '
         'QRibbonPanel7
         '
@@ -278,15 +287,6 @@ Partial Class MainNotaria
         Me.QRibbonInputBoxItem1.InputBox.Size = New System.Drawing.Size(100, 19)
         Me.QRibbonInputBoxItem1.InputBox.TabIndex = 0
         Me.QRibbonInputBoxItem1.Title = "QRibbonInputBoxItem1"
-        '
-        'qcbEditRole
-        '
-        Me.qcbEditRole.Configuration.Direction = Qios.DevSuite.Components.QPartDirection.Vertical
-        Me.qcbEditRole.Configuration.IconConfiguration.IconSize = New System.Drawing.Size(40, 40)
-        Me.qcbEditRole.Configuration.IconConfiguration.StretchVertical = True
-        Me.qcbEditRole.Configuration.StretchVertical = True
-        Me.qcbEditRole.Icon = CType(resources.GetObject("qcbEditRole.Icon"), System.Drawing.Icon)
-        Me.qcbEditRole.Title = "Editar Role"
         '
         'MainNotaria
         '

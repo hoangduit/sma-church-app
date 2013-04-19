@@ -108,3 +108,31 @@ C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTA
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\bin\Debug\NOTARIA.xml
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\bin\Debug\Qios.DevSuite.Components.dll
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.EditRole.resources
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\bin\Debug\NOTARIA.exe.config
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.exe
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.xml
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.pdb
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\bin\Debug\NOTARIA.exe
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\bin\Debug\NOTARIA.pdb
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\bin\Debug\NOTARIA.xml
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\bin\Debug\Qios.DevSuite.Components.dll
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.AltaCuenta.resources
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.EditRole.resources
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.EditUser.resources
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.PerfilCuenta.resources
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.frmAcceso.resources
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.Busquedas.resources
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.Configuracion.resources
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.Cuentas.resources
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.frmBautizo.resources
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.Main.resources
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.MainNotaria.resources
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.Resources.resources
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.LstPreRegistros.resources
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.PreRegistro.resources
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\GenerateResource.read.183.tlog
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\bin\Debug\MySql.Data.dll
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.LoginNotaria.resources

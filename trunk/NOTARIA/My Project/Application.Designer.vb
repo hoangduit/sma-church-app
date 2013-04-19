@@ -32,11 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-<<<<<<< .mine
             Me.MainForm = Global.NOTARIA.LoginNotaria
-=======
-            Me.MainForm = Global.NOTARIA.Configuracion
->>>>>>> .r80
         End Sub
     End Class
 End Namespace

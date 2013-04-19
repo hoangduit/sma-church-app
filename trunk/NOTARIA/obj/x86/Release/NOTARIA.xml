@@ -15,6 +15,10 @@ NOTARIA
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:NOTARIA.My.Resources.Resources.deleteApplicationRolebyIdApp">
+	<summary>
+  Looks up a localized string similar to DELETE FROM aplicacionrole where idaplicacion = @idApp AND idrol = @tipoRol.
+</summary>
 </member><member name="P:NOTARIA.My.Resources.Resources.deleteUserByName">
 	<summary>
   Looks up a localized string similar to DELETE FROM usuario  WHERE nombre = @name.
@@ -34,6 +38,10 @@ NOTARIA
 </member><member name="P:NOTARIA.My.Resources.Resources.selectApplication">
 	<summary>
   Looks up a localized string similar to SELECT *  FROM aplicacion a.
+</summary>
+</member><member name="P:NOTARIA.My.Resources.Resources.selectApplicationRole">
+	<summary>
+  Looks up a localized string similar to SELECT distinct (a.idaplicacion) FROM aplicacion a, rol r, aplicacionrole ar where ar.idrol = @tipoRol and ar.idaplicacion = a.idaplicacion.
 </summary>
 </member><member name="P:NOTARIA.My.Resources.Resources.selectRolByTipoRol">
 	<summary>
@@ -61,7 +69,11 @@ NOTARIA
 </summary>
 </member><member name="P:NOTARIA.My.Resources.Resources.selectUserNombre">
 	<summary>
-  Looks up a localized string similar to SELECT u.nombre FROM usuario u.
+  Looks up a localized string similar to SELECT nombre FROM usuario.
+</summary>
+</member><member name="P:NOTARIA.My.Resources.Resources.updateApplicationRole">
+	<summary>
+  Looks up a localized string similar to UPDATE aplicacionrole SET idaplicacion = @idApp WHERE idrol = @tipoRol.
 </summary>
 </member><member name="P:NOTARIA.My.Resources.Resources.updateUserByName">
 	<summary>

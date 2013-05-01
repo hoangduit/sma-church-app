@@ -48,10 +48,10 @@ Public Class Configuracion
             'create dataset
             Dim ds As DataSet = New DataSet
 
-            If ds.Tables(0).Rows.Count = 0 Then
-                MsgBox("Exit")
-                Exit Sub
-            End If
+            'If ds.Tables(0).Rows.Count = 0 Then
+            'MsgBox("Exit")
+            'Exit Sub
+            'End If
 
 
             'fill dataset
@@ -62,7 +62,7 @@ Public Class Configuracion
 
             'display data
             'Dim row As DataRow
-           ' For Each row In dt.Rows
+            ' For Each row In dt.Rows
             'txtannos.Text = row("lstannos")
             ' Next
             Dim row As DataRow

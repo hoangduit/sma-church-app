@@ -67,6 +67,8 @@ Partial Class frmBautizo
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtid = New System.Windows.Forms.TextBox()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.txtEstatus = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.txtActa = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.txtPagina = New System.Windows.Forms.TextBox()
@@ -78,8 +80,6 @@ Partial Class frmBautizo
         Me.Label20 = New System.Windows.Forms.Label()
         Me.txtLugarFecha = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.txtEstatus = New System.Windows.Forms.TextBox()
         Me.txtPrereg = New System.Windows.Forms.TextBox()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
@@ -549,6 +549,23 @@ Partial Class frmBautizo
         Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "Registro Bautizo"
         '
+        'txtEstatus
+        '
+        Me.txtEstatus.Location = New System.Drawing.Point(613, 19)
+        Me.txtEstatus.MaxLength = 70
+        Me.txtEstatus.Name = "txtEstatus"
+        Me.txtEstatus.Size = New System.Drawing.Size(104, 20)
+        Me.txtEstatus.TabIndex = 75
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(559, 22)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(48, 13)
+        Me.Label21.TabIndex = 74
+        Me.Label21.Text = "Estatus :"
+        '
         'txtActa
         '
         Me.txtActa.Location = New System.Drawing.Point(437, 19)
@@ -651,30 +668,12 @@ Partial Class frmBautizo
         Me.Label19.TabIndex = 18
         Me.Label19.Text = "Lugar y Fecha :"
         '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(559, 22)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(48, 13)
-        Me.Label21.TabIndex = 74
-        Me.Label21.Text = "Estatus :"
-        '
-        'txtEstatus
-        '
-        Me.txtEstatus.Location = New System.Drawing.Point(613, 19)
-        Me.txtEstatus.MaxLength = 70
-        Me.txtEstatus.Name = "txtEstatus"
-        Me.txtEstatus.Size = New System.Drawing.Size(104, 20)
-        Me.txtEstatus.TabIndex = 75
-        '
         'txtPrereg
         '
         Me.txtPrereg.Location = New System.Drawing.Point(311, -1)
         Me.txtPrereg.Name = "txtPrereg"
         Me.txtPrereg.Size = New System.Drawing.Size(100, 20)
         Me.txtPrereg.TabIndex = 80
-        Me.txtPrereg.Visible = False
         '
         'frmBautizo
         '
@@ -701,7 +700,7 @@ Partial Class frmBautizo
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.txtid)
         Me.Name = "frmBautizo"
-        Me.Text = "9"
+        Me.Text = "Bautizos"
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)

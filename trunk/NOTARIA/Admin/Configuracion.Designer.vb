@@ -56,12 +56,13 @@ Partial Class Configuracion
         Me.txtannos.Location = New System.Drawing.Point(118, 205)
         Me.txtannos.Multiline = True
         Me.txtannos.Name = "txtannos"
-        Me.txtannos.Size = New System.Drawing.Size(687, 78)
+        Me.txtannos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtannos.Size = New System.Drawing.Size(758, 138)
         Me.txtannos.TabIndex = 1
         '
         'BtnGuardar
         '
-        Me.BtnGuardar.Location = New System.Drawing.Point(46, 453)
+        Me.BtnGuardar.Location = New System.Drawing.Point(46, 458)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(75, 23)
         Me.BtnGuardar.TabIndex = 10
@@ -91,14 +92,14 @@ Partial Class Configuracion
         '
         Me.txtParroco.Location = New System.Drawing.Point(118, 41)
         Me.txtParroco.Name = "txtParroco"
-        Me.txtParroco.Size = New System.Drawing.Size(687, 20)
+        Me.txtParroco.Size = New System.Drawing.Size(758, 20)
         Me.txtParroco.TabIndex = 13
         '
         'txtObispado
         '
         Me.txtObispado.Location = New System.Drawing.Point(118, 78)
         Me.txtObispado.Name = "txtObispado"
-        Me.txtObispado.Size = New System.Drawing.Size(687, 20)
+        Me.txtObispado.Size = New System.Drawing.Size(758, 20)
         Me.txtObispado.TabIndex = 15
         '
         'Label4
@@ -115,7 +116,7 @@ Partial Class Configuracion
         Me.txtDireccion.Location = New System.Drawing.Point(118, 114)
         Me.txtDireccion.Multiline = True
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(687, 79)
+        Me.txtDireccion.Size = New System.Drawing.Size(758, 79)
         Me.txtDireccion.TabIndex = 17
         '
         'Label5
@@ -135,9 +136,9 @@ Partial Class Configuracion
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.txtConBau)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Location = New System.Drawing.Point(14, 288)
+        Me.GroupBox1.Location = New System.Drawing.Point(14, 349)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(806, 143)
+        Me.GroupBox1.Size = New System.Drawing.Size(862, 105)
         Me.GroupBox1.TabIndex = 24
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Números Consecutivos"
@@ -146,7 +147,7 @@ Partial Class Configuracion
         '
         Me.txtConDef.Location = New System.Drawing.Point(104, 73)
         Me.txtConDef.Name = "txtConDef"
-        Me.txtConDef.Size = New System.Drawing.Size(687, 20)
+        Me.txtConDef.Size = New System.Drawing.Size(752, 20)
         Me.txtConDef.TabIndex = 29
         '
         'Label8
@@ -162,7 +163,7 @@ Partial Class Configuracion
         '
         Me.txtConMat.Location = New System.Drawing.Point(104, 48)
         Me.txtConMat.Name = "txtConMat"
-        Me.txtConMat.Size = New System.Drawing.Size(687, 20)
+        Me.txtConMat.Size = New System.Drawing.Size(752, 20)
         Me.txtConMat.TabIndex = 27
         '
         'Label7
@@ -178,7 +179,7 @@ Partial Class Configuracion
         '
         Me.txtConBau.Location = New System.Drawing.Point(104, 20)
         Me.txtConBau.Name = "txtConBau"
-        Me.txtConBau.Size = New System.Drawing.Size(687, 20)
+        Me.txtConBau.Size = New System.Drawing.Size(752, 20)
         Me.txtConBau.TabIndex = 25
         '
         'Label6
@@ -194,7 +195,7 @@ Partial Class Configuracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(843, 495)
+        Me.ClientSize = New System.Drawing.Size(901, 495)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.txtDireccion)
         Me.Controls.Add(Me.Label5)

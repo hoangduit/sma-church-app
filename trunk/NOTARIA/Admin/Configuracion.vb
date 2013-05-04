@@ -8,11 +8,13 @@ Public Class Configuracion
     Private Sub BtnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnGuardar.Click
         Dim conn As New MySqlConnection(connectionMysql)
 
+        'Falta Validar campos
 
         Try
             conn.Open()
             query = "UPDATE tb_admin SET lstannos = '" + txtannos.Text + "', nombreparroco='" + txtParroco.Text + "', obispadode='" + txtObispado.Text + "', direccionnotaria='" + txtDireccion.Text + "', actabautizo='" + txtConBau.Text + "', actamatrimonio='" + txtConMat.Text + "', actadefuncion='" + txtConDef.Text + "'"
 
+            MsgBox(query)
             Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
             'MsgBox(sql)
             Dim i As Integer = cmd.ExecuteNonQuery()
@@ -66,20 +68,19 @@ Public Class Configuracion
             'txtannos.Text = row("lstannos")
             ' Next
             Dim row As DataRow
-            'Dim row As New DataRow
+            'Dim row1 As DataRow
 
 
             For Each row In dt.Rows
                 txtannos.Text = row("lstannos")
             Next
 
-            'txtParroco.Text = row("nombreparroco")
-            'txtObispado.Text = row("obispadode")
-            'txtDireccion.Text = row("direccionnotaria")
-            'txtConBau.Text = row("actabautizo")
-            'txtConMat.Text = row("actamatrimonio")
-            'txtConDef.Text = row("actadefuncion")
-
+            txtParroco.Text = row("nombreparroco")
+            txtObispado.Text = row("obispadode")
+            txtDireccion.Text = row("direccionnotaria")
+            txtConBau.Text = row("actabautizo")
+            txtConMat.Text = row("actamatrimonio")
+            txtConDef.Text = row("actadefuncion")
 
             conn.Close()
 

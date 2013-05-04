@@ -126,11 +126,6 @@ Public Class PreRegistro
     Private Sub PreRegistro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim conn As New MySqlConnection(connectionMysql)
         Dim conn2 As New MySqlConnection(connectionMysql)
-        ' Dim aux As String
-
-        'conn.ConnectionString = "server=SQL09.FREEMYSQL.NET; user id=notariasma; password=zaq12wsx; database=notariabd"
-
-        'MsgBox(txtid.Text)
 
         Try
             conn.Open()
@@ -150,21 +145,17 @@ Public Class PreRegistro
             Dim dt As DataTable = ds.Tables("tb_admin")
 
             'display data
-            'Dim row As DataRow
-            'Dim aux As String
-            'Dim aryTextFile() As String
+            Dim row As DataRow
+            Dim aux As String
+            Dim aryTextFile() As String
 
-            'Dim row As DataRow
-            'Dim aryTextFile() As String
+            For Each row In dt.Rows
+                aux = row("lstannos")
+            Next
 
-
-            'For Each row In dt.Rows
-            'aux = row("lstannos")
-            'Next
-
-            'aryTextFile = aux.Split(",")
-            'cmbannobau.Items.AddRange(aryTextFile)
-            'cmbannonac.Items.AddRange(aryTextFile)
+            aryTextFile = aux.Split(",")
+            cmbannobau.Items.AddRange(aryTextFile)
+            cmbannonac.Items.AddRange(aryTextFile)
 
             conn.Close()
 
@@ -239,5 +230,9 @@ Public Class PreRegistro
     Private Sub btnCerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCerrar.Click
         LstPreRegistros.Show()
         Me.Close()
+    End Sub
+
+    Private Sub cmbannonac_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbannonac.SelectedIndexChanged
+
     End Sub
 End Class

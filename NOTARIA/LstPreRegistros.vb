@@ -144,29 +144,13 @@ Public Class LstPreRegistros
         End If
     End Sub
 
-    Private Sub btnCrearBautizo_Click(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles btnCrearBautizo.Click
-        'Daguiento este evento System.Windows.Forms.DataGridViewCellEventArgs
-        'es el que contiene el rowIndex lo puse en los parametros de este metodo
-        'solo que no se si funciona jejeje
-        Dim invId As Object = DataGridView1.Rows(e.RowIndex).Cells(0).Value
-        inventoryIdLabel.Text = Convert.ToString(invId)
-        PreRegistro.txtid.Text = Convert.ToString(invId)
-    End Sub
-
     Private Sub btnCrearBautizo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCrearBautizo.Click
 
-        'Dim invId As Object = DataGridView1.Rows(e.RowIndex).Cells(0).Value
-        'inventoryIdLabel.Text = Convert.ToString(invId)
-        'PreRegistro.txtid.Text = Convert.ToString(invId)
+        Dim invId As Object = DataGridView1.SelectedCells(0).Value.ToString
+        MsgBox(invId)
+
+        frmBautizo.txtPrereg.Text = Convert.ToString(invId)
         frmBautizo.Show()
 
-        'Dim invId As Object = DataGridView1.Rows(e.RowIndex).Cells(0).Value
-        'inventoryIdLabel.Text = Convert.ToString(invId)
-        'PreRegistro.txtid.Text = Convert.ToString(invId)
-        'frmBautizo.Show()
-
-
     End Sub
-
-  
 End Class

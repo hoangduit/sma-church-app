@@ -94,7 +94,7 @@ Public Class PreRegistro
                 query = query + "' , nombrepadrino='" + txtnompad.Text + "', nombremadrina='" + txtnommad.Text + "', dianac='" + cmbdianac.Text + "', mesnac='" + cmbmesnac.Text + "', annonac='" + cmbannonac.Text + "', diabau='" + cmbdiabau.Text + "', mesbau='" + cmbmesbau.Text + "', annobau='" + cmbannobau.Text
                 query = query + "' WHERE idregistro='" + txtid.Text + "'"
             End If
-            MsgBox(query)
+
 
             Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
             Dim i As Integer = cmd.ExecuteNonQuery()
@@ -167,9 +167,7 @@ Public Class PreRegistro
 
 
 
-        If txtid.Text = "" Then
-            ' New Record
-        Else
+        If txtid.Text <> "" Then
             ' Existing Record
             query = "SELECT * FROM test.tb_preregistro WHERE idregistro=" + txtid.Text
 

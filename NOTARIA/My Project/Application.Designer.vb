@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.NOTARIA.frmBautizo
+            Me.MainForm = Global.NOTARIA.LstPreRegistros
         End Sub
     End Class
 End Namespace

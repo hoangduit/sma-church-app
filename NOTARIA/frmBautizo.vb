@@ -56,7 +56,7 @@ Public Class frmBautizo
             MsgBox("Datos Preregistro traer datos")
 
         ElseIf txtid.Text <> "" Then
-            query = "SELECT * FROM test.tb_registro_bautizo WHERE idregistro=" + txtid.Text
+            query = "SELECT * FROM test.tb_registro_bautizo WHERE idregistrobau=" + txtid.Text
             MsgBox("Registro Bautizado")
 
 
@@ -75,34 +75,42 @@ Public Class frmBautizo
 
         If dr.HasRows Then
             dr.Read()
-            Me.txtnombre.Text = dr(1).ToString
-            Me.txtapepat.Text = dr(2).ToString
-            Me.txtapemat.Text = dr(3).ToString
-            Me.txtnompapa.Text = dr(4).ToString
-            Me.txtnommama.Text = dr(5).ToString
+            Me.txtnombre.Text = dr("nombre").ToString
+            Me.txtapepat.Text = dr("apepat").ToString
+            Me.txtapemat.Text = dr("apemat").ToString
+            Me.txtnompapa.Text = dr("nombrepapa").ToString
+            Me.txtnommama.Text = dr("nombremama").ToString
             'abuelos paternos
-            Me.txtnomapp.Text = dr(6).ToString
-            Me.txtnomapm.Text = dr(8).ToString
+            Me.txtnomapp.Text = dr("nombreapp").ToString
+            Me.txtnomapm.Text = dr("nombreapm").ToString
             'abuelos maternos
-            Me.txtnomamp.Text = dr(7).ToString
-            Me.txtnomamm.Text = dr(9).ToString
+            Me.txtnomamp.Text = dr("nombreamp").ToString
+            Me.txtnomamm.Text = dr("nombreamm").ToString
             'padrinos
-            Me.txtnompad.Text = dr(10).ToString
-            Me.txtnommad.Text = dr(11).ToString
+            Me.txtnompad.Text = dr("nombrepadrino").ToString
+            Me.txtnommad.Text = dr("nombremadrina").ToString
             'dia nac
-            Me.cmbdianac.Text = dr(15).ToString
-            Me.cmbmesnac.Text = dr(16).ToString
-            Me.cmbannonac.Text = dr(17).ToString
+            Me.cmbdianac.Text = dr("dianac").ToString
+            Me.cmbmesnac.Text = dr("mesnac").ToString
+            Me.cmbannonac.Text = dr("annonac").ToString
             'dia bautizo
-            Me.cmbdiabau.Text = dr(12).ToString
-            Me.cmbmesbau.Text = dr(13).ToString
-            Me.cmbannobau.Text = dr(14).ToString
+            Me.cmbdiabau.Text = dr("diabau").ToString
+            Me.cmbmesbau.Text = dr("mesbau").ToString
+            Me.cmbannobau.Text = dr("annobau").ToString
             Me.txtEstatus.Text = "Nuevo"
 
-            'If txtid.Text <> "" Then
-            ' los datos cuando ya esta registrado
-            ' 5 o 6 registros
-            'End If
+            If txtid.Text <> "" Then
+                ' los datos cuando ya esta registrado
+                Me.txtLibro.Text = dr("libro")
+                Me.txtPagina.Text = dr("pagina")
+                Me.txtActa.Text = dr("acta")
+                Me.txtFolio.Text = dr("folio")
+                Me.txtLugarFecha.Text = dr("lugarfecha")
+                Me.txtNotaMarginal.Text = dr("notamarginal")
+
+                Me.txtEstatus.Text = "Proceso"
+                ' 5 o 6 registros
+            End If
 
         End If
 

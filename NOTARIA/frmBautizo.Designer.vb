@@ -532,7 +532,6 @@ Partial Class frmBautizo
         Me.txtid.Name = "txtid"
         Me.txtid.Size = New System.Drawing.Size(100, 20)
         Me.txtid.TabIndex = 66
-        Me.txtid.Visible = False
         '
         'GroupBox7
         '

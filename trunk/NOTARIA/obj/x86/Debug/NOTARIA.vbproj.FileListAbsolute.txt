@@ -138,3 +138,4 @@ C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\bin\Debug\MySql.Data
 C:\Users\IBM_ADMIN\Documents\Visual Studio 2010\wks\NOTARIA\obj\x86\Debug\NOTARIA.LoginNotaria.resources
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.EditRole.resources
 C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.LoginNotaria.resources
+C:\Users\User\Documents\Visual Studio 2010\Projects\NOTARIA\sma-church-app\NOTARIA\obj\x86\Debug\NOTARIA.frmLstBautizados.resources

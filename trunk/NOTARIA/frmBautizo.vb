@@ -53,11 +53,10 @@ Public Class frmBautizo
             ' Existing Record on preregistro
             query = "SELECT * FROM test.tb_preregistro WHERE idregistro=" + txtPrereg.Text
 
-            MsgBox("Datos Preregistro traer datos")
 
         ElseIf txtid.Text <> "" Then
             query = "SELECT * FROM test.tb_registro_bautizo WHERE idregistrobau=" + txtid.Text
-            MsgBox("Registro Bautizado")
+
 
 
         End If
@@ -107,7 +106,6 @@ Public Class frmBautizo
                 Me.txtFolio.Text = dr("folio")
                 Me.txtLugarFecha.Text = dr("lugarfecha")
                 Me.txtNotaMarginal.Text = dr("notamarginal")
-
                 Me.txtEstatus.Text = "Proceso"
                 ' 5 o 6 registros
             End If
@@ -233,16 +231,12 @@ Public Class frmBautizo
                 query = query + "VALUES ('" + txtnombre.Text + "', '" + txtapepat.Text + "', '" + txtapemat.Text + "', '" + txtnompapa.Text + "', '" + txtnommama.Text + "', '" + txtnomapp.Text + "', '" + txtnomapm.Text + "', '" + txtnomamp.Text + "', '" + txtnomamm.Text + "', '" + txtnompad.Text + "', '" + txtnommad.Text + "', '" + cmbdianac.Text + "', '" + cmbmesnac.Text + "', '" + cmbannonac.Text + "', '" + cmbdiabau.Text + "', '" + cmbmesbau.Text + "', '" + cmbannobau.Text + "' , '" + txtNotaMarginal.Text + "', '" + txtLugarFecha.Text + "', '" + txtLibro.Text + "', '" + txtPagina.Text + "', '" + txtActa.Text + "', '" + txtFolio.Text + "')"
 
             Else
-                query = "UPDATE tb_registro SET nombre='" + txtnombre.Text + "', apepat='" + txtapepat.Text + "', apemat='" + txtapemat.Text + "', nombrepapa='" + txtnompapa.Text + "', nombremama='" + txtnommama.Text + "', nombreapp='" + txtnomapp.Text + "', nombreapm='" + txtnomapm.Text + "', nombreamp='" + txtnomamp.Text + "', nombreamm='" + txtnomamm.Text
+                query = "UPDATE tb_registro_bautizo SET nombre='" + txtnombre.Text + "', apepat='" + txtapepat.Text + "', apemat='" + txtapemat.Text + "', nombrepapa='" + txtnompapa.Text + "', nombremama='" + txtnommama.Text + "', nombreapp='" + txtnomapp.Text + "', nombreapm='" + txtnomapm.Text + "', nombreamp='" + txtnomamp.Text + "', nombreamm='" + txtnomamm.Text
                 query = query + "' , nombrepadrino='" + txtnompad.Text + "', nombremadrina='" + txtnommad.Text + "', dianac='" + cmbdianac.Text + "', mesnac='" + cmbmesnac.Text + "', annonac='" + cmbannonac.Text + "', diabau='" + cmbdiabau.Text + "', mesbau='" + cmbmesbau.Text + "', annobau='" + cmbannobau.Text
                 query = query + "', libro='" + txtLibro.Text + "', pagina='" + txtPagina.Text + "', acta='" + txtActa.Text + "', folio='" + txtFolio.Text
 
                 query = query + "' WHERE idregistrobau='" + txtid.Text + "'"
             End If
-
-            MsgBox(query)
-
-
 
 
             Dim cmd As MySqlCommand = New MySqlCommand(query, conn)

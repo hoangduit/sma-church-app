@@ -106,8 +106,7 @@ Public Class PreRegistro
                 Me.Hide()
 
                 'Admin.Show()
-            Else
-                MsgBox("Registro no actualizado")
+            
             End If
 
             conn.Close()
@@ -193,34 +192,36 @@ Public Class PreRegistro
 
             If dr.HasRows Then
                 dr.Read()
-                Me.txtnombre.Text = dr(1).ToString
-                Me.txtapepat.Text = dr(2).ToString
-                Me.txtapemat.Text = dr(3).ToString
-                Me.txtnompapa.Text = dr(4).ToString
-                Me.txtnommama.Text = dr(5).ToString
+                Me.txtnombre.Text = dr("nombre").ToString
+                Me.txtapepat.Text = dr("apepat").ToString
+                Me.txtapemat.Text = dr("apemat").ToString
+                Me.txtnompapa.Text = dr("nombrepapa").ToString
+                Me.txtnommama.Text = dr("nombremama").ToString
                 'abuelos paternos
-                Me.txtnomapp.Text = dr(6).ToString
-                Me.txtnomapm.Text = dr(8).ToString
+                Me.txtnomapp.Text = dr("nombreapp").ToString
+                Me.txtnomapm.Text = dr("nombreapm").ToString
                 'abuelos maternos
-                Me.txtnomamp.Text = dr(7).ToString
-                Me.txtnomamm.Text = dr(9).ToString
+                Me.txtnomamp.Text = dr("nombreamp").ToString
+                Me.txtnomamm.Text = dr("nombreamm").ToString
                 'padrinos
-                Me.txtnompad.Text = dr(10).ToString
-                Me.txtnommad.Text = dr(11).ToString
+                Me.txtnompad.Text = dr("nombrepadrino").ToString
+                Me.txtnommad.Text = dr("nombremadrina").ToString
                 'dia nac
-                Me.cmbdianac.Text = dr(15).ToString
-                Me.cmbmesnac.Text = dr(16).ToString
-                Me.cmbannonac.Text = dr(17).ToString
+                Me.cmbdianac.Text = dr("dianac").ToString
+                Me.cmbmesnac.Text = dr("mesnac").ToString
+                Me.cmbannonac.Text = dr("annonac").ToString
                 'dia bautizo
-                Me.cmbdiabau.Text = dr(12).ToString
-                Me.cmbmesbau.Text = dr(13).ToString
-                Me.cmbannobau.Text = dr(14).ToString
+                Me.cmbdiabau.Text = dr("diabau").ToString
+                Me.cmbmesbau.Text = dr("mesbau").ToString
+                Me.cmbannobau.Text = dr("annobau").ToString
             End If
 
             conn2.Close()
 
 
         End If
+
+
 
     End Sub
 

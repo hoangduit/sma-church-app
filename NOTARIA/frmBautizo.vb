@@ -51,11 +51,11 @@ Public Class frmBautizo
 
         If txtPrereg.Text <> "" Then
             ' Existing Record on preregistro
-            query = "SELECT * FROM test.tb_preregistro WHERE idregistro=" + txtPrereg.Text
+            query = "SELECT * FROM tb_preregistro WHERE idregistro=" + txtPrereg.Text
 
 
         ElseIf txtid.Text <> "" Then
-            query = "SELECT * FROM test.tb_registro_bautizo WHERE idregistrobau=" + txtid.Text
+            query = "SELECT * FROM tb_registro_bautizo WHERE idregistrobau=" + txtid.Text
 
 
 
@@ -262,7 +262,6 @@ Public Class frmBautizo
 
 
 
-            MsgBox("Guardar registro")
 
 
     End Sub

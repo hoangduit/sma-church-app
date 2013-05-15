@@ -168,7 +168,7 @@ Public Class PreRegistro
 
         If txtid.Text <> "" Then
             ' Existing Record
-            query = "SELECT * FROM test.tb_preregistro WHERE idregistro=" + txtid.Text
+            query = "SELECT * FROM tb_preregistro WHERE idregistro=" + txtid.Text
 
             'MsgBox(query)
 

@@ -192,10 +192,6 @@ Public Class frmBautizo
             MsgBox("Por favor ingresa el nombre de la madrina")
             txtnommad.Focus()
             Exit Sub
-        ElseIf txtLugarFecha.Text = "" Then
-            MsgBox("Por favor ingresa el lugar y la fecha")
-            txtLugarFecha.Focus()
-            Exit Sub
         End If
 
         If txtEstatus.Text = "Registrado" Then
@@ -214,6 +210,10 @@ Public Class frmBautizo
             ElseIf txtFolio.Text = "" Then
                 MsgBox("Por favor ingresa valor en el campo folio")
                 txtFolio.Focus()
+                Exit Sub
+            ElseIf txtLugarFecha.Text = "" Then
+                MsgBox("Por favor ingresa el lugar y la fecha")
+                txtLugarFecha.Focus()
                 Exit Sub
             End If
 
@@ -266,5 +266,4 @@ Public Class frmBautizo
 
     End Sub
 
-  
 End Class

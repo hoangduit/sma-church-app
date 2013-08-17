@@ -57,9 +57,8 @@ Public Class frmBautizo
         ElseIf txtid.Text <> "" Then
             query = "SELECT * FROM tb_registro_bautizo WHERE idregistrobau=" + txtid.Text
 
-
-
         End If
+
 
         Dim myCommand As MySqlCommand
 
@@ -96,7 +95,15 @@ Public Class frmBautizo
             Me.cmbdiabau.Text = dr("diabau").ToString
             Me.cmbmesbau.Text = dr("mesbau").ToString
             Me.cmbannobau.Text = dr("annobau").ToString
-            Me.txtEstatus.Text = "Nuevo"
+
+            Me.txtNotaMarginal.Text = dr("notamarginal")
+
+            If dr("status").ToString <> "" Then
+                Me.cmbannobau.Text = dr("status").ToString
+            Else
+                Me.txtEstatus.Text = "Nuevo"
+            End If
+
 
             If txtid.Text <> "" Then
                 ' los datos cuando ya esta registrado
@@ -105,18 +112,12 @@ Public Class frmBautizo
                 Me.txtActa.Text = dr("acta")
                 Me.txtFolio.Text = dr("folio")
                 Me.txtLugarFecha.Text = dr("lugarfecha")
-                Me.txtNotaMarginal.Text = dr("notamarginal")
-                Me.txtEstatus.Text = "Proceso"
                 ' 5 o 6 registros
             End If
 
         End If
 
         conn2.Close()
-
-
-
-
 
     End Sub
 
@@ -194,41 +195,68 @@ Public Class frmBautizo
             Exit Sub
         End If
 
-        If txtEstatus.Text = "Registrado" Then
-            If txtLibro.Text = "" Then
-                MsgBox("Por favor ingresar valor en el campo libro")
-                txtLibro.Focus()
-                Exit Sub
-            ElseIf txtPagina.Text = "" Then
-                MsgBox("Por favor ingresa valor en el campo pagina")
-                txtPagina.Focus()
-                Exit Sub
-            ElseIf txtActa.Text = "" Then
-                MsgBox("Por favor ingresa valor en el campo acta")
-                txtActa.Focus()
-                Exit Sub
-            ElseIf txtFolio.Text = "" Then
-                MsgBox("Por favor ingresa valor en el campo folio")
-                txtFolio.Focus()
-                Exit Sub
-            ElseIf txtLugarFecha.Text = "" Then
-                MsgBox("Por favor ingresa el lugar y la fecha")
-                txtLugarFecha.Focus()
-                Exit Sub
-            End If
-
+        If txtLibro.Text = "" Then
+            MsgBox("Por favor ingresar valor en el campo libro")
+            txtLibro.Focus()
+            Exit Sub
+        ElseIf txtPagina.Text = "" Then
+            MsgBox("Por favor ingresa valor en el campo pagina")
+            txtPagina.Focus()
+            Exit Sub
+        ElseIf txtActa.Text = "" Then
+            MsgBox("Por favor ingresa valor en el campo acta")
+            txtActa.Focus()
+            Exit Sub
+        ElseIf txtFolio.Text = "" Then
+            MsgBox("Por favor ingresa valor en el campo folio")
+            txtFolio.Focus()
+            Exit Sub
+        ElseIf txtLugarFecha.Text = "" Then
+            MsgBox("Por favor ingresa el lugar y la fecha")
+            txtLugarFecha.Focus()
+            Exit Sub
         End If
 
 
-        Dim conn As New MySqlConnection(connectionMysql)
 
+
+        Dim conn As New MySqlConnection(connectionMysql)
+        Dim conn2 As New MySqlConnection(connectionMysql)
 
         Try
             conn.Open()
             If txtid.Text = "" Then
                 ' usuario (nombre, password,idrol) VALUES(@name, @pass, @idrol)
-                query = "INSERT INTO tb_registro_bautizo (nombre, apepat, apemat, nombrepapa, nombremama, nombreapp, nombreapm, nombreamp, nombreamm, nombrepadrino, nombremadrina, dianac, mesnac, annonac, diabau, mesbau, annobau, notamarginal, lugarfecha, libro, pagina, acta, folio)"
-                query = query + "VALUES ('" + txtnombre.Text + "', '" + txtapepat.Text + "', '" + txtapemat.Text + "', '" + txtnompapa.Text + "', '" + txtnommama.Text + "', '" + txtnomapp.Text + "', '" + txtnomapm.Text + "', '" + txtnomamp.Text + "', '" + txtnomamm.Text + "', '" + txtnompad.Text + "', '" + txtnommad.Text + "', '" + cmbdianac.Text + "', '" + cmbmesnac.Text + "', '" + cmbannonac.Text + "', '" + cmbdiabau.Text + "', '" + cmbmesbau.Text + "', '" + cmbannobau.Text + "' , '" + txtNotaMarginal.Text + "', '" + txtLugarFecha.Text + "', '" + txtLibro.Text + "', '" + txtPagina.Text + "', '" + txtActa.Text + "', '" + txtFolio.Text + "')"
+                query = "INSERT INTO tb_registro_bautizo (nombre, apepat, apemat, nombrepapa, nombremama, nombreapp, nombreapm, nombreamp, nombreamm, nombrepadrino, nombremadrina, dianac, mesnac, annonac, diabau, mesbau, annobau, notamarginal, lugarfecha, libro, pagina, acta, folio, status)"
+                query = query + "VALUES ('" + txtnombre.Text + "', '" + txtapepat.Text + "', '" + txtapemat.Text + "', '" + txtnompapa.Text + "', '" + txtnommama.Text + "', '" + txtnomapp.Text + "', '" + txtnomapm.Text + "', '" + txtnomamp.Text + "', '" + txtnomamm.Text + "', '" + txtnompad.Text + "', '" + txtnommad.Text + "', '" + cmbdianac.Text + "', '" + cmbmesnac.Text + "', '" + cmbannonac.Text + "', '" + cmbdiabau.Text + "', '" + cmbmesbau.Text + "', '" + cmbannobau.Text + "' , '" + txtNotaMarginal.Text + "', '" + txtLugarFecha.Text + "', '" + txtLibro.Text + "', '" + txtPagina.Text + "', '" + txtActa.Text + "', '" + txtFolio.Text + "', Registrado)"
+
+
+                Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
+                Dim i As Integer = cmd.ExecuteNonQuery()
+                If (i > 0) Then
+                    'MsgBox("Record is Successfully Updated")
+                    Me.Hide()
+                    'Admin.Show()
+                Else
+                    MsgBox("Registro no actualizado")
+                End If
+
+                conn.Close()
+
+
+                ' Borrar registro en pre-registros
+                query = "Delete * From tb_preregistro WHERE idregistro=" + txtPrereg.Text
+                Dim cmd2 As MySqlCommand = New MySqlCommand(query, conn2)
+                Dim i2 As Integer = cmd2.ExecuteNonQuery()
+                If (i2 > 0) Then
+                    'MsgBox("Record is Successfully Updated")
+                    Me.Hide()
+                    'Admin.Show()
+                Else
+                    MsgBox("Registro no borrado")
+                End If
+
+                conn2.Close()
 
             Else
                 query = "UPDATE tb_registro_bautizo SET nombre='" + txtnombre.Text + "', apepat='" + txtapepat.Text + "', apemat='" + txtapemat.Text + "', nombrepapa='" + txtnompapa.Text + "', nombremama='" + txtnommama.Text + "', nombreapp='" + txtnomapp.Text + "', nombreapm='" + txtnomapm.Text + "', nombreamp='" + txtnomamp.Text + "', nombreamm='" + txtnomamm.Text
@@ -236,24 +264,26 @@ Public Class frmBautizo
                 query = query + "', libro='" + txtLibro.Text + "', pagina='" + txtPagina.Text + "', acta='" + txtActa.Text + "', folio='" + txtFolio.Text
 
                 query = query + "' WHERE idregistrobau='" + txtid.Text + "'"
+
+                Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
+                Dim i As Integer = cmd.ExecuteNonQuery()
+                If (i > 0) Then
+                    'MsgBox("Record is Successfully Updated")
+                    'Actualizar el data grid. 
+
+
+                    Me.Hide()
+
+                    'Admin.Show()
+                Else
+                    MsgBox("Registro no actualizado")
+                End If
+
+                conn.Close()
             End If
 
 
-            Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
-            Dim i As Integer = cmd.ExecuteNonQuery()
-            If (i > 0) Then
-                'MsgBox("Record is Successfully Updated")
-                'Actualizar el data grid. 
 
-
-                Me.Hide()
-
-                'Admin.Show()
-            Else
-                MsgBox("Registro no actualizado")
-            End If
-
-            conn.Close()
         Catch myerror As MySqlException
             MessageBox.Show("Error Connecting to Database: " & myerror.Message)
         Finally

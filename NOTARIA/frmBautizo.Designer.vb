@@ -80,16 +80,16 @@ Partial Class frmBautizo
         Me.Label20 = New System.Windows.Forms.Label()
         Me.txtPrereg = New System.Windows.Forms.TextBox()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.txtFolio = New System.Windows.Forms.TextBox()
-        Me.Label22 = New System.Windows.Forms.Label()
         Me.txtLugarFecha = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
+        Me.txtrcActa = New System.Windows.Forms.TextBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.txtrclibro = New System.Windows.Forms.TextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.txtrcOficialia = New System.Windows.Forms.TextBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.txtrcFolio = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -107,7 +107,7 @@ Partial Class frmBautizo
         Me.txtapemat.MaxLength = 45
         Me.txtapemat.Name = "txtapemat"
         Me.txtapemat.Size = New System.Drawing.Size(477, 20)
-        Me.txtapemat.TabIndex = 64
+        Me.txtapemat.TabIndex = 11
         '
         'txtnomamp
         '
@@ -116,7 +116,7 @@ Partial Class frmBautizo
         Me.txtnomamp.MaxLength = 120
         Me.txtnomamp.Name = "txtnomamp"
         Me.txtnomamp.Size = New System.Drawing.Size(794, 20)
-        Me.txtnomamp.TabIndex = 14
+        Me.txtnomamp.TabIndex = 22
         '
         'txtnommad
         '
@@ -125,7 +125,7 @@ Partial Class frmBautizo
         Me.txtnommad.MaxLength = 120
         Me.txtnommad.Name = "txtnommad"
         Me.txtnommad.Size = New System.Drawing.Size(794, 20)
-        Me.txtnommad.TabIndex = 17
+        Me.txtnommad.TabIndex = 25
         '
         'txtnompad
         '
@@ -134,7 +134,7 @@ Partial Class frmBautizo
         Me.txtnompad.MaxLength = 120
         Me.txtnompad.Name = "txtnompad"
         Me.txtnompad.Size = New System.Drawing.Size(794, 20)
-        Me.txtnompad.TabIndex = 16
+        Me.txtnompad.TabIndex = 24
         '
         'txtnomamm
         '
@@ -143,7 +143,7 @@ Partial Class frmBautizo
         Me.txtnomamm.MaxLength = 120
         Me.txtnomamm.Name = "txtnomamm"
         Me.txtnomamm.Size = New System.Drawing.Size(794, 20)
-        Me.txtnomamm.TabIndex = 15
+        Me.txtnomamm.TabIndex = 23
         '
         'GroupBox5
         '
@@ -187,7 +187,7 @@ Partial Class frmBautizo
         Me.txtnomapm.MaxLength = 120
         Me.txtnomapm.Name = "txtnomapm"
         Me.txtnomapm.Size = New System.Drawing.Size(794, 20)
-        Me.txtnomapm.TabIndex = 13
+        Me.txtnomapm.TabIndex = 21
         '
         'Label11
         '
@@ -216,7 +216,7 @@ Partial Class frmBautizo
         Me.txtnomapp.MaxLength = 120
         Me.txtnomapp.Name = "txtnomapp"
         Me.txtnomapp.Size = New System.Drawing.Size(794, 20)
-        Me.txtnomapp.TabIndex = 12
+        Me.txtnomapp.TabIndex = 20
         '
         'GroupBox6
         '
@@ -250,7 +250,7 @@ Partial Class frmBautizo
         Me.cmbannobau.Location = New System.Drawing.Point(249, 21)
         Me.cmbannobau.Name = "cmbannobau"
         Me.cmbannobau.Size = New System.Drawing.Size(58, 21)
-        Me.cmbannobau.TabIndex = 9
+        Me.cmbannobau.TabIndex = 17
         '
         'cmbmesbau
         '
@@ -259,7 +259,7 @@ Partial Class frmBautizo
         Me.cmbmesbau.Location = New System.Drawing.Point(122, 19)
         Me.cmbmesbau.Name = "cmbmesbau"
         Me.cmbmesbau.Size = New System.Drawing.Size(92, 21)
-        Me.cmbmesbau.TabIndex = 8
+        Me.cmbmesbau.TabIndex = 16
         '
         'Label14
         '
@@ -277,7 +277,7 @@ Partial Class frmBautizo
         Me.cmbdiabau.Location = New System.Drawing.Point(36, 21)
         Me.cmbdiabau.Name = "cmbdiabau"
         Me.cmbdiabau.Size = New System.Drawing.Size(43, 21)
-        Me.cmbdiabau.TabIndex = 7
+        Me.cmbdiabau.TabIndex = 15
         '
         'Label15
         '
@@ -365,7 +365,7 @@ Partial Class frmBautizo
         Me.cmbannonac.Location = New System.Drawing.Point(249, 21)
         Me.cmbannonac.Name = "cmbannonac"
         Me.cmbannonac.Size = New System.Drawing.Size(58, 21)
-        Me.cmbannonac.TabIndex = 6
+        Me.cmbannonac.TabIndex = 14
         '
         'cmbmesnac
         '
@@ -374,7 +374,7 @@ Partial Class frmBautizo
         Me.cmbmesnac.Location = New System.Drawing.Point(122, 19)
         Me.cmbmesnac.Name = "cmbmesnac"
         Me.cmbmesnac.Size = New System.Drawing.Size(92, 21)
-        Me.cmbmesnac.TabIndex = 5
+        Me.cmbmesnac.TabIndex = 13
         '
         'Label38
         '
@@ -392,7 +392,7 @@ Partial Class frmBautizo
         Me.cmbdianac.Location = New System.Drawing.Point(36, 21)
         Me.cmbdianac.Name = "cmbdianac"
         Me.cmbdianac.Size = New System.Drawing.Size(43, 21)
-        Me.cmbdianac.TabIndex = 4
+        Me.cmbdianac.TabIndex = 12
         '
         'Label37
         '
@@ -428,7 +428,7 @@ Partial Class frmBautizo
         Me.txtapepat.MaxLength = 45
         Me.txtapepat.Name = "txtapepat"
         Me.txtapepat.Size = New System.Drawing.Size(477, 20)
-        Me.txtapepat.TabIndex = 63
+        Me.txtapepat.TabIndex = 10
         '
         'Label3
         '
@@ -445,7 +445,7 @@ Partial Class frmBautizo
         Me.txtnombre.MaxLength = 70
         Me.txtnombre.Name = "txtnombre"
         Me.txtnombre.Size = New System.Drawing.Size(477, 20)
-        Me.txtnombre.TabIndex = 62
+        Me.txtnombre.TabIndex = 9
         '
         'Label2
         '
@@ -488,7 +488,7 @@ Partial Class frmBautizo
         Me.txtnommama.MaxLength = 120
         Me.txtnommama.Name = "txtnommama"
         Me.txtnommama.Size = New System.Drawing.Size(794, 20)
-        Me.txtnommama.TabIndex = 11
+        Me.txtnommama.TabIndex = 19
         '
         'txtnompapa
         '
@@ -497,7 +497,7 @@ Partial Class frmBautizo
         Me.txtnompapa.MaxLength = 120
         Me.txtnompapa.Name = "txtnompapa"
         Me.txtnompapa.Size = New System.Drawing.Size(794, 20)
-        Me.txtnompapa.TabIndex = 10
+        Me.txtnompapa.TabIndex = 18
         '
         'GroupBox2
         '
@@ -562,7 +562,7 @@ Partial Class frmBautizo
         Me.txtActa.MaxLength = 70
         Me.txtActa.Name = "txtActa"
         Me.txtActa.Size = New System.Drawing.Size(104, 20)
-        Me.txtActa.TabIndex = 72
+        Me.txtActa.TabIndex = 3
         '
         'Label18
         '
@@ -579,7 +579,7 @@ Partial Class frmBautizo
         Me.txtPagina.MaxLength = 70
         Me.txtPagina.Name = "txtPagina"
         Me.txtPagina.Size = New System.Drawing.Size(104, 20)
-        Me.txtPagina.TabIndex = 70
+        Me.txtPagina.TabIndex = 2
         '
         'Label17
         '
@@ -596,7 +596,7 @@ Partial Class frmBautizo
         Me.txtLibro.MaxLength = 70
         Me.txtLibro.Name = "txtLibro"
         Me.txtLibro.Size = New System.Drawing.Size(104, 20)
-        Me.txtLibro.TabIndex = 68
+        Me.txtLibro.TabIndex = 1
         '
         'Label16
         '
@@ -643,7 +643,7 @@ Partial Class frmBautizo
         Me.txtNotaMarginal.Multiline = True
         Me.txtNotaMarginal.Name = "txtNotaMarginal"
         Me.txtNotaMarginal.Size = New System.Drawing.Size(794, 135)
-        Me.txtNotaMarginal.TabIndex = 21
+        Me.txtNotaMarginal.TabIndex = 26
         '
         'Label20
         '
@@ -666,13 +666,13 @@ Partial Class frmBautizo
         '
         Me.GroupBox9.Controls.Add(Me.txtLugarFecha)
         Me.GroupBox9.Controls.Add(Me.Label19)
-        Me.GroupBox9.Controls.Add(Me.TextBox3)
+        Me.GroupBox9.Controls.Add(Me.txtrcActa)
         Me.GroupBox9.Controls.Add(Me.Label25)
-        Me.GroupBox9.Controls.Add(Me.TextBox2)
+        Me.GroupBox9.Controls.Add(Me.txtrclibro)
         Me.GroupBox9.Controls.Add(Me.Label24)
-        Me.GroupBox9.Controls.Add(Me.TextBox1)
+        Me.GroupBox9.Controls.Add(Me.txtrcOficialia)
         Me.GroupBox9.Controls.Add(Me.Label23)
-        Me.GroupBox9.Controls.Add(Me.txtFolio)
+        Me.GroupBox9.Controls.Add(Me.txtrcFolio)
         Me.GroupBox9.Controls.Add(Me.Label22)
         Me.GroupBox9.Location = New System.Drawing.Point(18, 90)
         Me.GroupBox9.Name = "GroupBox9"
@@ -681,74 +681,6 @@ Partial Class frmBautizo
         Me.GroupBox9.TabStop = False
         Me.GroupBox9.Text = "Datos Registro Civil"
         '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(661, 17)
-        Me.TextBox3.MaxLength = 70
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(104, 20)
-        Me.TextBox3.TabIndex = 88
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(606, 20)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(35, 13)
-        Me.Label25.TabIndex = 89
-        Me.Label25.Text = "Acta :"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(492, 17)
-        Me.TextBox2.MaxLength = 70
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(104, 20)
-        Me.TextBox2.TabIndex = 86
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(437, 20)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(33, 13)
-        Me.Label24.TabIndex = 87
-        Me.Label24.Text = "Libro:"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(297, 17)
-        Me.TextBox1.MaxLength = 70
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(104, 20)
-        Me.TextBox1.TabIndex = 84
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(216, 20)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(78, 13)
-        Me.Label23.TabIndex = 85
-        Me.Label23.Text = "Num. Oficialia :"
-        '
-        'txtFolio
-        '
-        Me.txtFolio.Location = New System.Drawing.Point(88, 17)
-        Me.txtFolio.MaxLength = 70
-        Me.txtFolio.Name = "txtFolio"
-        Me.txtFolio.Size = New System.Drawing.Size(104, 20)
-        Me.txtFolio.TabIndex = 82
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(41, 20)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(35, 13)
-        Me.Label22.TabIndex = 83
-        Me.Label22.Text = "Folio :"
-        '
         'txtLugarFecha
         '
         Me.txtLugarFecha.Location = New System.Drawing.Point(86, 43)
@@ -756,7 +688,7 @@ Partial Class frmBautizo
         Me.txtLugarFecha.MaxLength = 120
         Me.txtLugarFecha.Name = "txtLugarFecha"
         Me.txtLugarFecha.Size = New System.Drawing.Size(794, 20)
-        Me.txtLugarFecha.TabIndex = 91
+        Me.txtLugarFecha.TabIndex = 8
         '
         'Label19
         '
@@ -767,6 +699,74 @@ Partial Class frmBautizo
         Me.Label19.Size = New System.Drawing.Size(81, 13)
         Me.Label19.TabIndex = 90
         Me.Label19.Text = "Lugar y Fecha :"
+        '
+        'txtrcActa
+        '
+        Me.txtrcActa.Location = New System.Drawing.Point(661, 17)
+        Me.txtrcActa.MaxLength = 70
+        Me.txtrcActa.Name = "txtrcActa"
+        Me.txtrcActa.Size = New System.Drawing.Size(104, 20)
+        Me.txtrcActa.TabIndex = 7
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(606, 20)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(35, 13)
+        Me.Label25.TabIndex = 89
+        Me.Label25.Text = "Acta :"
+        '
+        'txtrclibro
+        '
+        Me.txtrclibro.Location = New System.Drawing.Point(492, 17)
+        Me.txtrclibro.MaxLength = 70
+        Me.txtrclibro.Name = "txtrclibro"
+        Me.txtrclibro.Size = New System.Drawing.Size(104, 20)
+        Me.txtrclibro.TabIndex = 6
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(437, 20)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(33, 13)
+        Me.Label24.TabIndex = 87
+        Me.Label24.Text = "Libro:"
+        '
+        'txtrcOficialia
+        '
+        Me.txtrcOficialia.Location = New System.Drawing.Point(297, 17)
+        Me.txtrcOficialia.MaxLength = 70
+        Me.txtrcOficialia.Name = "txtrcOficialia"
+        Me.txtrcOficialia.Size = New System.Drawing.Size(104, 20)
+        Me.txtrcOficialia.TabIndex = 5
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(216, 20)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(78, 13)
+        Me.Label23.TabIndex = 85
+        Me.Label23.Text = "Num. Oficialia :"
+        '
+        'txtrcFolio
+        '
+        Me.txtrcFolio.Location = New System.Drawing.Point(88, 17)
+        Me.txtrcFolio.MaxLength = 70
+        Me.txtrcFolio.Name = "txtrcFolio"
+        Me.txtrcFolio.Size = New System.Drawing.Size(104, 20)
+        Me.txtrcFolio.TabIndex = 4
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(41, 20)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(35, 13)
+        Me.Label22.TabIndex = 83
+        Me.Label22.Text = "Folio :"
         '
         'frmBautizo
         '
@@ -877,13 +877,13 @@ Partial Class frmBautizo
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents txtPrereg As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox9 As System.Windows.Forms.GroupBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents txtrcActa As System.Windows.Forms.TextBox
     Friend WithEvents Label25 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtrclibro As System.Windows.Forms.TextBox
     Friend WithEvents Label24 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtrcOficialia As System.Windows.Forms.TextBox
     Friend WithEvents Label23 As System.Windows.Forms.Label
-    Friend WithEvents txtFolio As System.Windows.Forms.TextBox
+    Friend WithEvents txtrcFolio As System.Windows.Forms.TextBox
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents txtLugarFecha As System.Windows.Forms.TextBox
     Friend WithEvents Label19 As System.Windows.Forms.Label

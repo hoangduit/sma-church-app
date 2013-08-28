@@ -1,0 +1,152 @@
+Imports MySql.Data.MySqlClient
+
+Public Class AltaParroquia
+    Dim base64String As String = ""
+    Dim connectionMysql As String = My.Settings.connectionDB
+
+
+    'Metodo para convertir Imagen a String base 64
+    Private Sub ImageToBase64(ByVal inputFileName As String)
+        Dim inFile As System.IO.FileStream 'Archivo de imagen
+        Dim binaryData(0) As Byte 'lectura del archivo
+
+        Try
+            'Obtenemos imagen
+            inFile = New System.IO.FileStream(inputFileName, System.IO.FileMode.Open, System.IO.FileAccess.Read)
+            'Redimensionamos variable de lectura 
+            ReDim binaryData(inFile.Length)
+            'Leemos imagen
+            Dim bytesRead As Long = inFile.Read(binaryData, 0, inFile.Length)
+            'Cerramos
+            inFile.Close()
+        Catch ex As Exception
+            'En caso de un error
+            System.Console.WriteLine("{0}", ex.Message)
+
+        End Try
+
+        Try
+            'Convertimos imagen a un string base64
+            base64String = System.Convert.ToBase64String(binaryData, 0, binaryData.Length)
+        Catch ex As System.ArgumentNullException
+            'En caso de error
+            System.Console.WriteLine("{0}", ex.Message + "Binary data array is null.")
+
+        End Try
+
+    End Sub
+
+    'Funcion que retorna la imagen
+    Function Base64toImage(ByVal base64String As String) As System.Drawing.Image
+        Dim image As System.Drawing.Image 'Imagen
+        Dim memoryStreamImage As System.IO.MemoryStream = New System.IO.MemoryStream 'Espacio reseervado para la imagen
+        Dim base64 As String = base64String.Replace(" ", "+") 'Limpiando el stringBase64
+        Dim byte64() As Byte 'Lectura de la imagen
+
+        'Convierte el string a bytes 
+        byte64 = Convert.FromBase64String(base64)
+        'reasigna la memoria a usar
+        memoryStreamImage = New System.IO.MemoryStream(byte64)
+        'convierte los bytes a imagen
+        image = System.Drawing.Image.FromStream(memoryStreamImage)
+
+        Return image
+
+
+    End Function
+
+   
+
+    Public Sub saveDataChurch()
+        Dim connection As MySqlConnection = New MySqlConnection(connectionMysql)
+        Dim command As MySqlCommand = New MySqlCommand(My.Resources.insertParroquia, connection)
+
+        Try
+            connection.Open()
+
+            command.Parameters.AddWithValue("@Nombre", txtNombre.InputBox.Text)
+
+            command.Parameters.AddWithValue("@Encargado", txtEncargado.InputBox.Text)
+
+            command.Parameters.AddWithValue("@lugar", txtLugar.InputBox.Text)
+
+            command.Parameters.AddWithValue("@Sello", base64String)
+
+            Dim result = command.ExecuteNonQuery()
+
+            dgvParroquia.Refresh()
+
+
+        Catch ex As Exception
+
+            Console.WriteLine("{0}", ex.Message)
+
+        Finally
+
+            connection.Close()
+
+        End Try
+
+    End Sub
+
+    Public Sub BrowseFileImage()
+        Dim openFileDialog As OpenFileDialog = New OpenFileDialog()
+        Dim strFileName As String = ""
+
+        With openFileDialog
+            .Title = "Buscar Firma"
+            .Filter = "Imágenes(*.png *.jpg *.bmp) |*.png; *.jpg; *.bmp|Todos(*.*) |*.*"
+            .FilterIndex = 2
+            .RestoreDirectory = True
+
+            If .ShowDialog = DialogResult.OK Then
+                strFileName = .FileName
+                ImageToBase64(strFileName)
+                MessageBox.Show(base64String)
+                qciSelloFirm.Image = Base64toImage(base64String)
+
+            End If
+        End With
+    End Sub
+
+
+    Private Sub btnExaminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExaminar.Click
+        BrowseFileImage()
+
+    End Sub
+
+    Private Sub AltaParroquia_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim connection As MySqlConnection = New MySqlConnection(connectionMysql)
+        Dim da As MySqlDataAdapter = New MySqlDataAdapter(My.Resources.selectParroquia, connection)
+        Dim ds As New DataSet
+
+
+
+        Try
+            connection.Open()
+
+            If da.Fill(ds) Then
+
+                dgvParroquia.DataSource = ds.Tables(0)
+
+            End If
+
+
+
+
+
+        Catch ex As Exception
+
+            Console.WriteLine("{0}", ex.Message)
+
+        Finally
+
+            connection.Close()
+
+        End Try
+    End Sub
+
+    Private Sub btnCancelar_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles btnCancelar.ItemActivated
+        Me.Close()
+    End Sub
+End Class

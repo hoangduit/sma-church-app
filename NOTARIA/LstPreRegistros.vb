@@ -40,8 +40,6 @@ Public Class LstPreRegistros
         End Try
     End Sub
 
-
-
     Private Sub DataGridView1_CellDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
         'Dim invId As Object = DataGridView1.Rows(e.RowIndex).Cells(e.ColumnIndex).Value
         'inventoryIdLabel.Text = Convert.ToString(invId)

@@ -10,7 +10,7 @@ Public Class LstPreRegistros
         Me.Hide()
         Main.Show()
     End Sub
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevo.Click
         Me.Hide()
         PreRegistro.Show()
     End Sub
@@ -113,7 +113,7 @@ Public Class LstPreRegistros
     Private Sub btnBorrarTodos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBorrarTodos.Click
         Dim button As DialogResult
         button = MessageBox.Show _
-        ("Estas seguro que deseas borrar todos los registros.", _
+        ("Estas seguro que deseas borrar todos los registros?", _
         "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
         If button = Windows.Forms.DialogResult.Yes Then
             MsgBox("Borrar registro")
@@ -150,4 +150,5 @@ Public Class LstPreRegistros
         frmBautizo.Show()
 
     End Sub
+
 End Class

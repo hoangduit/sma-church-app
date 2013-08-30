@@ -117,6 +117,27 @@ Public Class PreRegistro
         End Try
 
 
+        'Para actualizar el Datagrid automaticamente.
+        Dim conn2 As New MySqlConnection(connectionMysql)
+
+        Try
+            conn2.Open()
+            query = "SELECT idregistro as ID_Preregistro, nombre as Nombre, apepat as Apellido_Paterno, apemat as Apellido_Materno, nombrepapa as Nombre_Papa, nombremama as Nombre_Mama FROM test.tb_preregistro"
+
+            'create data adapter
+            Dim da As MySqlDataAdapter = New MySqlDataAdapter(query, conn2)
+
+            Dim dt = New DataTable
+            da.Fill(dt)
+            LstPreRegistros.DataGridView1.DataSource = dt
+            conn2.Close()
+
+        Catch myerror As MySqlException
+            MessageBox.Show("Error Connecting to Database: " & myerror.Message)
+        Finally
+            conn2.Dispose()
+        End Try
+        'Fin Actualizar Datagrid
 
         LstPreRegistros.Show()
         Me.Close()

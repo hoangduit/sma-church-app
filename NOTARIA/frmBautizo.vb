@@ -286,6 +286,28 @@ Public Class frmBautizo
                 conn.Close()
             End If
 
+            'Actualizar Datagrid
+            Dim conn3 As New MySqlConnection(connectionMysql)
+
+            Try
+                conn3.Open()
+                'MessageBox.Show("Connection Opened Successfully")
+                query = "SELECT idregistrobau as ID_Preregistro, nombre as Nombre, apepat as Apellido_Paterno, apemat as Apellido_Materno, nombrepapa as Nombre_Papa, nombremama as Nombre_Mama FROM tb_registro_bautizo WHERE status='Nuevo'"
+
+                'create data adapter
+                Dim da As MySqlDataAdapter = New MySqlDataAdapter(query, conn3)
+
+                Dim dt = New DataTable
+                da.Fill(dt)
+                frmLstBautizados.DataGridView1.DataSource = dt
+                conn3.Close()
+
+            Catch myerror As MySqlException
+                MessageBox.Show("Error Connecting to Database: " & myerror.Message)
+            Finally
+                conn3.Dispose()
+            End Try
+            'Fin Actualizar Datagrid
 
         Catch myerror As MySqlException
             MessageBox.Show("Error Connecting to Database: " & myerror.Message)

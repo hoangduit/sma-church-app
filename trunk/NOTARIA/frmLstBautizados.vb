@@ -14,7 +14,7 @@ Public Class frmLstBautizados
         Try
             conn.Open()
             'MessageBox.Show("Connection Opened Successfully")
-            query = "SELECT idregistrobau as ID_Bautizo, nombre as Nombre, apepat as Apellido_Paterno, apemat as Apellido_Materno, nombrepapa as Nombre_Papa, nombremama as Nombre_Mama FROM test.tb_registro_bautizo"
+            query = "SELECT idregistrobau as ID_Bautizo, nombre as Nombre, apepat as Apellido_Paterno, apemat as Apellido_Materno, nombrepapa as Nombre_Papa, nombremama as Nombre_Mama FROM test.tb_registro_bautizo WHERE status='Nuevo'"
 
             'create data adapter
             Dim da As MySqlDataAdapter = New MySqlDataAdapter(query, conn)

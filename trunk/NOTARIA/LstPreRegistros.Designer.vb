@@ -24,7 +24,7 @@ Partial Class LstPreRegistros
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnPrincipal = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnNuevo = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.inventoryIdLabel = New System.Windows.Forms.TextBox()
         Me.btnActualizar = New System.Windows.Forms.Button()
@@ -53,14 +53,14 @@ Partial Class LstPreRegistros
         Me.btnPrincipal.Text = "Principal"
         Me.btnPrincipal.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnNuevo
         '
-        Me.Button1.Location = New System.Drawing.Point(214, 8)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 31
-        Me.Button1.Text = "&Nuevo"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnNuevo.Location = New System.Drawing.Point(214, 8)
+        Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.Size = New System.Drawing.Size(75, 23)
+        Me.btnNuevo.TabIndex = 31
+        Me.btnNuevo.Text = "&Nuevo"
+        Me.btnNuevo.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
@@ -128,7 +128,7 @@ Partial Class LstPreRegistros
         Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.inventoryIdLabel)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnNuevo)
         Me.Controls.Add(Me.btnPrincipal)
         Me.Controls.Add(Me.Label1)
         Me.Name = "LstPreRegistros"
@@ -140,7 +140,7 @@ Partial Class LstPreRegistros
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnPrincipal As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnNuevo As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents inventoryIdLabel As System.Windows.Forms.TextBox
     Friend WithEvents btnActualizar As System.Windows.Forms.Button

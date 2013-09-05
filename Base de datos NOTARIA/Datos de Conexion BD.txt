@@ -4,7 +4,7 @@ server=SQL09.FREEMYSQL.NET; user id=notariasma; password=zaq12wsx; database=nota
 
 Servidor Local
 
-server=localhost; user id=root; password=admin; database=notariadb
+server=localhost; user id=root; password=admin; database=notariabd
 
 Solo cambia estos valores
 

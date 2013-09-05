@@ -53,6 +53,10 @@ Partial Class MainNotaria
         Me.QRibbonPanel7 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
         Me.QRibbonInputBoxItem1 = New Qios.DevSuite.Components.Ribbon.QRibbonInputBoxItem()
         Me.QRibbonItemGroup1 = New Qios.DevSuite.Components.Ribbon.QRibbonItemGroup()
+        Me.QRibbonPanel8 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
+        Me.QCompositeButton4 = New Qios.DevSuite.Components.QCompositeButton()
+        Me.QCompositeButton5 = New Qios.DevSuite.Components.QCompositeButton()
+        Me.QCompositeButton6 = New Qios.DevSuite.Components.QCompositeButton()
         CType(Me.QRibbonCaption1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QRibbon1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.QRibbon1.SuspendLayout()
@@ -105,6 +109,7 @@ Partial Class MainNotaria
         Me.qrPagePreRegistro.Items.Add(Me.QRibbonPanel4)
         Me.qrPagePreRegistro.Items.Add(Me.QRibbonPanel6)
         Me.qrPagePreRegistro.Items.Add(Me.QRibbonPanel5)
+        Me.qrPagePreRegistro.Items.Add(Me.QRibbonPanel8)
         Me.qrPagePreRegistro.Location = New System.Drawing.Point(2, 31)
         Me.qrPagePreRegistro.Name = "qrPagePreRegistro"
         Me.qrPagePreRegistro.PersistGuid = New System.Guid("f021ac2d-110a-475b-9900-812d424cc631")
@@ -177,10 +182,11 @@ Partial Class MainNotaria
         Me.QCompositeButton2.Configuration.MinimumSize = New System.Drawing.Size(50, 22)
         Me.QCompositeButton2.Configuration.StretchVertical = True
         Me.QCompositeButton2.Icon = CType(resources.GetObject("QCompositeButton2.Icon"), System.Drawing.Icon)
-        Me.QCompositeButton2.Title = " Nuevo"
+        Me.QCompositeButton2.Title = "Lista"
         '
         'QRibbonPanel2
         '
+        Me.QRibbonPanel2.Items.Add(Me.QCompositeButton6)
         Me.QRibbonPanel2.Title = "QRibbonPanel2"
         '
         'QRibbonPanel3
@@ -288,6 +294,24 @@ Partial Class MainNotaria
         Me.QRibbonInputBoxItem1.InputBox.TabIndex = 0
         Me.QRibbonInputBoxItem1.Title = "QRibbonInputBoxItem1"
         '
+        'QRibbonPanel8
+        '
+        Me.QRibbonPanel8.Items.Add(Me.QCompositeButton4)
+        Me.QRibbonPanel8.Items.Add(Me.QCompositeButton5)
+        Me.QRibbonPanel8.Title = "QRibbonPanel8"
+        '
+        'QCompositeButton4
+        '
+        Me.QCompositeButton4.Title = "Borrar"
+        '
+        'QCompositeButton5
+        '
+        Me.QCompositeButton5.Title = "Borrar todos"
+        '
+        'QCompositeButton6
+        '
+        Me.QCompositeButton6.Title = "Nuevo"
+        '
         'MainNotaria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -343,4 +367,8 @@ Partial Class MainNotaria
     Friend WithEvents QRibbonPanel5 As Qios.DevSuite.Components.Ribbon.QRibbonPanel
     Friend WithEvents QCompositeButton3 As Qios.DevSuite.Components.QCompositeButton
     Friend WithEvents qcbEditRole As Qios.DevSuite.Components.QCompositeButton
+    Friend WithEvents QRibbonPanel8 As Qios.DevSuite.Components.Ribbon.QRibbonPanel
+    Friend WithEvents QCompositeButton4 As Qios.DevSuite.Components.QCompositeButton
+    Friend WithEvents QCompositeButton5 As Qios.DevSuite.Components.QCompositeButton
+    Friend WithEvents QCompositeButton6 As Qios.DevSuite.Components.QCompositeButton
 End Class

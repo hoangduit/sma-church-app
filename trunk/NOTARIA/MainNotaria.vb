@@ -178,28 +178,7 @@ Public Class MainNotaria
     End Sub
 
     Private Sub QCompositeButton3_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles QCompositeButton3.ItemActivated
-        Dim conn As New MySqlConnection(connectionMysql)
 
-        'conn.ConnectionString = "server=SQL09.FREEMYSQL.NET; user id=notariasma; password=zaq12wsx; database=notariabd"
-
-        Try
-            conn.Open()
-            'MessageBox.Show("Connection Opened Successfully")
-            query = "SELECT idregistro as ID_Preregistro, nombre as Nombre, apepat as Apellido_Paterno, apemat as Apellido_Materno, nombrepapa as Nombre_Papa, nombremama as Nombre_Mama FROM test.tb_preregistro"
-
-            'create data adapter
-            Dim da As MySqlDataAdapter = New MySqlDataAdapter(query, conn)
-
-            Dim dt = New DataTable
-            da.Fill(dt)
-            DataGridView1.DataSource = dt
-            conn.Close()
-
-        Catch myerror As MySqlException
-            MessageBox.Show("Error Connecting to Database: " & myerror.Message)
-        Finally
-            conn.Dispose()
-        End Try
 
     End Sub
 

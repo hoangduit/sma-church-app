@@ -199,4 +199,8 @@ Public Class MainNotaria
         MDILstBautizo.WindowState = 2
         MDILstBautizo.Show()
     End Sub
+
+    Private Sub QCompositeButton7_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles QCompositeButton7.ItemActivated
+  
+    End Sub
 End Class

@@ -34,10 +34,14 @@ Partial Class MainNotaria
         Me.QCompositeButton1 = New Qios.DevSuite.Components.QCompositeButton()
         Me.QRibbonPanel5 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
         Me.QCompositeButton3 = New Qios.DevSuite.Components.QCompositeButton()
+        Me.QRibbonPanel8 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
+        Me.QCompositeButton4 = New Qios.DevSuite.Components.QCompositeButton()
+        Me.QCompositeButton5 = New Qios.DevSuite.Components.QCompositeButton()
         Me.qrPageBautizos = New Qios.DevSuite.Components.Ribbon.QRibbonPage()
         Me.QRibbonPanel1 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
         Me.QCompositeButton2 = New Qios.DevSuite.Components.QCompositeButton()
         Me.QRibbonPanel2 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
+        Me.QCompositeButton6 = New Qios.DevSuite.Components.QCompositeButton()
         Me.QRibbonPanel3 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
         Me.qrPageAdmin = New Qios.DevSuite.Components.Ribbon.QRibbonPage()
         Me.QRPanelAltaAdmin = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
@@ -53,10 +57,7 @@ Partial Class MainNotaria
         Me.QRibbonPanel7 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
         Me.QRibbonInputBoxItem1 = New Qios.DevSuite.Components.Ribbon.QRibbonInputBoxItem()
         Me.QRibbonItemGroup1 = New Qios.DevSuite.Components.Ribbon.QRibbonItemGroup()
-        Me.QRibbonPanel8 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
-        Me.QCompositeButton4 = New Qios.DevSuite.Components.QCompositeButton()
-        Me.QCompositeButton5 = New Qios.DevSuite.Components.QCompositeButton()
-        Me.QCompositeButton6 = New Qios.DevSuite.Components.QCompositeButton()
+        Me.QCompositeButton7 = New Qios.DevSuite.Components.QCompositeButton()
         CType(Me.QRibbonCaption1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QRibbon1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.QRibbon1.SuspendLayout()
@@ -158,6 +159,20 @@ Partial Class MainNotaria
         Me.QCompositeButton3.Icon = CType(resources.GetObject("QCompositeButton3.Icon"), System.Drawing.Icon)
         Me.QCompositeButton3.Title = "Actualizar"
         '
+        'QRibbonPanel8
+        '
+        Me.QRibbonPanel8.Items.Add(Me.QCompositeButton4)
+        Me.QRibbonPanel8.Items.Add(Me.QCompositeButton5)
+        Me.QRibbonPanel8.Title = "QRibbonPanel8"
+        '
+        'QCompositeButton4
+        '
+        Me.QCompositeButton4.Title = "Borrar"
+        '
+        'QCompositeButton5
+        '
+        Me.QCompositeButton5.Title = "Borrar todos"
+        '
         'qrPageBautizos
         '
         Me.qrPageBautizos.ButtonOrder = 1
@@ -188,6 +203,10 @@ Partial Class MainNotaria
         '
         Me.QRibbonPanel2.Items.Add(Me.QCompositeButton6)
         Me.QRibbonPanel2.Title = "QRibbonPanel2"
+        '
+        'QCompositeButton6
+        '
+        Me.QCompositeButton6.Title = "Nuevo"
         '
         'QRibbonPanel3
         '
@@ -280,6 +299,7 @@ Partial Class MainNotaria
         '
         'QRibbonPanel7
         '
+        Me.QRibbonPanel7.Items.Add(Me.QCompositeButton7)
         Me.QRibbonPanel7.Title = "Alta"
         '
         'QRibbonInputBoxItem1
@@ -294,23 +314,9 @@ Partial Class MainNotaria
         Me.QRibbonInputBoxItem1.InputBox.TabIndex = 0
         Me.QRibbonInputBoxItem1.Title = "QRibbonInputBoxItem1"
         '
-        'QRibbonPanel8
+        'QCompositeButton7
         '
-        Me.QRibbonPanel8.Items.Add(Me.QCompositeButton4)
-        Me.QRibbonPanel8.Items.Add(Me.QCompositeButton5)
-        Me.QRibbonPanel8.Title = "QRibbonPanel8"
-        '
-        'QCompositeButton4
-        '
-        Me.QCompositeButton4.Title = "Borrar"
-        '
-        'QCompositeButton5
-        '
-        Me.QCompositeButton5.Title = "Borrar todos"
-        '
-        'QCompositeButton6
-        '
-        Me.QCompositeButton6.Title = "Nuevo"
+        Me.QCompositeButton7.Title = "Cuentas"
         '
         'MainNotaria
         '
@@ -371,4 +377,5 @@ Partial Class MainNotaria
     Friend WithEvents QCompositeButton4 As Qios.DevSuite.Components.QCompositeButton
     Friend WithEvents QCompositeButton5 As Qios.DevSuite.Components.QCompositeButton
     Friend WithEvents QCompositeButton6 As Qios.DevSuite.Components.QCompositeButton
+    Friend WithEvents QCompositeButton7 As Qios.DevSuite.Components.QCompositeButton
 End Class

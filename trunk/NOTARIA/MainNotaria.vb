@@ -69,6 +69,7 @@ Public Class MainNotaria
 
     Private Sub QCompositeButton1_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles qcbNuevoPre.ItemActivated
         Dim MDIFormListPreRegistro As New LstPreRegistros
+        CloseAllMDIChild()
         MDIFormListPreRegistro.MdiParent = Me
         MDIFormListPreRegistro.WindowState = 2
         MDIFormListPreRegistro.Show()
@@ -109,11 +110,11 @@ Public Class MainNotaria
 
 
     Private Sub MainNotaria_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim MDIFormListaPreRegistro As New LstPreRegistros
-        CloseAllMDIChild()
-        MDIFormListaPreRegistro.MdiParent = Me
-        MDIFormListaPreRegistro.WindowState = 2
-        MDIFormListaPreRegistro.Show()
+        Dim MDIWelcomeApp As New Welcome
+        'CloseAllMDIChild()
+        MDIWelcomeApp.MdiParent = Me
+        MDIWelcomeApp.WindowState = 2
+        MDIWelcomeApp.Show()
         'desactiveAllPage()
         AccessControl()
 
@@ -123,9 +124,10 @@ Public Class MainNotaria
 
     'Con este metodo se cierran todos los forms hijos en la aplicacion
     Private Sub CloseAllMDIChild()
-        'MsgBox(Me.MdiChildren.Length)
+
+        Dim len = Me.MdiChildren.Length - 1
         If Me.MdiChildren.Length > 0 Then
-            For i = 0 To Me.MdiChildren.Length - 1
+            For i = 0 To len
                 Me.MdiChildren(i).Close()
             Next
         End If

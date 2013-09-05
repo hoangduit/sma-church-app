@@ -8,6 +8,7 @@ Public Class MainNotaria
         Dim command As MySqlCommand = New MySqlCommand(My.Resources.selectModuleByIdRol, connect)
         Dim reader As MySqlDataReader
         Dim modulo As String = ""
+        Dim query As String = ""
 
         Try
             connect.Open()
@@ -179,10 +180,6 @@ Public Class MainNotaria
         MDIPreRegistros.Show()
     End Sub
 
-    Private Sub QCompositeButton3_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles QCompositeButton3.ItemActivated
-
-
-    End Sub
 
     Private Sub QCompositeButton6_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles QCompositeButton6.ItemActivated
         Dim MDIBautizo As New frmBautizo
@@ -202,5 +199,37 @@ Public Class MainNotaria
 
     Private Sub QCompositeButton7_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles QCompositeButton7.ItemActivated
   
+    End Sub
+
+    Private Sub QCompositeButton4_ItemActivated_1(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles QCompositeButton4.ItemActivated
+        Dim button As DialogResult
+        Dim query As String
+        button = MessageBox.Show _
+        ("Estas seguro que deseas borrar el registro :  " + LstPreRegistros.DataGridView1.SelectedCells(0).Value.ToString + ".- " + LstPreRegistros.DataGridView1.SelectedCells(1).Value.ToString + " " + LstPreRegistros.DataGridView1.SelectedCells(2).Value.ToString + " " + LstPreRegistros.DataGridView1.SelectedCells(3).Value.ToString + " ?", _
+        "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
+        If button = Windows.Forms.DialogResult.Yes Then
+            'MsgBox("Borrar registro")
+            ' Codigo para borrar registro
+            'Dim conn2 As New MySqlConnection(ConnectionState)
+
+            Try
+                'conn2.Open()
+                'MessageBox.Show("Connection Opened Successfully")
+                query = "DELETE FROM tb_preregistro WHERE idregistro=" + LstPreRegistros.DataGridView1.SelectedCells(0).Value.ToString
+
+                'create data adapter
+                'Dim da As MySqlDataAdapter = New MySqlDataAdapter(query, conn2)
+
+                'Dim dt = New DataTable
+                'da.Fill(dt)
+                'LstPreRegistros.DataGridView1.DataSource = dt
+                'conn2.Close()
+
+            Catch myerror As MySqlException
+                MessageBox.Show("Error Connecting to Database: " & myerror.Message)
+            Finally
+                'conn2.Dispose()
+            End Try
+        End If
     End Sub
 End Class

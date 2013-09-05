@@ -72,6 +72,8 @@ Public Class MainNotaria
         MDIFormListPreRegistro.MdiParent = Me
         MDIFormListPreRegistro.WindowState = 2
         MDIFormListPreRegistro.Show()
+
+      
     End Sub
 
     Private Sub QCompositeButton4_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles qcbNuevoAdmin.ItemActivated
@@ -165,5 +167,55 @@ Public Class MainNotaria
 
     Private Sub MainNotaria_FormClosed(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles MyBase.FormClosed
         Application.Exit()
+    End Sub
+
+    Private Sub QCompositeButton1_ItemActivated_1(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles QCompositeButton1.ItemActivated
+        Dim MDIPreRegistros As New PreRegistro
+        CloseAllMDIChild()
+        MDIPreRegistros.MdiParent = Me
+        MDIPreRegistros.WindowState = 2
+        MDIPreRegistros.Show()
+    End Sub
+
+    Private Sub QCompositeButton3_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles QCompositeButton3.ItemActivated
+        Dim conn As New MySqlConnection(connectionMysql)
+
+        'conn.ConnectionString = "server=SQL09.FREEMYSQL.NET; user id=notariasma; password=zaq12wsx; database=notariabd"
+
+        Try
+            conn.Open()
+            'MessageBox.Show("Connection Opened Successfully")
+            query = "SELECT idregistro as ID_Preregistro, nombre as Nombre, apepat as Apellido_Paterno, apemat as Apellido_Materno, nombrepapa as Nombre_Papa, nombremama as Nombre_Mama FROM test.tb_preregistro"
+
+            'create data adapter
+            Dim da As MySqlDataAdapter = New MySqlDataAdapter(query, conn)
+
+            Dim dt = New DataTable
+            da.Fill(dt)
+            DataGridView1.DataSource = dt
+            conn.Close()
+
+        Catch myerror As MySqlException
+            MessageBox.Show("Error Connecting to Database: " & myerror.Message)
+        Finally
+            conn.Dispose()
+        End Try
+
+    End Sub
+
+    Private Sub QCompositeButton6_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles QCompositeButton6.ItemActivated
+        Dim MDIBautizo As New frmBautizo
+        CloseAllMDIChild()
+        MDIBautizo.MdiParent = Me
+        MDIBautizo.WindowState = 2
+        MDIBautizo.Show()
+    End Sub
+
+    Private Sub QCompositeButton2_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles QCompositeButton2.ItemActivated
+        Dim MDILstBautizo As New frmLstBautizados
+        CloseAllMDIChild()
+        MDILstBautizo.MdiParent = Me
+        MDILstBautizo.WindowState = 2
+        MDILstBautizo.Show()
     End Sub
 End Class

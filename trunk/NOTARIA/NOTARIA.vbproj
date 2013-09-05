@@ -154,10 +154,10 @@
     <Compile Include="Admin\Cuentas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBautizo.Designer.vb">
+    <Compile Include="Bautizos\frmBautizo.Designer.vb">
       <DependentUpon>frmBautizo.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmBautizo.vb">
+    <Compile Include="Bautizos\frmBautizo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="login\LoginNotaria.Designer.vb">
@@ -194,22 +194,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="LstPreRegistros.Designer.vb">
+    <Compile Include="Bautizos\LstPreRegistros.Designer.vb">
       <DependentUpon>LstPreRegistros.vb</DependentUpon>
     </Compile>
-    <Compile Include="LstPreRegistros.vb">
+    <Compile Include="Bautizos\LstPreRegistros.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PreRegistro.Designer.vb">
+    <Compile Include="Bautizos\PreRegistro.Designer.vb">
       <DependentUpon>PreRegistro.vb</DependentUpon>
     </Compile>
-    <Compile Include="PreRegistro.vb">
+    <Compile Include="Bautizos\PreRegistro.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLstBautizados.Designer.vb">
+    <Compile Include="Bautizos\frmLstBautizados.Designer.vb">
       <DependentUpon>frmLstBautizados.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmLstBautizados.vb">
+    <Compile Include="Bautizos\frmLstBautizados.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Settings.vb" />
@@ -239,10 +239,10 @@
     <EmbeddedResource Include="Admin\Cuentas.resx">
       <DependentUpon>Cuentas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBautizo.resx">
+    <EmbeddedResource Include="Bautizos\frmBautizo.resx">
       <DependentUpon>frmBautizo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLstBautizados.resx">
+    <EmbeddedResource Include="Bautizos\frmLstBautizados.resx">
       <DependentUpon>frmLstBautizados.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login\LoginNotaria.resx">
@@ -260,10 +260,10 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="LstPreRegistros.resx">
+    <EmbeddedResource Include="Bautizos\LstPreRegistros.resx">
       <DependentUpon>LstPreRegistros.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PreRegistro.resx">
+    <EmbeddedResource Include="Bautizos\PreRegistro.resx">
       <DependentUpon>PreRegistro.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

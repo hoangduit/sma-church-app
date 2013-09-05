@@ -122,7 +122,7 @@ Public Class PreRegistro
 
         Try
             conn2.Open()
-            query = "SELECT idregistro as ID_Preregistro, nombre as Nombre, apepat as Apellido_Paterno, apemat as Apellido_Materno, nombrepapa as Nombre_Papa, nombremama as Nombre_Mama FROM test.tb_preregistro"
+            query = "SELECT idregistro as ID_Preregistro, nombre as Nombre, apepat as Apellido_Paterno, apemat as Apellido_Materno, nombrepapa as Nombre_Papa, nombremama as Nombre_Mama FROM tb_preregistro"
 
             'create data adapter
             Dim da As MySqlDataAdapter = New MySqlDataAdapter(query, conn2)

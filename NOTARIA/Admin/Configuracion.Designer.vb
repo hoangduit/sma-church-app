@@ -32,14 +32,6 @@ Partial Class Configuracion
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtConDef = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtConMat = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtConBau = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -62,7 +54,7 @@ Partial Class Configuracion
         '
         'BtnGuardar
         '
-        Me.BtnGuardar.Location = New System.Drawing.Point(46, 458)
+        Me.BtnGuardar.Location = New System.Drawing.Point(43, 374)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(75, 23)
         Me.BtnGuardar.TabIndex = 10
@@ -128,75 +120,11 @@ Partial Class Configuracion
         Me.Label5.TabIndex = 16
         Me.Label5.Text = "Dirección de Notaria :"
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.txtConDef)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.txtConMat)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.txtConBau)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Location = New System.Drawing.Point(14, 349)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(862, 105)
-        Me.GroupBox1.TabIndex = 24
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Números Consecutivos"
-        '
-        'txtConDef
-        '
-        Me.txtConDef.Location = New System.Drawing.Point(104, 73)
-        Me.txtConDef.Name = "txtConDef"
-        Me.txtConDef.Size = New System.Drawing.Size(752, 20)
-        Me.txtConDef.TabIndex = 29
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(9, 74)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(73, 13)
-        Me.Label8.TabIndex = 28
-        Me.Label8.Text = "Defunciones :"
-        '
-        'txtConMat
-        '
-        Me.txtConMat.Location = New System.Drawing.Point(104, 48)
-        Me.txtConMat.Name = "txtConMat"
-        Me.txtConMat.Size = New System.Drawing.Size(752, 20)
-        Me.txtConMat.TabIndex = 27
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(6, 51)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(64, 13)
-        Me.Label7.TabIndex = 26
-        Me.Label7.Text = "Matrimonio :"
-        '
-        'txtConBau
-        '
-        Me.txtConBau.Location = New System.Drawing.Point(104, 20)
-        Me.txtConBau.Name = "txtConBau"
-        Me.txtConBau.Size = New System.Drawing.Size(752, 20)
-        Me.txtConBau.TabIndex = 25
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(6, 23)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(48, 13)
-        Me.Label6.TabIndex = 24
-        Me.Label6.Text = "Bautizo :"
-        '
         'Configuracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(901, 495)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.ClientSize = New System.Drawing.Size(901, 404)
         Me.Controls.Add(Me.txtDireccion)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtObispado)
@@ -209,8 +137,6 @@ Partial Class Configuracion
         Me.Controls.Add(Me.Label1)
         Me.Name = "Configuracion"
         Me.Text = "Configuración"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -225,11 +151,4 @@ Partial Class Configuracion
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtDireccion As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtConDef As System.Windows.Forms.TextBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents txtConMat As System.Windows.Forms.TextBox
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents txtConBau As System.Windows.Forms.TextBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

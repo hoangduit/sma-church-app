@@ -12,9 +12,8 @@ Public Class Configuracion
 
         Try
             conn.Open()
-            query = "UPDATE tb_admin SET lstannos = '" + txtannos.Text + "', nombreparroco='" + txtParroco.Text + "', obispadode='" + txtObispado.Text + "', direccionnotaria='" + txtDireccion.Text + "', actabautizo='" + txtConBau.Text + "', actamatrimonio='" + txtConMat.Text + "', actadefuncion='" + txtConDef.Text + "'"
+            query = "UPDATE tb_admin SET lstannos = '" + txtannos.Text + "', nombreparroco='" + txtParroco.Text + "', obispadode='" + txtObispado.Text + "', direccionnotaria='" + txtDireccion.Text + "'"
 
-            MsgBox(query)
             Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
             'MsgBox(sql)
             Dim i As Integer = cmd.ExecuteNonQuery()
@@ -23,12 +22,12 @@ Public Class Configuracion
                 Me.Hide()
                 'Admin.Show()
             Else
-                MsgBox("Record is not Updated")
+                MsgBox("Registro no actualizado")
             End If
 
             conn.Close()
         Catch myerror As MySqlException
-            MessageBox.Show("Error Connecting to Database: " & myerror.Message)
+            MessageBox.Show("Error Connectando a Dase de datos : " & myerror.Message)
         Finally
             conn.Dispose()
         End Try
@@ -78,9 +77,6 @@ Public Class Configuracion
             txtParroco.Text = row("nombreparroco")
             txtObispado.Text = row("obispadode")
             txtDireccion.Text = row("direccionnotaria")
-            txtConBau.Text = row("actabautizo")
-            txtConMat.Text = row("actamatrimonio")
-            txtConDef.Text = row("actadefuncion")
 
             conn.Close()
 

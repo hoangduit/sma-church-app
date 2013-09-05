@@ -33,7 +33,7 @@ Partial Class MainNotaria
         Me.QRibbonPanel6 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
         Me.QCompositeButton1 = New Qios.DevSuite.Components.QCompositeButton()
         Me.QRibbonPanel5 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
-        Me.QCompositeButton3 = New Qios.DevSuite.Components.QCompositeButton()
+        Me.QActualizar = New Qios.DevSuite.Components.QCompositeButton()
         Me.QRibbonPanel8 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
         Me.QCompositeButton4 = New Qios.DevSuite.Components.QCompositeButton()
         Me.QCompositeButton5 = New Qios.DevSuite.Components.QCompositeButton()
@@ -55,9 +55,9 @@ Partial Class MainNotaria
         Me.qcbEditRole = New Qios.DevSuite.Components.QCompositeButton()
         Me.qrPageConfiguracion = New Qios.DevSuite.Components.Ribbon.QRibbonPage()
         Me.QRibbonPanel7 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
+        Me.QCompositeButton7 = New Qios.DevSuite.Components.QCompositeButton()
         Me.QRibbonInputBoxItem1 = New Qios.DevSuite.Components.Ribbon.QRibbonInputBoxItem()
         Me.QRibbonItemGroup1 = New Qios.DevSuite.Components.Ribbon.QRibbonItemGroup()
-        Me.QCompositeButton7 = New Qios.DevSuite.Components.QCompositeButton()
         CType(Me.QRibbonCaption1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QRibbon1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.QRibbon1.SuspendLayout()
@@ -147,17 +147,17 @@ Partial Class MainNotaria
         '
         'QRibbonPanel5
         '
-        Me.QRibbonPanel5.Items.Add(Me.QCompositeButton3)
+        Me.QRibbonPanel5.Items.Add(Me.QActualizar)
         Me.QRibbonPanel5.Title = "Edición"
         '
-        'QCompositeButton3
+        'QActualizar
         '
-        Me.QCompositeButton3.Configuration.Direction = Qios.DevSuite.Components.QPartDirection.Vertical
-        Me.QCompositeButton3.Configuration.IconConfiguration.IconSize = New System.Drawing.Size(32, 32)
-        Me.QCompositeButton3.Configuration.MinimumSize = New System.Drawing.Size(60, 22)
-        Me.QCompositeButton3.Configuration.StretchVertical = True
-        Me.QCompositeButton3.Icon = CType(resources.GetObject("QCompositeButton3.Icon"), System.Drawing.Icon)
-        Me.QCompositeButton3.Title = "Actualizar"
+        Me.QActualizar.Configuration.Direction = Qios.DevSuite.Components.QPartDirection.Vertical
+        Me.QActualizar.Configuration.IconConfiguration.IconSize = New System.Drawing.Size(32, 32)
+        Me.QActualizar.Configuration.MinimumSize = New System.Drawing.Size(60, 22)
+        Me.QActualizar.Configuration.StretchVertical = True
+        Me.QActualizar.Icon = CType(resources.GetObject("QActualizar.Icon"), System.Drawing.Icon)
+        Me.QActualizar.Title = "Actualizar"
         '
         'QRibbonPanel8
         '
@@ -302,6 +302,10 @@ Partial Class MainNotaria
         Me.QRibbonPanel7.Items.Add(Me.QCompositeButton7)
         Me.QRibbonPanel7.Title = "Alta"
         '
+        'QCompositeButton7
+        '
+        Me.QCompositeButton7.Title = "Cuentas"
+        '
         'QRibbonInputBoxItem1
         '
         Me.QRibbonInputBoxItem1.ControlSize = New System.Drawing.Size(100, 19)
@@ -313,10 +317,6 @@ Partial Class MainNotaria
         Me.QRibbonInputBoxItem1.InputBox.Size = New System.Drawing.Size(100, 19)
         Me.QRibbonInputBoxItem1.InputBox.TabIndex = 0
         Me.QRibbonInputBoxItem1.Title = "QRibbonInputBoxItem1"
-        '
-        'QCompositeButton7
-        '
-        Me.QCompositeButton7.Title = "Cuentas"
         '
         'MainNotaria
         '
@@ -371,7 +371,7 @@ Partial Class MainNotaria
     Friend WithEvents QRibbonPanel6 As Qios.DevSuite.Components.Ribbon.QRibbonPanel
     Friend WithEvents QCompositeButton1 As Qios.DevSuite.Components.QCompositeButton
     Friend WithEvents QRibbonPanel5 As Qios.DevSuite.Components.Ribbon.QRibbonPanel
-    Friend WithEvents QCompositeButton3 As Qios.DevSuite.Components.QCompositeButton
+    Friend WithEvents QActualizar As Qios.DevSuite.Components.QCompositeButton
     Friend WithEvents qcbEditRole As Qios.DevSuite.Components.QCompositeButton
     Friend WithEvents QRibbonPanel8 As Qios.DevSuite.Components.Ribbon.QRibbonPanel
     Friend WithEvents QCompositeButton4 As Qios.DevSuite.Components.QCompositeButton

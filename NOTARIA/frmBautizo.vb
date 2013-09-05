@@ -292,7 +292,7 @@ Public Class frmBautizo
             Try
                 conn3.Open()
                 'MessageBox.Show("Connection Opened Successfully")
-                query = "SELECT idregistrobau as ID_Preregistro, nombre as Nombre, apepat as Apellido_Paterno, apemat as Apellido_Materno, nombrepapa as Nombre_Papa, nombremama as Nombre_Mama FROM tb_registro_bautizo WHERE status='Nuevo'"
+                query = "SELECT idregistrobau as ID_Preregistro, nombre as Nombre, apepat as Apellido_Paterno, apemat as Apellido_Materno, nombrepapa as Nombre_Papa, nombremama as Nombre_Mama FROM tb_registro_bautizo"
 
                 'create data adapter
                 Dim da As MySqlDataAdapter = New MySqlDataAdapter(query, conn3)

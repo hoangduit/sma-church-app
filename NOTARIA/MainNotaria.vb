@@ -197,8 +197,8 @@ Public Class MainNotaria
         MDILstBautizo.Show()
     End Sub
 
-    Private Sub QCompositeButton7_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles QCompositeButton7.ItemActivated
-  
+    Private Sub QCompositeButton7_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles qcbConfiguration.ItemActivated
+
     End Sub
 
     Private Sub QCompositeButton4_ItemActivated_1(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles QCompositeButton4.ItemActivated

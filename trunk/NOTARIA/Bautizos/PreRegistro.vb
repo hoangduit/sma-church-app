@@ -5,6 +5,8 @@ Public Class PreRegistro
     Private connectionMysql As String = My.Settings.connectionDB
     Private query As String
 
+    'Con este metodo se cierran todos los forms hijos en la aplicacion
+   
 
     Private Sub BtnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnGuardar.Click
 
@@ -139,8 +141,13 @@ Public Class PreRegistro
         End Try
         'Fin Actualizar Datagrid
 
-        LstPreRegistros.Show()
-        Me.Close()
+        ' Mostrar pagina en principal
+        'LstPreRegistros.Show()
+        ' Me.Close()
+
+        'MainNotaria.qcbListado_ItemActivated()
+        MainNotaria.CloseAllMDIChild()
+
     End Sub
 
     Private Sub PreRegistro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

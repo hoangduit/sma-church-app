@@ -75,7 +75,7 @@ Partial Class MainNotaria
         Me.QRibbonCaption1.Name = "QRibbonCaption1"
         Me.QRibbonCaption1.Size = New System.Drawing.Size(1080, 36)
         Me.QRibbonCaption1.TabIndex = 1
-        Me.QRibbonCaption1.Text = "Notaria 2012 V1.1"
+        Me.QRibbonCaption1.Text = "Notaria 2013 V1.1"
         '
         'QRibbonApplicationButton1
         '
@@ -167,6 +167,7 @@ Partial Class MainNotaria
         '
         'qcbBorrar
         '
+        Me.qcbBorrar.Icon = CType(resources.GetObject("qcbBorrar.Icon"), System.Drawing.Icon)
         Me.qcbBorrar.Title = "Borrar"
         '
         'qcbBorrarTodos
@@ -331,7 +332,7 @@ Partial Class MainNotaria
         Me.IsMdiContainer = True
         Me.Name = "MainNotaria"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Notaria 2012 V1.1"
+        Me.Text = "Notaria 2013 V1.1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.QRibbonCaption1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.QRibbon1, System.ComponentModel.ISupportInitialize).EndInit()

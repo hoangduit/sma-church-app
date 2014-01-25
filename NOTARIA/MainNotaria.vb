@@ -204,8 +204,15 @@ Public Class MainNotaria
         MDILstBautizo.Show()
     End Sub
 
+<<<<<<< .mine
+   
+=======
+>>>>>>> .r128
 
+<<<<<<< .mine
+=======
 
+>>>>>>> .r128
     Private Sub QCompositeButton4_ItemActivated_1(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles qcbBorrar.ItemActivated
         Dim query As String
 
@@ -240,6 +247,16 @@ Public Class MainNotaria
             End Try
         End If
     End Sub
+<<<<<<< .mine
+
+    Private Sub qcbConfiguration_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles qcbConfiguration.ItemActivated
+        Dim MDIConfiguration As New Configuracion
+        CloseAllMDIChild()
+        MDIConfiguration.MdiParent = Me
+        MDIConfiguration.WindowState = 2
+        MDIConfiguration.Show()
+    End Sub
+=======
 
 
     Private Sub qcbListado_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles qcbListado.ItemActivated
@@ -338,4 +355,5 @@ Public Class MainNotaria
     Private Sub qrPageAdmin_Activated_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles qrPageAdmin.Activated
 
     End Sub
+>>>>>>> .r128
 End Class

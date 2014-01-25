@@ -55,7 +55,7 @@ Partial Class MainNotaria
         Me.qcbEditRole = New Qios.DevSuite.Components.QCompositeButton()
         Me.qrPageConfiguracion = New Qios.DevSuite.Components.Ribbon.QRibbonPage()
         Me.QRibbonPanel7 = New Qios.DevSuite.Components.Ribbon.QRibbonPanel()
-        Me.QCompositeButton7 = New Qios.DevSuite.Components.QCompositeButton()
+        Me.qcbConfiguration = New Qios.DevSuite.Components.QCompositeButton()
         Me.QRibbonInputBoxItem1 = New Qios.DevSuite.Components.Ribbon.QRibbonInputBoxItem()
         Me.QRibbonItemGroup1 = New Qios.DevSuite.Components.Ribbon.QRibbonItemGroup()
         CType(Me.QRibbonCaption1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -152,11 +152,15 @@ Partial Class MainNotaria
         '
         'qcbActualizar
         '
-        Me.qcbActualizar.Configuration.Direction = Qios.DevSuite.Components.QPartDirection.Vertical
+<<<<<<< .mine        Me.QActualizar.Configuration.Direction = Qios.DevSuite.Components.QPartDirection.Vertical
+        Me.QActualizar.Configuration.IconConfiguration.IconSize = New System.Drawing.Size(32, 32)
+        Me.QActualizar.Configuration.MinimumSize = New System.Drawing.Size(60, 22)
+        Me.QActualizar.Configuration.StretchVertical = True
+=======        Me.qcbActualizar.Configuration.Direction = Qios.DevSuite.Components.QPartDirection.Vertical
         Me.qcbActualizar.Configuration.IconConfiguration.IconSize = New System.Drawing.Size(32, 32)
         Me.qcbActualizar.Configuration.MinimumSize = New System.Drawing.Size(60, 22)
         Me.qcbActualizar.Configuration.StretchVertical = True
-        Me.qcbActualizar.Icon = CType(resources.GetObject("qcbActualizar.Icon"), System.Drawing.Icon)
+>>>>>>> .theirs        Me.qcbActualizar.Icon = CType(resources.GetObject("qcbActualizar.Icon"), System.Drawing.Icon)
         Me.qcbActualizar.Title = "Actualizar"
         '
         'QRibbonPanel8
@@ -300,12 +304,12 @@ Partial Class MainNotaria
         '
         'QRibbonPanel7
         '
-        Me.QRibbonPanel7.Items.Add(Me.QCompositeButton7)
+        Me.QRibbonPanel7.Items.Add(Me.qcbConfiguration)
         Me.QRibbonPanel7.Title = "Alta"
         '
-        'QCompositeButton7
+        'qcbConfiguration
         '
-        Me.QCompositeButton7.Title = "Cuentas"
+        Me.qcbConfiguration.Title = "Cuentas"
         '
         'QRibbonInputBoxItem1
         '

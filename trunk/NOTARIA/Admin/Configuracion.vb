@@ -66,7 +66,7 @@ Public Class Configuracion
             ' For Each row In dt.Rows
             'txtannos.Text = row("lstannos")
             ' Next
-            Dim row As DataRow
+            Dim row As DataRow = dt.NewRow
             'Dim row1 As DataRow
 
 

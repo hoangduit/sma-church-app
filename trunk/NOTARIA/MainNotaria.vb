@@ -326,5 +326,16 @@ Public Class MainNotaria
         End If
     End Sub
 
+
+    Private Sub qcbVerBautizados_ItemActivated(ByVal sender As System.Object, ByVal e As Qios.DevSuite.Components.QCompositeEventArgs) Handles qcbListado.ItemActivated
+        Dim MDILstBautizadosAll As New frmLstBautizados
+        CloseAllMDIChild()
+        MDILstBautizadosAll.MdiParent = Me
+        MDILstBautizadosAll.WindowState = 2
+        MDILstBautizadosAll.Show()
+    End Sub
    
+    Private Sub qrPageAdmin_Activated_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles qrPageAdmin.Activated
+
+    End Sub
 End Class
